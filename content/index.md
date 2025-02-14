@@ -1,31 +1,30 @@
 ---
 title: Home
-navigation: false
+description: Home
+icon: lucide:info
 ---
 
-::hero
----
-announcement:
-  title: 'Release v0.8.14'
-  icon: '🎉'
-  to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/releases/latest
-  target: _blank
-actions:
-  - name: Get Started
-    to: /getting-started/introduction
-  - name: GitHub
-    variant: outline
-    to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
-    leftIcon: 'lucide:github'
----
+## Introduction
 
-#title
-Effortless and Beautiful :br Docs Template.
+pdfRest :br Documentation
 
-#description
-Beautifully designed Nuxt Content template built with shadcn-vue. :br Customizable. Compatible. Open Source.
-::
+## Features
 
-::div{class="border rounded-lg shadow-md"}
-  :iframe{src="/getting-started/introduction" height="700" width="100%" class="rounded-lg" scrolling="no" frameborder="0"}
-::
+- Free and [open source](https://github.com/ZTL-UwU/shadcn-docs-nuxt).
+- Fully [customizable](/api/configuration).
+- Rich [components](/components/prose) to work with.
+- Mobile support.
+- Indexed searching powered by Nuxt Content.
+- Partial component compatibility with `Docus`, `Nuxt UI Pro Docs`, `undocs`.
+
+## Credits
+
+- [Nuxt Content](https://content.nuxt.com/): Content made easy for Vue Developers.
+- [shadcn-ui](https://ui.shadcn.com/): For the beautiful component & docs design.
+- [shadcn-vue](https://www.shadcn-vue.com/): For the vue port of shadcn-ui & some docs component source.
+- [Docus](https://docus.dev/): For inspiration & some docs component source.
+- [Nuxt UI Pro Docs](https://docs-template.nuxt.dev/): For inspiration.
+
+## License
+
+[MIT](https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/LICENSE)
