@@ -1,11 +1,10 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'shadcn-docs',
-      description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
-      ogImage: '/hero.png',
+      name: 'pdfrest-docs',
+      description: 'pdfRest Documentation',
       ogImageComponent: 'ShadcnDocs',
-      ogImageColor: 'light',
+      ogImageColor: 'dark',
       umami: {
         enable: true,
         src: 'https://cloud.umami.is/script.js',
@@ -26,7 +25,7 @@ export default defineAppConfig({
       border: true,
     },
     header: {
-      title: 'shadcn-docs',
+      title: 'Documentation',
       showTitle: true,
       logo: {
         light: '/logo.svg',
@@ -34,7 +33,7 @@ export default defineAppConfig({
       },
       darkModeToggle: true,
       nav: [{
-        title: 'Docs',
+        title: 'Test',
         links: [{
           title: 'Getting Started',
           to: '/getting-started',
