@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@vueuse/nuxt',
     '@nuxt/content',
+    '@nuxthq/studio',
     '@nuxt/image',
     '@nuxt/icon',
     '@nuxtjs/color-mode',
