@@ -6,7 +6,7 @@ navigation: false
 ---
 actions:
   - name: Get Started
-    to: /pdf-toolkit-self-hosted/
+    to: /pdf-toolkit-self-hosted/introduction/
   - name: GitHub Code Samples
     variant: outline
     to: https://github.com/datalogics/pdf-rest-api-samples
@@ -23,7 +23,7 @@ Learn how to setup your self-hosted instance and use pdfRest.
 
 ::card
 ---
-to: /pdf-toolkit-self-hosted/
+to: /pdf-toolkit-self-hosted/introduction/
 ---
 #title
 Setup Instructions
@@ -36,7 +36,7 @@ Learn how to setup your Self-Hosted instance
 
 ::card
 ---
-to: /pdf-toolkit-self-hosted/
+to: /pdf-toolkit-self-hosted/introduction/
 ---
 #title
 Setup Instructions
@@ -49,7 +49,7 @@ Learn how to setup your Self-Hosted instance
 
 ::card
 ---
-to: /pdf-toolkit-self-hosted/
+to: /pdf-toolkit-self-hosted/introduction/
 ---
 #title
 Setup Instructions
