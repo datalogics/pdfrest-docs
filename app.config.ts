@@ -149,16 +149,16 @@ export default defineAppConfig({
       },
     },
     footer: {
-      credits: 'Made with ❤️ by [**Tony Zhang**](https://github.com/ZTL-UwU/)',
+      credits: `© ${new Date().getFullYear()} Datalogics, Inc. All rights reserved.`,
       links: [
         {
-          title: 'shadcn-vue',
-          to: 'https://www.shadcn-vue.com/',
+          title: 'pdfRest',
+          to: 'https://pdfrest.com/',
           target: '_blank',
         },
         {
           icon: 'lucide:github',
-          to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+          to: 'https://github.com/datalogics/pdf-rest-api-samples',
           target: '_blank',
         },
       ],
