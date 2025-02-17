@@ -5,21 +5,16 @@ export default defineAppConfig({
       description: 'pdfRest Documentation',
       ogImageComponent: 'ShadcnDocs',
       ogImageColor: 'dark',
-      umami: {
-        enable: true,
-        src: 'https://cloud.umami.is/script.js',
-        dataWebsiteId: 'd793fbf3-461e-4e26-9ec9-4e9141df96ee',
-      },
     },
     theme: {
-      color: 'zinc',
-      radius: 0.5,
+      color: 'violet',
+      radius: 0.75,
     },
     banner: {
       enable: false,
       showClose: true,
-      content: 'Welcome to **shadcn-docs-nuxt**',
-      to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+      content: 'Welcome to **pdfRest Documentation**',
+      to: 'https://github.com/datalogics/pdf-rest-api-samples',
       target: '_blank',
       border: true,
     },
@@ -32,25 +27,6 @@ export default defineAppConfig({
       },
       darkModeToggle: true,
       nav: [{
-        title: 'Test',
-        links: [{
-          title: 'Getting Started',
-          to: '/getting-started',
-          description: 'Start building your document with shadcn-docs-nuxt',
-          icon: 'lucide:rocket',
-        }, {
-          title: 'Components',
-          to: '/components/prose',
-          description: 'Explore available UI components and usage examples.',
-          icon: 'lucide:box',
-        }, {
-          title: 'API',
-          to: '/api/configuration/shadcn-docs',
-          description: 'Discover the configurations and exposed APIs.',
-          target: '_self',
-          icon: 'lucide:code',
-        }],
-      }, {
         title: 'Credits',
         links: [{
           title: 'shadcn-ui',
@@ -73,15 +49,10 @@ export default defineAppConfig({
           description: 'Content made easy for Vue Developers',
           target: '_blank',
         }],
-      }, {
-        title: 'Use This Template',
-        to: '/getting-started/installation',
-        target: '_self',
-        showLinkIcon: true,
       }],
       links: [{
         icon: 'lucide:github',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+        to: 'https://github.com/datalogics/pdf-rest-api-samples',
         target: '_blank',
       }],
     },
