@@ -40,10 +40,9 @@
     <NuxtLink
       v-else
       :to="link._path"
-      class="flex items-center gap-2 rounded-md p-2 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+      class="flex items-center gap-3 rounded-md p-1 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
       :class="[
         isActive && 'bg-muted !text-primary',
-        link.navTruncate !== false && 'h-8',
       ]"
     >
       <LayoutAsideTreeItemButton :link />
