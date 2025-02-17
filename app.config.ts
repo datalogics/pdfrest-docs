@@ -12,7 +12,6 @@ export default defineAppConfig({
       },
     },
     theme: {
-      customizable: true,
       color: 'zinc',
       radius: 0.5,
     },
@@ -96,13 +95,6 @@ export default defineAppConfig({
       breadCrumb: true,
       showTitle: true,
       codeCopyToast: true,
-      editLink: {
-        enable: true,
-        pattern: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt/edit/main/content/:path',
-        text: 'Edit this page',
-        icon: 'lucide:square-pen',
-        placement: ['docsFooter', 'toc'],
-      },
       backToTop: true,
       codeIcon: {
         'package.json': 'vscode-icons:file-type-node',
@@ -168,28 +160,19 @@ export default defineAppConfig({
       enableInMobile: false,
       enableInHomepage: false,
       title: 'On This Page',
-      links: [{
-        title: 'Star on GitHub',
-        icon: 'lucide:star',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
-        target: '_blank',
-        showLinkIcon: true,
-      }, {
-        title: 'Create Issues',
-        icon: 'lucide:circle-dot',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues',
-        target: '_blank',
-        showLinkIcon: true,
-      }],
-      carbonAds: {
-        enable: true,
-        disableInDev: true,
-        fallback: false,
-        fallbackMessage: 'Please support us by disabling your ad blocker.',
-        code: 'CW7ITKJN',
-        placement: 'shadcn-docs-nuxtvercelapp',
-        format: 'cover',
-      },
+      // links: [{
+      //   title: 'Star on GitHub',
+      //   icon: 'lucide:star',
+      //   to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+      //   target: '_blank',
+      //   showLinkIcon: true,
+      // }, {
+      //   title: 'Create Issues',
+      //   icon: 'lucide:circle-dot',
+      //   to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues',
+      //   target: '_blank',
+      //   showLinkIcon: true,
+      // }],
     },
     search: {
       enable: true,
