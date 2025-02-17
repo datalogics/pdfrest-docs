@@ -15,7 +15,7 @@
         <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'input'" />
         <div class="flex">
           <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'button'" />
-          <ThemePopover v-if="config.theme.customizable" />
+          <!-- <ThemePopover v-if="config.theme.customizable" /> -->
           <DarkModeToggle v-if="config.header.darkModeToggle" />
           <NuxtLink
             v-for="(link, i) in config.header.links"
