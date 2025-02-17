@@ -1,30 +1,59 @@
 ---
-title: Home
-description: Home
-icon: lucide:info
+navigation: false
 ---
 
-## Introduction
+::hero
+---
+actions:
+  - name: Get Started
+    to: /pdf-toolkit-self-hosted/
+  - name: GitHub Code Samples
+    variant: outline
+    to: https://github.com/datalogics/pdf-rest-api-samples
+    leftIcon: lucide:github
+---
+#title
+pdfRest Documentation
 
-pdfRest :br Documentation
+#description
+Learn how to setup your self-hosted instance and use pdfRest.
+::
 
-## Features
+## pdfRest PDF Toolkit Self-Hosted API
 
-- Free and [open source](https://github.com/ZTL-UwU/shadcn-docs-nuxt).
-- Fully [customizable](/api/configuration).
-- Rich [components](/components/prose) to work with.
-- Mobile support.
-- Indexed searching powered by Nuxt Content.
-- Partial component compatibility with `Docus`, `Nuxt UI Pro Docs`, `undocs`.
+::card
+---
+to: /pdf-toolkit-self-hosted/
+---
+#title
+Setup Instructions
 
-## Credits
+#description
+Learn how to setup your Self-Hosted instance
+::
 
-- [Nuxt Content](https://content.nuxt.com/): Content made easy for Vue Developers.
-- [shadcn-ui](https://ui.shadcn.com/): For the beautiful component & docs design.
-- [shadcn-vue](https://www.shadcn-vue.com/): For the vue port of shadcn-ui & some docs component source.
-- [Docus](https://docus.dev/): For inspiration & some docs component source.
-- [Nuxt UI Pro Docs](https://docs-template.nuxt.dev/): For inspiration.
+## pdfRest PDF Forms Pro Self-Hosted API
 
-## License
+::card
+---
+to: /pdf-toolkit-self-hosted/
+---
+#title
+Setup Instructions
 
-[MIT](https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/LICENSE)
+#description
+Learn how to setup your Self-Hosted instance
+::
+
+## pdfRest PDF to Office Pro Self-Hosted API
+
+::card
+---
+to: /pdf-toolkit-self-hosted/
+---
+#title
+Setup Instructions
+
+#description
+Learn how to setup your Self-Hosted instance
+::
