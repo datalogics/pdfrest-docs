@@ -36,7 +36,7 @@ Learn how to setup your Self-Hosted instance
 
 ::card
 ---
-to: /pdf-toolkit-self-hosted/introduction/
+to: /pdf-forms-pro-self-hosted/introduction/
 ---
 #title
 Setup Instructions
