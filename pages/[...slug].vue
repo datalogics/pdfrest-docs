@@ -24,6 +24,7 @@
         :description="page?.description"
         :badges="page?.badges"
         :authors="page?.authors"
+        :image="page?.image"
       />
 
       <Alert

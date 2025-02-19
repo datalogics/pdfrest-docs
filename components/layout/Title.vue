@@ -1,11 +1,18 @@
 <template>
   <div class="mb-6">
-    <ProseH1>
-      {{ title }}
-    </ProseH1>
-    <p class="pt-1 text-lg text-muted-foreground">
-      {{ description }}
-    </p>
+    <div class="flex flex-col lg:flex-row gap-3">
+      <div v-if="image" class="w-20">
+        <NuxtImg :src="image"/>
+      </div>
+      <div>
+        <ProseH1>
+          {{ title }}
+        </ProseH1>
+        <p class="pt-1 text-lg text-muted-foreground">
+          {{ description }}
+        </p>
+      </div>
+    </div>
 
     <div v-if="badges" class="flex gap-2 pt-4">
       <NuxtLink
@@ -43,6 +50,7 @@
 defineProps<{
   title?: string;
   description?: string;
+  image?: string;
   badges?: {
     value?: string;
     icon?: string;
