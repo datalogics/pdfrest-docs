@@ -65,6 +65,14 @@ export default defineNuxtConfig({
       },
     },
   },
+  experimental: {
+    defaults: {
+      // https://github.com/nuxt/nuxt/pull/23724
+      nuxtLink: {
+        trailingSlash: 'append',
+      },
+    },
+  },
   icon: {
     clientBundle: {
       scan: true,
