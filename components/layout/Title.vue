@@ -2,7 +2,7 @@
   <div class="mb-6">
     <div class="flex flex-col lg:flex-row gap-3">
       <div v-if="image" class="w-20">
-        <NuxtImg :src="image"/>
+        <NuxtImg :src="image" class="w-full"/>
       </div>
       <div>
         <ProseH1>
