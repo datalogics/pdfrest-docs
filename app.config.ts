@@ -7,7 +7,7 @@ export default defineAppConfig({
       ogImageColor: 'dark',
     },
     theme: {
-      color: 'violet',
+      color: 'pdfrest',
       radius: 0.75,
     },
     banner: {
