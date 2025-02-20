@@ -1,8 +1,8 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'pdfrest-docs',
-      description: 'pdfRest Documentation',
+      name: 'pdfRest Documentation',
+      description: 'Learn how to setup and use pdfRest.',
       ogImageComponent: 'ShadcnDocs',
       ogImageColor: 'dark',
     },
