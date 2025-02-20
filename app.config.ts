@@ -3,6 +3,7 @@ export default defineAppConfig({
     site: {
       name: 'pdfRest Documentation',
       description: 'Learn how to setup and use pdfRest.',
+      ogImage: '/hero.png',
       ogImageComponent: 'ShadcnDocs',
       ogImageColor: 'dark',
     },
