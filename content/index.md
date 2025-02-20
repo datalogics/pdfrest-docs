@@ -1,5 +1,7 @@
 ---
 navigation: false
+title: Home
+description: Learn how to setup and use pdfRest.
 ---
 
 ::hero
