@@ -51,7 +51,7 @@ Learn how to setup your Self-Hosted instance
 
 ::card
 ---
-to: /pdf-toolkit-self-hosted/introduction/
+to: /pdf-to-office-pro-self-hosted/introduction/
 ---
 #title
 Setup Instructions
