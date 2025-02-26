@@ -1,40 +1,9 @@
 {
-  "name": "shadcn-docs-nuxt",
+  "name": "pdfrest-docs",
+  "private": true,
   "type": "module",
-  "version": "0.8.14",
-  "description": "Effortless and beautiful docs template built with Nuxt Content & shadcn-vue.",
-  "author": "Tony Zhang <zhangtianli2006@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://shadcn-docs-nuxt.vercel.app/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZTL-UwU/shadcn-docs-nuxt.git"
-  },
-  "bugs": "https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues",
-  "keywords": [
-    "markdown",
-    "docs",
-    "vue",
-    "nuxt",
-    "documentation-tool",
-    "nuxt-content",
-    "shadcn-vue"
-  ],
-  "main": "./nuxt.config.ts",
-  "files": [
-    "app",
-    "app.vue",
-    "assets",
-    "components",
-    "components.json",
-    "composables",
-    "layouts",
-    "lib",
-    "nuxt.config.ts",
-    "pages",
-    "plugins",
-    "types"
-  ],
+  "description": "Documentation for pdfRest services",
+  "homepage": "https://docs.pdfrest.com/",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
