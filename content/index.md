@@ -14,7 +14,6 @@ actions:
     to: https://github.com/datalogics/pdf-rest-api-samples
     leftIcon: lucide:github
 ---
-
 #title
 pdfRest API Documentation
 
@@ -90,10 +89,9 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   :::
 ::
 
-## Container API (Enterprise Docker solution)
+## Container API (Enterprise Docker)
 
 ::card-group
-
   :::card
   ---
   icon: lucide:message-circle-question
