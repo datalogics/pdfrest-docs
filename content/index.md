@@ -15,47 +15,47 @@ actions:
     leftIcon: lucide:github
 ---
 #title
-pdfRest Documentation
+pdfRest API Documentation
 
 #description
-Learn how to setup your self-hosted instance and use pdfRest.
+Learn about using the pdfRest PDF processing API. Whether you're self-hosting or subscribed to our Cloud API, all of the documentation you need is here!
 ::
 
-## pdfRest PDF Toolkit Self-Hosted API
+## pdfRest Cloud API
 
 ::card
 ---
 to: /pdf-toolkit-self-hosted/introduction/
 ---
 #title
-Setup Instructions
+Cloud-Hosted API
 
 #description
-Learn how to setup your Self-Hosted instance
+Discover how to use the Cloud API, our publicly available PDF document processing SaaS offering.
 ::
 
-## pdfRest PDF Forms Pro Self-Hosted API
+## pdfRest Self-Hosted API on AWS
 
 ::card
 ---
 to: /pdf-forms-pro-self-hosted/introduction/
 ---
 #title
-Setup Instructions
+pdfRest in your AWS VPC
 
 #description
-Learn how to setup your Self-Hosted instance
+Learn how to deploy pdfRest as an EC2 instance inside your private AWS VPC
 ::
 
-## pdfRest PDF to Office Pro Self-Hosted API
+## pdfRest Container API (Enterprise)
 
 ::card
 ---
 to: /pdf-to-office-pro-self-hosted/introduction/
 ---
 #title
-Setup Instructions
+A Docker container of the pdfRest API
 
 #description
-Learn how to setup your Self-Hosted instance
+Deploy the Container API in any Docker-compatible environment
 ::
