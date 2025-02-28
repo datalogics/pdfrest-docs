@@ -1,0 +1,11 @@
+# Dir page
+
+title: Self-Hosted on AWS
+icon: lucide:package-open
+navigation.redirect: /frameworks/vue
+#navBadges:
+#  - value: AWS
+#    type: yellow
+sidebar:
+  style: group
+collapse: false
