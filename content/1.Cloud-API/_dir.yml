@@ -1,0 +1,12 @@
+# Dir page
+
+title: Cloud API
+icon: lucide:cloud
+navigation.redirect: /cloud-api/getting-started
+#navBadges:
+#  - value: New
+#    type: lime
+sidebar:
+  style: group
+collapse: false
+toc: true

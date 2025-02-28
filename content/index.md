@@ -30,7 +30,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: vscode-icons:file-type-apib
   target: _blank
   title: Getting Started
-  to: https://nuxt.com/docs/api/components/client-only
+  to: /cloud-api/getting-started
   ---
   A guide on how to get started using the pdfRest Cloud API service.
   :::
@@ -50,7 +50,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: lucide:message-circle-question
   target: _blank
   title: Frequently Asked Questions
-  to: https://nuxt.com/docs/api/composables/use-app-config
+  to: /cloud-api/frequently-asked-questions
   ---
   A repository of frequently asked questions related to the Cloud API subscription entitlement, API keys, etc.
   :::
