@@ -24,6 +24,17 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
 ## pdfRest Cloud API
 
 ::card-group
+
+  :::card
+  ---
+  icon: vscode-icons:file-type-apib
+  target: _blank
+  title: Getting Started
+  to: https://nuxt.com/docs/api/components/client-only
+  ---
+  A guide on how to get started using the pdfRest Cloud API service.
+  :::
+
   :::card
   ---
   icon: vscode-icons:file-type-apib
