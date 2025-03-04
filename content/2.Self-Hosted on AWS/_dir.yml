@@ -2,7 +2,7 @@
 
 title: Self-Hosted on AWS
 icon: lucide:package-open
-navigation.redirect: /frameworks/vue
+navigation.redirect: /self-hosted-on-aws/deploy-on-aws/
 #navBadges:
 #  - value: AWS
 #    type: yellow
