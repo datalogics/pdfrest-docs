@@ -27,7 +27,7 @@ How to configure Self-Hosted API deployments from the AWS Marketplace.
 
 ### Start the Docker Container
 
-For this process, you will need to have already launched an instance by following the [AMI Deployment guide](pdfrest.com/documentation/self-hosted/ami-deploy/).
+For this process, you will need to have already launched an instance by following the [AMI Deployment guide](https://pdfrest.com/documentation/self-hosted/ami-deploy/).
 
 ::steps{level=4}
 
