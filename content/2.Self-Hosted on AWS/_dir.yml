@@ -1,7 +1,7 @@
 # Dir page
 
 title: Self-Hosted on AWS
-icon: lucide:package-open
+icon: vscode-icons:file-type-aws
 navigation.redirect: /self-hosted-on-aws/deploy-on-aws/
 #navBadges:
 #  - value: AWS

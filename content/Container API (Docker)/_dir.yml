@@ -1,0 +1,12 @@
+# Dir page
+
+title: Container API
+icon: vscode-icons:file-type-docker2
+
+navigation.redirect: /frameworks/vue
+navBadges:
+  - value: Enterprise
+    type: pink
+sidebar:
+  style: group
+collapse: false

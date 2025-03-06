@@ -1,7 +1,7 @@
 # Dir page
 
 title: Cloud API
-icon: lucide:cloud
+icon: vscode-icons:file-type-apib2
 navigation.redirect: /cloud-api/getting-started
 #navBadges:
 #  - value: New
