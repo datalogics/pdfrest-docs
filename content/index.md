@@ -83,7 +83,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: lucide:scissors
   target: _self
   title: Configure
-  to: /self-hosted-on-aws/configure-a-deployment/
+  to: /self-hosted-on-aws/configure-aws-deployment/
   ---
   Learn how to setup the pdfRest API inside your AWS VPC.
   :::
@@ -103,7 +103,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: lucide:message-circle-question
   target: _self
   title: Frequently Asked Questions
-  to: /self-hosted-on-aws/cloudformation-template-faq/
+  to: /self-hosted-on-aws/faq/
   ---
   Answers to questions that focus on deploying, setting up, configuring, or optimizing the Self-Hosted API.
   :::
