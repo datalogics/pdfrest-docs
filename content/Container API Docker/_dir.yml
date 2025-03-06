@@ -3,7 +3,7 @@
 title: Container API
 icon: vscode-icons:file-type-docker2
 
-navigation.redirect: /frameworks/vue
+navigation.redirect: /container-api-docker/getting-started/
 navBadges:
   - value: Enterprise
     type: pink
