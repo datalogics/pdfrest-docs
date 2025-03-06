@@ -7,8 +7,6 @@ description: Learn how to setup and use pdfRest.
 ::hero
 ---
 actions:
-  - name: Get Started
-    to: /pdf-toolkit-self-hosted/introduction/
   - name: GitHub Code Samples
     variant: outline
     to: https://github.com/datalogics/pdf-rest-api-samples
