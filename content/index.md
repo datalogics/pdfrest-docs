@@ -26,9 +26,9 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   :::card
   ---
   icon: vscode-icons:file-type-apib
-  target: _blank
+  target: _self
   title: Getting Started
-  to: /cloud-api/getting-started
+  to: /cloud-api/getting-started/
   ---
   A guide on how to get started using the pdfRest Cloud API service.
   :::
@@ -38,7 +38,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: vscode-icons:file-type-apib
   target: _blank
   title: API Reference Guide
-  to: https://nuxt.com/docs/api/components/client-only
+  to: https://docs.pdfrest.com/cloud-api-reference/
   ---
   API endpoint documentation specific to Cloud API.
   :::
@@ -46,9 +46,9 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   :::card
   ---
   icon: lucide:message-circle-question
-  target: _blank
+  target: _self
   title: Frequently Asked Questions
-  to: /cloud-api/frequently-asked-questions
+  to: /cloud-api/frequently-asked-questions/
   ---
   A repository of frequently asked questions related to the Cloud API subscription entitlement, API keys, etc.
   :::
@@ -58,7 +58,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: lucide:github
   target: _blank
   title: Github Code Samples
-  to: https://nuxt.com/docs/api/commands/add
+  to: https://github.com/datalogics/pdf-rest-api-samples/
   ---
   List of Nuxt CLI commands to init, analyze, build, and preview your application.
   :::
@@ -67,32 +67,43 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
 ## pdfRest Self-Hosted API on AWS
 
 ::card-group
-  :::card
-  ---
-  icon: vscode-icons:file-type-apib
-  target: _blank
-  title: API Reference Guide
-  to: https://nuxt.com/docs/api/components/client-only
-  ---
-  API endpoint documentation specific to Self-Hosted/Container API products.
-  :::
 
   :::card
   ---
   icon: lucide:scissors
-  target: _blank
-  title: Deploy and Configure
-  to: https://nuxt.com/docs/api/utils/dollarfetch
+  target: _self
+  title: Deploy
+  to: /self-hosted-on-aws/deploy-on-aws/
   ---
   Learn how to setup the pdfRest API inside your AWS VPC.
   :::
 
   :::card
   ---
-  icon: lucide:message-circle-question
+  icon: lucide:scissors
+  target: _self
+  title: Configure
+  to: /self-hosted-on-aws/configure-a-deployment/
+  ---
+  Learn how to setup the pdfRest API inside your AWS VPC.
+  :::
+
+  :::card
+  ---
+  icon: vscode-icons:file-type-apib
   target: _blank
+  title: API Reference Guide
+  to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
+  ---
+  API endpoint documentation specific to Self-Hosted and Container API products.
+  :::
+
+  :::card
+  ---
+  icon: lucide:message-circle-question
+  target: _self
   title: Frequently Asked Questions
-  to: https://nuxt.com/docs/api/commands/add
+  to: /self-hosted-on-aws/cloudformation-template-faq/
   ---
   Answers to questions that focus on deploying, setting up, configuring, or optimizing the Self-Hosted API.
   :::
@@ -106,7 +117,8 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: lucide:message-circle-question
   target: _blank
   title: Contact Sales
-  to: https://nuxt.com/docs/api/composables/use-app-config
+  to: mailto:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry
+
   ---
   Container API is available through the Datalogics Enterprise Sales Team.
   :::
@@ -116,17 +128,17 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   icon: vscode-icons:file-type-apib
   target: _blank
   title: API Reference Guide
-  to: https://nuxt.com/docs/api/components/client-only
+  to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
   ---
-  API endpoint documentation specific to Self-Hosted/Container API products.
+  API endpoint documentation specific to Container and Self-Hosted API products.
   :::
 
   :::card
   ---
   icon: lucide:scissors
-  target: _blank
+  target: _self
   title: Configure the Container
-  to: https://nuxt.com/docs/api/utils/dollarfetch
+  to: /container-api-docker/deploy-and-configure/
   ---
   How to configure and optimize the Docker container.
   :::
@@ -134,7 +146,7 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   :::card
   ---
   icon: lucide:message-circle-question
-  target: _blank
+  target: _self
   title: Frequently Asked Questions
   to: https://nuxt.com/docs/api/commands/add
   ---
