@@ -19,149 +19,28 @@ pdfRest API Documentation
 Learn about using the pdfRest PDF processing API. Whether you're self-hosting or subscribed to our Cloud API, all of the documentation you need is here!
 ::
 
-## Cloud API
 
-::card-group
+## Learn About the Product Lines
 
-  :::card
-  ---
-  icon: vscode-icons:file-type-apib
-  target: _self
-  title: Getting Started
-  to: /cloud-api/getting-started/
-  ---
-  A guide on how to get started using the pdfRest Cloud API service.
-  :::
+This is information about the product lines.
 
-  :::card
-  ---
-  icon: vscode-icons:file-type-apib
-  target: _blank
-  title: API Reference Guide
-  to: https://docs.pdfrest.com/cloud-api-reference/
-  ---
-  API endpoint documentation specific to Cloud API.
-  :::
+### More About Cloud API
 
-  :::card
-  ---
-  icon: lucide:message-circle-question
-  target: _self
-  title: Frequently Asked Questions
-  to: /cloud-api/frequently-asked-questions/
-  ---
-  A repository of frequently asked questions related to the Cloud API subscription entitlement, API keys, etc.
-  :::
+Morning info about Cloud API
 
-  :::card
-  ---
-  icon: lucide:github
-  target: _blank
-  title: Github Code Samples
-  to: https://github.com/datalogics/pdf-rest-api-samples/
-  ---
-  List of Nuxt CLI commands to init, analyze, build, and preview your application.
-  :::
-::
+### More About Self-Hosted API on AWS
 
-## Self-Hosted API on AWS
+Here's all the info you'll ever need on Self-Hosted in AWS!
 
-::card-group
+- PDF Toolkit Self-Hosted API
+- PDF Forms Pro Self-Hosted API
+- PDF to Office Pro Self-Hosted API
 
-  :::card
-  ---
-  icon: lucide:scissors
-  target: _self
-  title: 
-  to: /self-hosted-on-aws/deploy-on-aws/
-  ---
-  Learn how to setup the pdfRest API inside your AWS VPC.
-  :::
-  :::card
-  ---
-  icon: lucide:scissors
-  target: _self
-  title: Deploy
-  to: /self-hosted-on-aws/deploy-on-aws/
-  ---
-  Learn how to setup the pdfRest API inside your AWS VPC.
-  :::
 
-  :::card
-  ---
-  icon: lucide:scissors
-  target: _self
-  title: Configure
-  to: /self-hosted-on-aws/configure-aws-deployment/
-  ---
-  Learn how to setup the pdfRest API inside your AWS VPC.
-  :::
+### More About Container API
 
-  :::card
-  ---
-  icon: vscode-icons:file-type-apib
-  target: _blank
-  title: API Reference Guide
-  to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
-  ---
-  API endpoint documentation specific to Self-Hosted and Container API products.
-  :::
+It's the bees knees.
 
-  :::card
-  ---
-  icon: lucide:message-circle-question
-  target: _self
-  title: Frequently Asked Questions
-  to: /self-hosted-on-aws/faq/
-  ---
-  Answers to questions that focus on deploying, setting up, configuring, or optimizing the Self-Hosted API.
-  :::
-::
-
-## Container API (Enterprise Docker)
-
-::card-group
-  :::card
-  ---
-  icon: lucide:message-circle-question
-  target: _blank
-  title: Contact Sales
-  to: mailto:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry
-
-  ---
-  Container API is available through the Datalogics Enterprise Sales Team.
-  :::
-
-  :::card
-  ---
-  icon: vscode-icons:file-type-apib
-  target: _blank
-  title: API Reference Guide
-  to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
-  ---
-  API endpoint documentation specific to Container and Self-Hosted API products.
-  :::
-
-  :::card
-  ---
-  icon: lucide:scissors
-  target: _self
-  title: Configure the Container
-  to: /container-api-docker/deploy-and-configure/
-  ---
-  How to configure and optimize the Docker container.
-  :::
-
-  :::card
-  ---
-  icon: lucide:message-circle-question
-  target: _self
-  title: Frequently Asked Questions
-  to: https://nuxt.com/docs/api/commands/add
-  ---
-  Answers to questions that focus on configuring and optimizing the Container API solution.
-  :::
-::
 
 ## **Acknowledgments**
 
