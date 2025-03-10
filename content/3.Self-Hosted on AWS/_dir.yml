@@ -2,10 +2,10 @@
 
 title: Self-Hosted on AWS
 icon: vscode-icons:file-type-aws
-navigation.redirect: /self-hosted-on-aws/deploy-on-aws/
+navigation.redirect: /self-hosted-on-aws/getting-started-with-self-hosted-on-aws/
 #navBadges:
 #  - value: AWS
 #    type: yellow
 sidebar:
-  style: group
+  style: tree
 collapse: false

@@ -1,5 +1,5 @@
 ---
-navigation: true
+navigation: false
 navigation.redirect: /cloud-api/getting-started
 title: Cloud API
 icon: vscode-icons:file-type-apib2
