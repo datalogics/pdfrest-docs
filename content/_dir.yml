@@ -7,6 +7,6 @@ navigation.redirect: /index/
 #  - value: New
 #    type: lime
 sidebar:
-  style: group
+  style: tree
 collapse: false
 toc: true
