@@ -2,7 +2,7 @@
 
 title: Overview of pdfRest
 icon: vscode-icons:file-type-pdf2
-navigation.redirect: /index/
+navigation.redirect: /overview-of-pdfrest/
 #navBadges:
 #  - value: New
 #    type: lime
