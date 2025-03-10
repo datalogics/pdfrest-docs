@@ -19,7 +19,7 @@ pdfRest API Documentation
 Learn about using the pdfRest PDF processing API. Whether you're self-hosting or subscribed to our Cloud API, all of the documentation you need is here!
 ::
 
-## pdfRest Cloud API
+## Cloud API
 
 ::card-group
 
@@ -64,10 +64,19 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
   :::
 ::
 
-## pdfRest Self-Hosted API on AWS
+## Self-Hosted API on AWS
 
 ::card-group
 
+  :::card
+  ---
+  icon: lucide:scissors
+  target: _self
+  title: 
+  to: /self-hosted-on-aws/deploy-on-aws/
+  ---
+  Learn how to setup the pdfRest API inside your AWS VPC.
+  :::
   :::card
   ---
   icon: lucide:scissors
