@@ -1,12 +1,18 @@
 <template>
   <div
     class="px-4 py-6 md:px-8"
-    :class="[config.main.padded && 'container']"
+    :class="[config.main.padded && 'container', config.toc.enableInHomepage && 'lg:grid lg:grid-cols-[1fr_220px] lg:gap-14 lg:py-8']"
   >
     <ContentRenderer
       :key="page._id"
       :value="page"
     />
+
+    <div v-if="config.toc.enableInHomepage" class="hidden text-sm lg:block">
+      <div class="sticky top-[90px] h-[calc(100vh-3.5rem)] overflow-hidden">
+        <LayoutToc :is-small="false" />
+      </div>
+    </div>
   </div>
 </template>
 
