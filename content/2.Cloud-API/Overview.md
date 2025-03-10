@@ -1,13 +1,5 @@
 ::hero-alt
----
-actions:
-  - name: Cloud API
-    to: /cloud-api/getting-started/
-  - name: Self-Hosted API on AWS
-    to: /self-hosted-api-on-aws/getting-started/
-  - name: Container API
-    to: /container-api/getting-started/
----
+
 #title
 Jump Right In
 
