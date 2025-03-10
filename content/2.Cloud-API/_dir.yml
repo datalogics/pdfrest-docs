@@ -1,12 +1,1 @@
 # Dir page
-
-title: Cloud API
-icon: vscode-icons:file-type-apib2
-navigation.redirect: /cloud-api/getting-started
-#navBadges:
-#  - value: New
-#    type: lime
-sidebar:
-  style: group
-collapse: false
-toc: true
