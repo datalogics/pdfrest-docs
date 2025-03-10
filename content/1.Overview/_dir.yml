@@ -1,0 +1,12 @@
+# Dir page
+
+title: Overview of pdfRest
+icon: vscode-icons:file-type-pdf2
+navigation.redirect: /overview/overview-of-pdfrest/
+#navBadges:
+#  - value: New
+#    type: lime
+sidebar:
+  style: group
+collapse: false
+toc: true
