@@ -20,22 +20,48 @@ Learn about using the pdfRest PDF processing API. Whether you're self-hosting or
 ::
 
 
-## Learn About the Product Lines
+## Where is pdfRest Available?
 
-This is information about the product lines.
+Read up on the different ways you can access and deploy the pdfRest API.
 
-### More About Cloud API
+### Cloud API
 
-Morning info about Cloud API
+The [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/) is our publicly available, full-featured, easy-to-implement, and a trusted enterprise-grade solution with affordable subscription plans for every project.
 
-### More About Self-Hosted API on AWS
+![alt]()
 
-Here's all the info you'll ever need on Self-Hosted in AWS!
+::card
+---
+img: /public/product-icons/toolkit-logo.png
+---
+#title
+Cloud API
 
-- PDF Toolkit Self-Hosted API
-- PDF Forms Pro Self-Hosted API
-- PDF to Office Pro Self-Hosted API
+#content
+The [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/) is our publicly available, full-featured, easy-to-implement, and a trusted enterprise-grade solution with affordable subscription plans for every project.
+::
 
+### Self-Hosted API on AWS
+
+Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), put you in full control of your PDF processing solutions, supporting the most rigorous data protection and compliance requirements. Click the links below to view the products in the AWS Marketplace.
+
+#### AWS Marketplace Products
+
+##### [PDF Toolkit Self-Hosted API](https://aws.amazon.com/marketplace/pp/prodview-lvleu34bj4cn6)
+
+Check every box on your list with a single, all-access API Key. Over 25 powerful API Tools to convert, optimize, modify, inspect, secure, and simplify your digital documents and processing workflows.
+
+Includes all the standard PDF processing tools you'd expect, such as Convert to PDF, Compress PDF, Merge PDFs, and Split PDF, as well as professional-grade tools like Flatten Transparencies, Convert to PDF/A, and Extract Text to prepare your documents for specific use cases, like print, archival, and machine learning.
+
+
+##### [PDF Forms Pro Self-Hosted API](https://aws.amazon.com/marketplace/pp/prodview-2xxmqtam6s54s)
+
+PDF Forms Pro is a one-stop-shop for automation and batch processing of PDF form documents with all the API Tools you'll need. Avoid manual data entry and save time by directly filling forms with external data. Extract form field values to collect data from multiple documents and aggregate into a single repository. Lock form field values to prevent further modification. Flatten PDF forms to make them universally compatible with all PDF viewing and processing applications. pdfRest offers the only REST API service for processing all PDF form types including Static XFA, Dynamic XFA, and Acroforms.
+
+
+##### [PDF to Office Pro Self-Hosted API](https://aws.amazon.com/marketplace/pp/prodview-gilhkmjyjxyrs)
+
+PDF to Office Pro is your one-stop shop for transforming static PDFs into fully editable Microsoft Office formats. This toolkit handles everything you need, seamlessly converting your PDFs into Word documents, Excel spreadsheets, and PowerPoint presentations. PDF to Office Pro integrates effortlessly with any development project. Its intuitive API allows you to seamlessly add powerful PDF conversion capabilities to your applications, streamlining workflows and empowering users to unlock the true potential of their documents.
 
 ### More About Container API
 
