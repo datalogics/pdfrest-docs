@@ -39,7 +39,7 @@ Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.ama
 
 ##### [PDF Toolkit Self-Hosted API](https://aws.amazon.com/marketplace/pp/prodview-lvleu34bj4cn6)
 
-Check every box on your list with a single, all-access API Key. Over 25 powerful API Tools to convert, optimize, modify, inspect, secure, and simplify your digital documents and processing workflows.
+Over 25 powerful API Tools to convert, optimize, modify, inspect, secure, and simplify your digital documents and processing workflows.
 
 Includes all the standard PDF processing tools you'd expect, such as Convert to PDF, Compress PDF, Merge PDFs, and Split PDF, as well as professional-grade tools like Flatten Transparencies, Convert to PDF/A, and Extract Text to prepare your documents for specific use cases, like print, archival, and machine learning.
 
@@ -51,11 +51,11 @@ PDF Forms Pro is a one-stop-shop for automation and batch processing of PDF form
 
 ##### [PDF to Office Pro Self-Hosted API](https://aws.amazon.com/marketplace/pp/prodview-gilhkmjyjxyrs)
 
-PDF to Office Pro is your one-stop shop for transforming static PDFs into fully editable Microsoft Office formats. This toolkit handles everything you need, seamlessly converting your PDFs into Word documents, Excel spreadsheets, and PowerPoint presentations. PDF to Office Pro integrates effortlessly with any development project. Its intuitive API allows you to seamlessly add powerful PDF conversion capabilities to your applications, streamlining workflows and empowering users to unlock the true potential of their documents.
+PDF to Office Pro has all the API tools for transforming static PDFs into fully editable Microsoft Office formats. This toolkit handles everything you need, seamlessly converting your PDFs into Word documents, Excel spreadsheets, and PowerPoint presentations. PDF to Office Pro integrates effortlessly with any development project. Its intuitive API allows you to seamlessly add powerful PDF conversion capabilities to your applications, streamlining workflows and empowering users to unlock the true potential of their documents.
 
 ::
 
-### More About Container API
+### Container API with Docker
 
 Deploy and manage powerful PDF solutions on-premises. This self-hosted container API provides complete control over your backend, storage, and security, Deployable anywhere that supports Docker, such as Kubernetes.
 
