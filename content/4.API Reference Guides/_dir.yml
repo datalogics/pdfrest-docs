@@ -1,0 +1,11 @@
+# Dir page
+
+title: API Reference Guides
+icon: vscode-icons:file-type-source
+navigation.redirect: /api-reference-guides/directory/
+#navBadges:
+#  - value: AWS
+#    type: yellow
+sidebar:
+  style: tree
+collapse: false
