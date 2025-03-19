@@ -78,6 +78,12 @@ export default defineNuxtConfig({
       scan: true,
       sizeLimitKb: 512,
     },
+    customCollections: [
+      {
+        prefix: 'pdfrest',
+        dir: './public/self-hosted-product-icons'
+      },
+    ],
   },
   typescript: {
     tsConfig: {
