@@ -1,7 +1,7 @@
 ## General API
 
-::accordion{default-value="first-item" collapsible}
-  ::accordion-item{value="first-item"}
+::accordion{collapsible}
+  ::accordion-item
   #title
   How are API calls measured?
 
@@ -62,7 +62,7 @@
 
 ## Security and Compliance
 
-::accordion{default-value="first-item" collapsible}
+::accordion{collapsible}
 
   ::accordion-item
   #title
