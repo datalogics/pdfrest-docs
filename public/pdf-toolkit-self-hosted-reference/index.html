@@ -60,6 +60,8 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Query PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-info'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-info</a><br/></div>
 			<div class='menu-row'>
+			<span class='menu-cat'><b>Extract Images</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/extracted-images'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/extracted-images</a><br/></div>
+			<div class='menu-row'>
 			<span class='menu-cat'><b>Extract Text</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/extracted-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/extracted-text</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>OCR PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-ocr-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-ocr-text</a><br/></div>
@@ -82,11 +84,13 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Split PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/split-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/split-pdf</a><br/></div>
 			<div class='menu-row'>
-			<span class='menu-cat'><b>Add to PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-image'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-image</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-attachment'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-attachment</a><br/></div>
+			<span class='menu-cat'><b>Add to PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-text</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-image'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-image</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-attachment'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-attachment</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>PDF to Images</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/bmp'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/bmp</a><br/>&nbsp;&nbsp;&#8226; <a href='#/jpg'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/jpg</a><br/>&nbsp;&nbsp;&#8226; <a href='#/png'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/png</a><br/>&nbsp;&nbsp;&#8226; <a href='#/gif'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/gif</a><br/>&nbsp;&nbsp;&#8226; <a href='#/tif'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/tif</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Convert PDF Colors</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-converted-colors'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-converted-colors</a><br/></div>
+			<div class='menu-row'>
+			<span class='menu-cat'><b>Rasterize PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/rasterized-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/rasterized-pdf</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Linearize PDF (Fast Web View)</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/linearized-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/linearized-pdf</a><br/></div>
 			<div class='menu-row'>
@@ -98,7 +102,7 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Upload Files</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/upload'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/upload</a><br/></div>
 			<div class='menu-row'>
-			<span class='menu-cat'><b>Zip Files</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/zip'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/zip</a><br/></div>
+			<span class='menu-cat'><b>Zip Files</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/zip'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/zip</a><br/>&nbsp;&nbsp;&#8226; <a href='#/unzip'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/unzip</a><br/></div>
 			</div>
 			</td>
 			<td valign='top'>
@@ -106,7 +110,7 @@
 				<span class='summary'>REST APIs supporting PDF document processing capabilities through GET and POST HTTP requests</span><br/><hr/><br/>
 				<a name='overview'></a><span class='header'>Getting Started</span><br/>
 				Welcome to the <a href='https://aws.amazon.com/marketplace/pp/prodview-lvleu34bj4cn6' target='_blank'>PDF Toolkit Self-Hosted API</a> Reference Guide!  Below you will find all of the information you will need to use any of the pdfRest API Tools.  This guide is organized by API endpoints, which express the output file types that can be generated from input files supplied with requests. For example, to convert a JPG file to a PDF, you would send the JPG file to the  /pdf endpoint.<br/><br/> Note that the examples throughout are presented using cURL, but the APIs support any standard method for sending GET and POST HTTP requests.<br/><br/> <span class='summary'>Additional Resources</span><br/> <ul>
-    <li><a href='https://pdfrest.com/pdf-toolkit-self-hosted-instructions/'>Setup Instructions for AWS Self-Hosted Backend</a> - learn how to launch and configure an EC2 and create a scalable stack</li>
+    <li><a href='https://pdfrest.com/pdf-toolkit-self-hosted-instructions'>Setup Instructions for AWS Self-Hosted Backend</a> - learn how to launch and configure an EC2 and create a scalable stack</li>
     <li><a href='https://pdfrest.com/apilab/' target='_blank'>API Lab</a> - an intuitive interface to learn the tools and parameters, build code automatically, send API calls directly from the website, and download output files</li>
     <li><a href='https://github.com/datalogics/pdf-rest-api-samples' target='_blank'>GitHub Repository</a> - functional code examples available for several popular languages</li>
         <ul>
@@ -117,7 +121,7 @@
             <li><a href='https://github.com/datalogics/pdf-rest-api-samples/tree/main/DotNET' target='_blank'>.NET</a></li>
             <li><a href='https://github.com/datalogics/pdf-rest-api-samples/tree/main/Java' target='_blank'>Java</a></li>
         </ul>
-    <li><a href='https://www.postman.com/pdfrest/' target='_blank'>Postman Collection</a> - preconfigured API calls ready to send using the Postman API Platform</li>
+    <li><a href='https://www.postman.com/pdfrest' target='_blank'>Postman Collection</a> - preconfigured API calls ready to send using the Postman API Platform</li>
 </ul>  
 <br/><br/><hr/><br/>
 				<a name='api-endpoints'></a><span class='header'>API Endpoints</span><br/>
@@ -141,7 +145,7 @@
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
 					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
 					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
-					<tr class='info'><td>queries</td><td>Comma separated list of information to request about the input PDF file and its contents.<br/><br/><b>Accepts:</b><br/><ul><li><b>tagged</b> - Checks for presence of structure tags in the input document. Returns true or false</li> <li><b>image_only</b> - Checks if the document is 'image only' meaning that it will only feature a series of embedded graphical image files, one per page and does not have any text or other features common to PDF documents, except for some metadata. Returns true or false</li> <li><b>title</b> - The title of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a title</li> <li><b>subject</b> - The subject of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a subject</li> <li><b>author</b> - The author of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have an author</li> <li><b>producer</b> - The producer of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a producer</li> <li><b>creator</b> - The creator of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a creator</li> <li><b>creation_date</b> - The creation date of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a creation date</li> <li><b>modified_date</b> - The most recent modification date of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a modification date</li> <li><b>keywords</b> - The keywords of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have keywords</li> <li><b>doc_language</b> - The language that the file claims to be written in. Returns a string</li> <li><b>page_count</b> - The number of pages in the PDF document. Returns an integer</li> <li><b>contains_annotations</b> - Checks whether the document contains annotations, such as notes, highlighted text, file attachments, crossed out text, and text callout boxes. Returns true or false</li> <li><b>contains_signature</b> - Checks if the document contains any digital signatures. Returns true or false</li> <li><b>pdf_version</b> - Retrieves the version of the PDF standard that the document was created with. Returns a string of the form X.Y.Z where X, Y, and Z are the major, minor, and extension versions respectively</li> <li><b>file_size</b> - Retrieves the size of the input file in bytes. Returns an integer</li> <li><b>filename</b> - The name of the input file. Returns a string</li> <li><b>restrict_permissions_set</b> - Checks whether the document has restrict permissions set to prevent printing, copying, signing etc. Returns true or false</li> <li><b>contains_xfa</b> - Checks whether the document contains XFA forms. Returns true or false</li> <li><b>contains_acroforms</b> - Checks whether the document contains Acroforms. Returns true or false</li> <li><b>contains_javascript</b> - Checks whether the document contains javascript. Returns true or false</li> <li><b>contains_transparency</b> - Checks whether the document contains transparent objects. Returns true or false</li> <li><b>contains_embedded_file</b> - Checks whether the document contains one or more embedded files. Returns true or false</li> <li><b>uses_embedded_fonts</b> - Checks whether the document contains fully embedded fonts. Returns true or false</li> <li><b>uses_nonembedded_fonts</b> - Checks whether the document contains non-embedded fonts. Returns true or false</li> <li><b>pdfa</b> - Checks whether the document claims and conforms to a PDF/A standard. Returns true or false</li> <li><b>pdfua_claim</b> - Checks whether the document claims to conform to a PDF/UA standard. Returns true or false</li> <li><b>pdfe_claim</b> - Checks whether the document claims to conform to a PDF/E standard. Returns true or false</li> <li><b>pdfx_claim</b> - Checks whether the document claims to conform to a PDF/X standard. Returns true or false</li> <li><b>requires_password_to_open</b> - Checks whether the document requires a password to open. Returns true or false.  *Note* A document requiring a password cannot be opened by this route and will not be able to return much other information</li><br/><br/><b>Example:</b><br/>tagged,image_only,creation_date,modified_date,doc_language</td><td>None</td><td class='yes'>Yes</tr>
+					<tr class='info'><td>queries</td><td>Comma separated list of information to request about the input PDF file and its contents.<br/><br/><b>Accepts:</b><br/><ul><li><b>tagged</b> - Checks for presence of structure tags in the input document. Returns true or false</li> <li><b>image_only</b> - Checks if the document is 'image only' meaning that it will only feature a series of embedded graphical image files, one per page and does not have any text or other features common to PDF documents, except for some metadata. Returns true or false</li> <li><b>title</b> - The title of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a title</li> <li><b>subject</b> - The subject of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a subject</li> <li><b>author</b> - The author of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have an author</li> <li><b>producer</b> - The producer of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a producer</li> <li><b>creator</b> - The creator of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a creator</li> <li><b>creation_date</b> - The creation date of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a creation date</li> <li><b>modified_date</b> - The most recent modification date of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have a modification date</li> <li><b>keywords</b> - The keywords of the PDF as listed in the metadata. Returns a string which may be empty if the document does not have keywords</li> <li><b>custom_metadata</b> - Retrieves custom metadata from the PDF and presents it as a JSON list of key:value pairs, where each pair represents a custom property and its value.</li> <li><b>doc_language</b> - The language that the file claims to be written in. Returns a string</li> <li><b>page_count</b> - The number of pages in the PDF document. Returns an integer</li> <li><b>contains_annotations</b> - Checks whether the document contains annotations, such as notes, highlighted text, file attachments, crossed out text, and text callout boxes. Returns true or false</li> <li><b>contains_signature</b> - Checks if the document contains any digital signatures. Returns true or false</li> <li><b>pdf_version</b> - Retrieves the version of the PDF standard that the document was created with. Returns a string of the form X.Y.Z where X, Y, and Z are the major, minor, and extension versions respectively</li> <li><b>file_size</b> - Retrieves the size of the input file in bytes. Returns an integer</li> <li><b>filename</b> - The name of the input file. Returns a string</li> <li><b>restrict_permissions_set</b> - Checks whether the document has restrict permissions set to prevent printing, copying, signing etc. Returns true or false</li> <li><b>contains_xfa</b> - Checks whether the document contains XFA forms. Returns true or false</li> <li><b>contains_acroforms</b> - Checks whether the document contains Acroforms. Returns true or false</li> <li><b>contains_javascript</b> - Checks whether the document contains javascript. Returns true or false</li> <li><b>contains_transparency</b> - Checks whether the document contains transparent objects. Returns true or false</li> <li><b>contains_embedded_file</b> - Checks whether the document contains one or more embedded files. Returns true or false</li> <li><b>uses_embedded_fonts</b> - Checks whether the document contains fully embedded fonts. Returns true or false</li> <li><b>uses_nonembedded_fonts</b> - Checks whether the document contains non-embedded fonts. Returns true or false</li> <li><b>pdfa</b> - Checks whether the document claims and conforms to a PDF/A standard. Returns true or false</li> <li><b>pdfua_claim</b> - Checks whether the document claims to conform to a PDF/UA standard. Returns true or false</li> <li><b>pdfe_claim</b> - Checks whether the document claims to conform to a PDF/E standard. Returns true or false</li> <li><b>pdfx_claim</b> - Checks whether the document claims to conform to a PDF/X standard. Returns true or false</li> <li><b>requires_password_to_open</b> - Checks whether the document requires a password to open. Returns true or false.  *Note* A document requiring a password cannot be opened by this route and will not be able to return much other information</li><br/><br/><b>Example:</b><br/>tagged,image_only,creation_date,modified_date,doc_language</td><td>None</td><td class='yes'>Yes</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -150,7 +154,30 @@
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
 					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
-   "error": "An Api-Key header is required to send this request."<br/>}</pre></td></tr>
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/extracted-images'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/extracted-images</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Extract all embedded images from a PDF file, or from a specified range of pages, and save them as separate image files. Each image will be saved in its original format (JPG, PNG, or TIFF), preserving its original compression and properties.<br/><br/> <span class='summary'>Examples</span> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-images" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-images" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "pages=14-last"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>output</td><td>Prefix of the generated output file name(s), without extension. The suffix "-img###-page###" will always be appended to the file name, where "img###" represents the incremental number of the extracted image file, and "page###" indicates the page number where the image first appeared.<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_extracted-images</td><td class='No'>No</tr>
+					<tr class='info'><td>pages</td><td>Page or range of pages to process<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": ["YOUR_DOMAIN_HERE/resource/255b5217c-a7cd-447b-99b3-0cadc9dc3831?format=file", "YOUR_DOMAIN_HERE/resource/203090407-cb1e-4c68-b7e1-c5b21211c0cd?format=file", "YOUR_DOMAIN_HERE/resource/24dd24471-a8b7-4f7c-b82b-5fc7ed55f74c?format=file"],<br/>
+   "outputId": [ "255b5217c-a7cd-447b-99b3-0cadc9dc3831", "203090407-cb1e-4c68-b7e1-c5b21211c0cd", "24dd24471-a8b7-4f7c-b82b-5fc7ed55f74c"],<br/>
+   "inputId": "1cb17d88c-7096-4d37-8b38-b97b00f587ac"<br/>}</pre></td></tr>
+					<tr class='info'><td>200</td><td>OK<br/>(no images detected)</td><td><pre>{
+   "outputUrl": [],<br/>
+   "outputId": [],<br/>
+   "inputId": "1cb17d88c-7096-4d37-8b38-b97b00f587ac"<br/>
+   "warning": "No files of the specified type were found."<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "Uploaded file is not valid input for this route. See documentation for valid file format(s)."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/extracted-text'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/extracted-text</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Extract all text from a PDF, optionally including style and/or position information.  <br/><br/> <span class='summary'>Examples</span> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-text" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-text" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "full_text=document" -F "word_style=on" -F "word_coordinates=on"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
@@ -158,6 +185,7 @@
 					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
 					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
 					<tr class='info'><td>full_text</td><td>Returns all text from the document without metadata, optionally split by page<br/><br/><b>Accepts:</b><br/><ul><li><b>off</b></li> <li><b>by_page</b></li> <li><b>document</b></li></ul></td><td>document</td><td class='No'>No</tr>
+					<tr class='info'><td>preserve_line_breaks</td><td>When enabled, this feature identifies and maintains the original line breaks within the text, inserting a newline character ("\n") at each break point for full_text output.<br/><br/><b>Accepts:</b><br/><ul><li><b>off</b></li> <li><b>on</b></li></td><td>off</td><td class='No'>No</tr>
 					<tr class='info'><td>word_style</td><td>Adds a JSON-formatted list of each word in the document with style information for each word, including font, size, color, and color-space.<br/><b>NOTE:</b> Turning on word_style and word_coordinates will add both types of metadata to the same word list<br/><br/><b>Accepts:</b><br/><ul><li><b>off</b></li> <li><b>on</b></li></ul></td><td>off</td><td class='No'>No</tr>
 					<tr class='info'><td>word_coordinates</td><td>Adds a JSON-formatted list of each word in the document, including page and coordinates of all 4 corners of each word's bounding box.<br/><b>NOTE:</b> Turning on word_style and word_coordinates will add both types of metadata to the same word list<br/><br/><b>Accepts:</b><br/><ul><li><b>off</b></li> <li><b>on</b></li></ul></td><td>off</td><td class='No'>No</tr>
 					<tr class='info'><td>output_type</td><td>Specify whether to save output as a file with .json extension or return output directly in the JSON response<br/><br/><b>Accepts:</b><br/><ul><li><b>json</b></li> <li><b>file</b></li></ul></td><td>json</td><td class='No'>No</tr>
@@ -414,6 +442,72 @@
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
+				<a name='/pdf-with-added-text'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-added-text</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Inserts text blocks into a PDF at specified locations with custom settings for font and styling. <br/> NOTE: The PDF coordinate system places the origin in the lower-left corner. Coordinates are in PDF units (1 in. = 72 PDF units). Please note that PDFs with offset origins may create an offset in the placement of the text. <br/><br/> <span class='summary'>Examples</span> <pre>TEXT_OPTIONS='[{"font":"Times New Roman","max_width":"175","opacity":"1","page":"1","rotation":"0","text":"sample text in PDF","text_color_rgb":"0,0,0","text_size":"30","x":"72","y":"144"}]'
+curl -X POST "YOUR_DOMAIN_HERE/pdf-with-added-text" \
+  -H "Accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@/path/to/file" \
+  -F "text_objects=$TEXT_OPTIONS" \
+  -F "output=example_out"
+</pre><br/> <span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>PDF file to be uploaded for text to be added.<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing PDF file on server for text to be added.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>text_objects</td><td><p>JSON-formatted string consisting of an array of one or more objects containing options to add and format text.</p>
+<br/><br/><b>Accepts:</b><br/><ul>
+    <li><b>font</b> - String | Required | Specify the font of the given string. See <a href='https://pdfrest.com/documentation/fontlist/'>Font List</a> for a complete list.</li>
+    <li><b>max_width</b> - String | Required | The maximum width of the text column in PDF Units (72 PDF Units = 1 inch). The text will wrap to conform to this width.</li>
+    <li><b>opacity</b> - String | Required | Text opacity (0.0 - 1.0)</li>
+    <li><b>page</b> - String | Required | Page number on which to add text. You can provide a page number, or you can use "all" to add the text to every page at the same X/Y position.</li>
+    <li><b>rotation</b> - String | Required | Rotation in degrees of the text block</li>
+    <li><b>text</b> - String | Required | String of text to add</li>
+    <li><b>text_color_cmyk</b> or <b>text_color_rgb</b> - String | Required | Comma-delineated string of color values (RGB example - "53,5,102", CMYK example - "0,100,100,0"). Use one of these to set the text color.</li>
+    <li><b>text_size</b> - String | Required | Font size of the text (5 - 100)</li>
+    <li><b>x</b> - String | Required | Horizontal starting position of the text in PDF Units (72 PDF Units = 1 inch)</li>
+    <li><b>y</b> - String | Required | Vertical starting position of the text in PDF Units (72 PDF Units = 1 inch)</li>
+    <li><b>is_rtl</b> - String | Optional | Set to "true" to insert right-to-left (RTL) language text</li>
+</ul> 
+<br/><br/><b>Example:</b><br/><pre> [
+   {
+      "font":"Arial",
+      "max_width":"100",
+      "opacity":"1",
+      "page":"all",
+      "rotation":"80",
+      "text":"Hello, PDF world!",
+      "text_color_rgb":"0,0,0",
+      "text_size":"12",
+      "x":"144",
+      "y":"144"
+   },
+   {
+      "font":"Times New Roman",
+      "max_width":"100",
+      "opacity":"1",
+      "page":"all",
+      "rotation":"0",
+      "text":"שלום עולם",
+      "text_color_rgb":"128,0,2",
+      "text_size":"72",
+      "x":"144",
+      "y":"720",
+      "is_rtl":"true"
+   }
+] </pre>
+</td><td>None</td><td class='yes'>Yes</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension.<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_pdf-with-added-text</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "YOUR_DOMAIN_HERE/resource/2e7de20c3-0dcd-4bed-b446-3c9c0d3f8c8c?format=file"<br/>
+   "outputId": "2e7de20c3-0dcd-4bed-b446-3c9c0d3f8c8c"<br/>
+   "inputId": "1e3c7fefe-45e0-48f2-bf8d-fe506e1d7838"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "The requested font was not found. Please see the documentation for a list of accepted fonts."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
 				<a name='/pdf-with-added-image'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-added-image</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Inserts an image into one page of a PDF at a specified location. <br/> Accepted image formats:<br/> <ul>
     <li>JPEG (.jpg, .jpeg)</li>
     <li>TIF (.tif, .tiff)</li>
@@ -439,7 +533,7 @@
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "There was a problem reading the input image. Verify fields and try again."<br/>}</pre></td></tr>
 					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
-   "error": "The provided key is not valid."<br/>}</pre></td></tr>
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/pdf-with-added-attachment'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-added-attachment</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Attaches a file to a PDF document. <br/><br/> <span class='summary'>Examples</span><br/> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf-with-added-attachment" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf" -F "file_to_attach=@PATH_TO_FILE/example_file.jpg" -F "output=example_output"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf-with-added-attachment" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "file_to_attach=01983abb7-ef44-ffaa-01ee-0b892f14a456" -F "output=example_output"</pre><br/> <span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
@@ -584,7 +678,25 @@
 <br/><br/><b>Example:</b><br/>acrobat9-cmyk</td><td>None</td><td class='yes'>Yes</tr>
 					<tr class='info'><td>profile</td><td>Select a local ICC color profile document to upload for processing.<br><br>NOTE: If color_profile is set to custom then a custom ICC color profile must be supplied with either the profile or profile_id paramater.<br/><br/><b>Accepts:</b><br/>Any valid ICC color profile<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_profile.icc</td><td>None</td><td class='partial'>When color_profile is set to custom, one of:<ul><li>profile</li><li>profile_id</li></ul></tr>
 					<tr class='info'><td>profile_id</td><td>Submit a resource ID for an ICC color profile document that already exists on the processing server.<br><br>NOTE: If color_profile is set to custom then a custom ICC color profile must be supplied with either the profile or profile_id paramater.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>138aadb71-ee34-4621-9098-9686441e84e2</td><td>None</td><td class='partial'>When color_profile is set to custom, one of:<ul><li>profile</li><li>profile_id</li></ul></tr>
+					<tr class='info'><td>preserve_black</td><td>To keep black elements consistent during color conversion, this option maintains their original definition (CMYK, RGB, or grayscale). Particularly useful for preventing RGB black text from inadvertently becoming a rich black in CMYK.<br/><br/><b>Accepts:</b><br/><ul><li><b>false</b></li> <li><b>true</b></li></ul></td><td>false</td><td class='No'>No</tr>
 					<tr class='info'><td>output</td><td>Name of the generated output file, without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_pdf-with-converted-colors</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "YOUR_DOMAIN_HERE/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
+   "outputId": "01240b25a-8936-4437-8652-8410130f1199"<br/>
+   "inputId": "138aadb71-ee34-4621-9098-9686441e84e2"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/rasterized-pdf'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/rasterized-pdf</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Rasterize each page of a PDF to a flattened image, removing dependencies on fonts or other vector elements to support consistent rendering and printing.  The output file is a single PDF in which all pages of the input PDF have been rasterized. <br/><br/> <span class='summary'>Examples</span> <pre>curl -X POST "YOUR_DOMAIN_HERE/rasterized-pdf" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf" -F "output=example_output"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/rasterized-pdf" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "output=example_output"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_rasterized-pdf</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -675,8 +787,6 @@
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{<br/> "files": [<br/> &nbsp;&nbsp;&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "filename1.doc",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": "2cbf6f191-4184-4bd2-82e0-531e3e1d8ba6"<br/> &nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name": "filename2.pdf",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": "259504d9c-38c8-41a6-82f3-3f97279c9522"<br/> &nbsp;&nbsp;&nbsp;}<br/> ]<br/>}</pre></td></tr>
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "Files and URLs cannot be uploaded together."<br/>}</pre></td></tr>
-					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
-   "error": "The provided key is not valid."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/zip'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/zip</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Compress any number of files into a .zip by specifying "file" and/or "id[]" paramaters multiple times.<br/><br/> <br/><br/> <span class='summary'>Examples</span><br/> <pre>curl -X POST "YOUR_DOMAIN_HERE/zip" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf" -F "output=example_out"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/zip" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf" -F "file=@PATH_TO_FILE/example_file_2.pdf" "id[]=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" "output=example_out"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
@@ -692,7 +802,20 @@
    "inputId": ["112f7ea0d-0e56-44bc-a3d2-42fdff96d993", "198f7ad08-9da2-44bc-52b3-a962d2f75114", "187d8cab2-1f53-ae13-b798-2c766db23098", "128db087e-990a-7e27-1c28-028585af8287"]<br/>}</pre></td></tr>
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "Found more than one output key, only one is allowed."<br/>}</pre></td></tr>
-				</table><br/></div><br/><br/>&#169; 2024 Datalogics, Inc. All rights reserved.			</td>
+				</table><br/></div><br/><br/>
+				<a name='/unzip'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/unzip</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Extract files from a compressed .zip archive, providing resource IDs for each unzipped file, which can then be processed or downloaded individually. Optionally accepts a password to support unzipping password-protected .zip archives.<br/><br/> <br/><br/> <span class='summary'>Examples</span> <pre>curl -X POST "YOUR_DOMAIN_HERE/unzip" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/unzip" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "password=example-pw"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and unzipped.<br/><br/><b>Accepts:</b><br/>Any .zip file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be unzipped.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>password</td><td>Optional password to unlock protected .zip archives<br/><br/><b>Accepts:</b><br/>Any valid password<br/><br/><b>Example:</b><br/>Password123</td><td>None</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{<br/> &nbsp;&nbsp;&nbsp;"files": [<br/> &nbsp;&nbsp;&nbsp;    {<br/> &nbsp;&nbsp;&nbsp;        "name": "file1.pdf",<br/> &nbsp;&nbsp;&nbsp;        "id": "2211de73f-33ce-4d62-9c7f-94aa6d82270d",<br/> &nbsp;&nbsp;&nbsp;        "outputUrl": "YOUR_DOMAIN_HERE/2211de73f-33ce-4d62-9c7f-94aa6d82270d?format=file"<br/> &nbsp;&nbsp;&nbsp;    },<br/> &nbsp;&nbsp;&nbsp;    {<br/> &nbsp;&nbsp;&nbsp;        "name": "file2.ppt",<br/> &nbsp;&nbsp;&nbsp;        "id": "2443dv2a2-d8e7-40a3-b569-9f793f7h7a63",<br/> &nbsp;&nbsp;&nbsp;        "outputUrl": "YOUR_DOMAIN_HERE/resource/2443dv2a2-d8e7-40a3-b569-9f793f7h7a63?format=file"<br/> &nbsp;&nbsp;&nbsp;    }<br/> &nbsp;&nbsp;&nbsp;],<br/> &nbsp;&nbsp;&nbsp;"inputId": "11j0a6498-a510-4f93-a790-c3843678cc4c"
+}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "The provided zip may be corrupt or require a password."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>&#169; 2025 Datalogics, Inc. All rights reserved.			</td>
 		</tr>
 	</table>
 </body>
