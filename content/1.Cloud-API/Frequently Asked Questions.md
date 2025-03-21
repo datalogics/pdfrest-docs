@@ -66,6 +66,30 @@
 
   ::accordion-item
   #title
+  Is the Cloud API encrypted?
+
+  #content
+  Yes it is. Volumes for production systems are encrypted at-rest with AES-256 and in-transit data utilizes modern TLS certificates on `api.pdfrest.com` and `eu-api.pdfrest.com`.
+  ::
+
+  ::accordion-item
+  #title
+  Where is the pdfRest Cloud API service hosted?
+
+  #content
+  Cloud API customers have access to the same API hosted within Amazon Web Services (AWS) in two regions, the United States and the European Union.
+  <br><br>
+  The US-based API at `api.pdfrest.com` is hosted in AWS's `us-east-2` region in Ohio.
+<br><br>
+  The EU-based API at `eu-api.pdfrest.com` is hosted among the following AWS regions in the EU:
+  - `eu-central-1`, Germany
+  - `eu-west-1`, Ireland
+  - `eu-west-3`, France
+  - `eu-north-1`, Sweden
+  ::
+
+  ::accordion-item
+  #title
   Is the Cloud API service GDPR compliant?
 
   #content
@@ -115,24 +139,27 @@
   <br>
   - Premium and Pro plans have a fee associated with each call to the EU GDPR Cloud API. There is no fee for Enterprise usage. Please refer to the [Pricing page](https://pdfrest.com/pricing/) for more details.
   ::
-::
-## Features and Pricing 
 
-::accordion{default-value="first-item" collapsible}
-  ::accordion-item{value="first-item"}
+  ::accordion-item
   #title
-  Is it accessible?
+  What access controls are in place to ensure data privacy and security?
 
   #content
-  Yes. It adheres to the WAI-ARIA design pattern.
+  Role-based access controls ensure that only the access needed to fulfill a particular role is given to an internal employee. There is no usage of third-party entities or contractors.
   ::
 
   ::accordion-item
   #title
-  Is it unstyled?
+  How and with what frequency is customer data backed up?
 
   #content
-  Yes. It's unstyled by default, giving you freedom over the look and feel.
+  All production systems are ephemeral and utilize infrastructure-as-code practices. There is currently no need for backups of our systems.
+  <br><br>
+  The duration that customer files are stored depends on the customer's selected plan level. This duration is determined by the "File Persistence" value associated with each plan, which is displayed in detail on the [Pricing page](https://pdfrest.com/pricing/). pdfRest adheres to a file lifecycle policy that automatically deletes files after the designated File Persistence period has elapsed.
+  <br><br>
+  **No customer data is retained or backed up beyond that File Persistence period.**
   ::
-  :accordion-item{title="Can it be animated?" content="Yes! You can use the transition prop to configure the animation."}
 ::
+## Features and Pricing 
+
+See the FAQ on the [Pricing](https://pdfrest.com/pricing/) page for any pricing-related questions. Reach out to our [Support](https://pdfrest.com/support) with any additional inquiries.
