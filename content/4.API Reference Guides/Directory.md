@@ -3,6 +3,9 @@
 ## Cloud API
 ::card
 ---
+icon: vscode-icons:file-type-source
+icon-size: 70
+horizontal: true
 to: https://docs.pdfrest.com/cloud-api-reference/
 target: _blank
 # showLinkIcon: false
@@ -50,6 +53,9 @@ Cloud API Reference Guide
 ## Container API with Docker
 ::card
 ---
+icon: 'vscode-icons:file-type-docker2'
+icon-size: 80
+horizontal: true
 to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
 target: _blank
 # showLinkIcon: false
