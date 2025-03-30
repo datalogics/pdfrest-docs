@@ -1,171 +1,130 @@
-::hero-alt
+---
+navigation: false
+title: Home
+description: Learn how to setup and use pdfRest.
 ---
 
+::hero-alt
+---
 actions:
-  - name: AWS Marketplace
-    to: https://aws.amazon.com/marketplace/seller-profile?id=2bceface-f777-4fcb-a529-91c088f45034
-    icon: vscode-icons:file-type-aws
-#  - name: GitHub
-#    variant: ghost
- #   to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
-#mobileRight: 'top' # 'top' | 'bottom'
+  - name: GitHub Code Samples
+    variant: outline
+    to: https://github.com/datalogics/pdf-rest-api-samples
+    leftIcon: lucide:github
+---
+#title
+pdfRest API Documentation
+
+#description
+Learn about using the pdfRest PDF processing API. Whether you're self-hosting or subscribed to our Cloud API, all of the documentation you need is here!
+::
+
+
+## Where is pdfRest Available?
+
+Read below about the different ways you can access and deploy the pdfRest API.
+
+::steps{level=3}
+
+### Cloud API
+
+The [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/) is our publicly available, fully-featured and trusted enterprise-grade solution with affordable subscription plans for every project.
+
+
+### Self-Hosted API on AWS
+
+Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), put you in full control of your PDF processing solutions, supporting the most rigorous data protection and compliance requirements. Click the links below to view the products in the AWS Marketplace.
+
+#### AWS Marketplace Products
+
+
+
+
+
+::card
+---
+icon: 'pdfrest:pdf-toolkit-self-hosted'
+icon-size: 83
+horizontal: true
+to: https://aws.amazon.com/marketplace/pp/prodview-lvleu34bj4cn6
+target: _blank
+#showLinkIcon: false
 ---
 
 #title
-Self-Hosted on AWS
+##### PDF Toolkit Self-Hosted API
 
 #description
-Host the pdfRest API on your own AWS VPC, with full control for scaling and security.
+Over 25 powerful API Tools to convert, optimize, modify, inspect, secure, and simplify your digital documents and processing workflows.
 
-#right
-![logo](aws-circle.png)
+#content
+Includes all the standard PDF processing tools you'd expect, such as Convert to PDF, Compress PDF, Merge PDFs, and Split PDF, as well as professional-grade tools like Flatten Transparencies, Convert to PDF/A, and Extract Text to prepare your documents for specific use cases, like print, archival, and machine learning.
 ::
 
-## Deployment Options
 
-The pdfRest Self-Hosted API products available on the AWS Marketplace offer two methods of deployment, an AMI (Amazon Machine Image) and a CloudFormation Template. The first part of this guide covers the CloudFormation Template deployment.
+
+::card
+---
+icon: 'pdfrest:pdf-forms-pro'
+icon-size: 76
+horizontal: true
+to: https://aws.amazon.com/marketplace/pp/prodview-2xxmqtam6s54s
+target: _blank
+#showLinkIcon: false
+---
+
+#title
+##### PDF Forms Pro Self-Hosted API
+
+#description
+The one-stop-shop for automation and batch processing of PDF form documents with all the API Tools you'll need.
+
+#content
+ Avoid manual data entry and save time by directly filling forms with external data. Extract form field values to collect data from multiple documents and aggregate into a single repository. Lock form field values to prevent further modification. Flatten PDF forms to make them universally compatible with all PDF viewing and processing applications. pdfRest offers the only REST API service for processing all PDF form types including Static XFA, Dynamic XFA, and Acroforms.
+::
+
+
+
+::card
+---
+icon: 'pdfrest:pdf-to-office'
+icon-size: 76
+horizontal: true
+to: https://aws.amazon.com/marketplace/pp/prodview-gilhkmjyjxyrs
+target: _blank
+#showLinkIcon: false
+---
+
+#title
+##### PDF to Office Pro Self-Hosted API
+
+#description
+All of the tools for transforming static PDFs into fully editable Microsoft Office formats.
+
+#content
+This toolkit handles everything you need, seamlessly converting your PDFs into Word documents, Excel spreadsheets, and PowerPoint presentations. PDF to Office Pro integrates effortlessly with any development project. Its intuitive API allows you to seamlessly add powerful PDF conversion capabilities to your applications, streamlining workflows and empowering users to unlock the true potential of their documents.
+::
+
+### Container API with Docker
+
+Deploy and manage powerful PDF solutions on-premises. This self-hosted container API provides complete control over your backend, storage, and security, Deployable anywhere that supports Docker, such as Kubernetes.
+
+Read more about all of the functionality available in the Container API on [pdfRest.com](https://pdfrest.com/products/pdf-toolkit-container-api/)!
 
 ::alert{type="secondary" icon="lucide:info"}
-All Self-Hosted API products share the same deployment and configuration guides.
+  Evaluation access and pricing for Container API is available through the [Datalogics Enterprise Sales Team](mailto:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry)
+::
 ::
 
-You can access your AWS Marketplace subscriptions from:
+## **Acknowledgments**
 
-1.  Select the [product page](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest) of the product you have Subscribed to.
-2. Select "View Purchase Options"
-3. Select "Continue to Configuration"
-4. Under the "Fulfillment option" dropdown, select either "Amazon Machine Image" or "CloudFormation Template".
+#### Adobe, Inc.
 
-## AWS CloudFormation
+- pdfRest REST APIs include the Adobe® PDF Library™ and Adobe® PDF Converter™ software products, and any upgrades, modified versions, updates, additions, and copies thereof. Adobe, Adobe PDF Library, and Adobe PDF Converter are either registered trademarks or trademarks of Adobe Inc. in the United States and/or other countries.
 
-The CloudFormation Template automates the deployment of one or more pdfRest EC2 instances alongside optional support infrastructure.
+#### **URW++ GmbH**
 
-::alert{type="secondary" icon="lucide:info"}
-The CloudFormation Template is highly recommended for users who prefer an automated, pre-configured solution. The AMI deployment requires technical experience with AWS networking and compute services.
-::
-
-The CloudFormation Template automates the deployment of highly-scalable infrastructure, suitable for any usage scenario from small business to enterprise-scale.
-
-### Deploy with CloudFormation
-
-
-#### Version and Region
-
-After selecting the CloudFormation Template under "Fulfillment options", you'll see three new dropdowns: 
-
-- Select `API Stack with Load Balancer and Auto Scaling`
-- Select the latest `Software version`
-- Choose which `Region` you intend to deploy the pdfRest Self-Hosted API into.
-
-On the next page, select "Launch CloudFormation" under the "Choose Action" dropdown, then "Launch".
-
-#### The CloudFormation Console
-
-::steps{level=5}
-
-##### 'Step 1, Create stack' -  Leave all settings default and click "Next".
-
-##### 'Step 2, Specify stack details' - Enter a name for the stack, such as: `pdfRest-Self-Hosted-API-Production`
-
-Fill out the Parameters down the page *as needed*.
-
-1. Parameters marked as `(REQUIRED)` are mandatory fields are need either the default value or a custom value in their field.
-
-2. Parameters marked as `(Optional)` include information about their purpose. Most will have a default value or can be left blank.
-
-::alert{type="secondary" icon="lucide:info"}
-See the [Environment Variables](/self-hosted-api-on-aws/configure-aws-deployment/#environment-variables) section of the Configuration guide for detailed information about Optional Parameters.
-::
-
-##### 'Step 3, Configure stack options' - All of these settings are optional, based on your organization's CloudFormation and tagging policies.
-
-##### 'Step 4, Review and create' - Review all of configuration choices made in the previous 3 sections. When you've confirmed your choices, click "Submit".
-
-##### Stack Creation
-
-- After submitting the build request, you will be taken to the CloudFormation Stacks page. There you will see the status of your Stack. It will likely be `CREATE_IN_PROGRESS`. Click on the Stack name for additional information.
-
-- When the pdfRest Self-Hosted API is finished building, the Stack status will be `CREATE_COMPLETE`.
-::
-
-### CloudFormation FAQ
-
-Below is a list of important and commonly asked questions related to deploying pdfRest Self-Hosted API using AWS CloudFormation.
-
-
-#### How does the CloudFormation Stack work?
-
-- All calls enter through an Internet Gateway in front of an Application Load Balancer.
-- The load balancer will distribute traffic to a Target Group containing EC2 instances that are defined and initialized by the stack's Launch Template, and are grouped by an Auto Scaling Group.
-- All instances created by this group will use the same shared Elastic File System volume, so any file can be processed by any instance.
-
-####  Which CloudFormation Template parameters must be filled out?
-
-- The only CFN parameters that are empty and must be filled in prior to using the product are "Stack name" and "Key Pair for SSH".
-- You must also change the "IP Address Range for HTTP and HTTPS" parameter to your IP address, or you will not be able to make calls to the instances. 0.0.0.0/0 will allow all IP addresses.
-- A stack resource label is required, and should be unique for every stack - however the prefilled value will work fine for your first stack.
-- We suggest also changing "IP Address Range for SSH" to your IP address - otherwise you will not be able to SSH onto the EC2 instances.
-  
-####  Do I need to fill in the empty optional parameters?
-
-- No. If these are left blank, CloudFormation will generate the appropriate resources per the template's instructions.
-- Existing resources can be used by filling in the relevent CloudFormation parameters.
-
-## Amazon Machine Image (AMI)
-
-The pdfRest Self-Hosted API products available on the AWS Marketplace offer two methods of deployment, an AMI (Amazon Machine Image) and a CloudFormation Template. The following section covers the AMI deployment.
-
-::alert{type="secondary" icon="lucide:info"}
-Users not familiar with AWS networking and compute services are advised to use the CloudFormation template, which automates most of the following procedures.
-::
-
-The pdfRest PDF Toolkit Self-Hosted API product is provided as an Amazon Machine Image ([AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)). This AMI is a snapshot of a server configuration and is available on the AWS Marketplace. It can be used as a template to deploy your own server instance, allowing you to add our PDF processing features to your own AWS environment or build your own custom workflows that you can run on demand.
-
-The Amazon Machine Image allows you to deploy a single EC2 instance without any optional infrastructure components. This is ideal for small scale processing, batch processing, or other uses that don't require a load balancer or multiple machines. Deeper knowledge of AWS infrastructure setup and configuration is recommended for direct AMI deployments.
-
-### Deploy an EC2 with the AMI
-
-::steps{level=4}
-
-For this process you’ll need to have already subscribed to the pdfRest API Toolkit Self-Hosted product on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest).
-
-#### Access the EC2 console by [logging into the AWS Management Console](https://console.aws.amazon.com/console/home) and searching for EC2.
-
-![AWS console search for EC2 service](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step1-lg.png/)
-
-#### Select Launch Instance from the EC2 Dashboard. This can also be found at the top right the “Instances” view.
-
-![Launch instance dropdown box](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step2-lg.png/)
-
-#### Enter a name for your instance.
-
-![Names and tags parameter](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step3.png/)
-
-#### Under Application and OS Images (Amazon Machine Image) select “Browse more AMIs”.
-
-![The EC2 console view for Application and OS Images menu](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step4.png/)
-
-#### Search for pdfRest under AWS Marketplace AMIs and select pdfRest PDF Toolkit Self-Hosted API. A popup view will appear that will allow you to review the product. Once you’ve finished reading, to continue forward select Continue.
-
-![pdfRest products under the AWS Marketplace AMIs tab](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step5.png/)
-
-#### For Instance Type, we recommend a c7i.xlarge for normal usage.
-
-![Instance type dropdown menu](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step6.png/)
-
-#### Select a key pair to use with this instance. If you do not have one, follow the link to create one. Ensure that you keep the private key. AWS has documentation on creating a key pair that [can be found here](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/getstarted-keypair.html).
-
-![The key pair dropdown menu](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step7.png/)
-
-#### Select a security group to use with this instance. If you do not have one then you can create one at this time. For the purposes of this guide, we’ll use our default security group. AWS’ documentation on EC2 security groups can be found here.
-
-![The network settings menu, focus is on Security Groups](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step8.png/)
-
-#### Configure your storage volume. For our purposes we’ll use a 100 GiB gp3 volume. Note that the volume must be at least 100 GiB.
-
-![Configure storage menu for root volume](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step9.png/)
-
-#### You can then launch the instance. You should see a confirmation message such as this one, with the ID of the new instance. Clicking on the link will take you to your instances list, where you can find further details.
-
-![Instance launch success and log dialogue](/pdf-toolkit-instructions/launching-an-ec2-instance/pdf-toolkit-self-hosted-launch-ec2-step10.png/)
-
+- URW++ GmbH, a German corporation having a place of business at Poppenbütteler Bogen 36, D-22399 Hamburg, Germany (“URW++”) is the owner and developer of certain fonts (“URW++ Fonts”). URW++ and Datalogics, Inc. have entered into an agreement (the “URW++ Enabling Agreement”) which entitles Datalogics, Inc. to sublicense certain rights to use and distribute URW++ Fonts.
+- Use of URW++ Fonts. Upon full payment of the agreed upon licensee fee, you are granted a non-exclusive right to use the URW++ Fonts.
+- Exclusion of Other Usage. It is prohibited to change or modify the font/trademark names used as identifying tags in the URW++ Fonts in any form or manner with prior written consent of URW.
+- No Other Rights. In the event your use of the URW++ Fonts is found to infringe on the intellectual property rights of any third party, in any jurisdiction, you will cease use of such URW++ Fonts in such jurisdiction unless or you secure any additional rights necessary for such use. End of Term. You are responsible for removing and deleting URW++ Fonts from any AMI on which they have been installed at the end of your license term.
