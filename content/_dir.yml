@@ -2,6 +2,7 @@
 
 title: Overview of pdfRest
 icon: vscode-icons:file-type-pdf2
+nativation: false
 #navigation.redirect: /index/
 #navBadges:
 #  - value: New
