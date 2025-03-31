@@ -82,7 +82,7 @@ Or maybe you are building a PDF document that you intend for people to read on s
 All of the settings for compressing a document are optional, and are turned `off` by default. That means then that a setting is only applied if it is included in the JSON file. Flag settings must be enabled, or set to `on` if the flag is an `on`/`off` value. Settings that are turned `off` do not need to be defined in the JSON profile file. So if you wanted to you could create a custom JSON file with only a single setting, to compress images. Your JSON file might only hold five or six lines of text.
 
 ::alert{type="secondary" icon="lucide:info"}
-Reminder: A setting is only applied if it is included in the JSON file.
+Reminder: A setting is only applied if it is included in the JSON file. Often, setting a paramter to `off` is the same as excluding it from the profile entirely.
 ::
 
 Only use lowercase characters for the keys and values you add to the JSON profile file.
@@ -449,6 +449,18 @@ This feature is not applicable if Color Conversion is enabled (see Color Convers
 #content
 
 Convert the colors in a PDF document to a color profile you select *before* compressing that document.
+<br><br>
+We can see thousands of different shades of colors, and high-quality digital cameras and scanners can often detect millions of shades. To manage the broad range of colors for producing graphics images in digital content, imaging professionals have developed models to define these colors, called color spaces.
+<br><br>
+Many color spaces have been defined. Some are dependent on hardware devices, and define what a camera can detect, or a printer print, or a monitor display. Others are based on software and thus can be used across many different types of devices, such as Adobe RGB or sRGB (standard RGB). A color space must be defined for any device or software product to make sure that coloring patterns remain the same from one device or system to another.
+<br><br>
+The Standard RGB color space, sRGB, was developed by Microsoft and Hewlett Packard to describe colors available on most monitors and displays. This color space is also commonly used for web graphics.
+<br><br>
+Adobe Systems’ own Adobe RGB (Red/Green/Blue) color space is designed to hold all of the colors that are likely to be available on any color CMYK (Cyan/Magenta/Yellow/Black) printer. It is considerably larger than Standard RGB.
+<br><br>
+Color profiles are standards for managing colors, used to ensure that the colors for text or graphics in a file remain the same regardless of the hardware or software used to display, edit, or print that file. Color profiles are based on the specification created by the International Color Consortium (ICC) in 1993 to govern color and color management across all operating systems, platforms, and software and hardware and software systems.
+<br><br>
+A color profile is usually expressed as a file included in the software or driver for an installed printer, scanner or other hardware device, or in software used to edit a file that is to be displayed or printed. A profile provides a set of data that describes an input or output device. A color profile file can also be embedded in a PDF document.
 
 ```bash [Color Conversion Example]icon=lucide:code line-numbers
 "color-conversion": {
@@ -465,29 +477,56 @@ Convert colors in a PDF document using a target profile.
   ::
   ::field{name="convert-profile" type="string"}
 The profile used to convert colors in the PDF document. Set one of:
+<br>
+- `lab-d50`
+<br>Lab color specification with a D50 white point. The Lab color space is based on the CIE XYZ color space, but it includes a dimension L, for lightness, along with a and b coordinates, to define the color. This is Adobe Systems’ standard Lab profile.<br><br>
+- `srgb`
+<br>Standard RGB, the default profile for Windows monitors.<br><br>
+- `apple-rgb`
+<br>Apple RGB, the default profile for Mac monitors.<br><br>
+- `color-match-rgb`
+<br>Color Match RGB. This is a simpler version of the Radius ColorMatch RGB space, without the non-zero black point.<br><br>
+- `monitor-rgb`
+<br>RGB Monitor, referring to a monitor that requires separate signals for the three primary colors.<br><br>
+- `gamma-18`
+<br>Gray Gamma 1.8, grayscale display profile, used for content viewed on a monitor.<br><br>
+- `gamma-22`
+<br>Gray Gamma 2.2<br><br>
+- `dot-gain-10/15/20/25/30`
+<br>Grayscale printer profile, with dot gain X%. Dot gain is commonly used in offset printing to define the increase in size in halftone dots in the printing process, making a printed document look darker than intended. For example, `dot-gain-20` will gain 20%.<br><br>
+- `acrobat5-cmyk`
+<br>Adobe Reader 5 CMYK<br><br>
+- `acrobat9-cmyk`
+<br>Adobe Reader 9 CMYK
 <br><br>
-`lab-d50`, `srgb`, `apple-rgb`
-, `color-match-rgb`, `gamma-18`, `gamma-22`, `dot-gain-10`, `dot-gain-15`, `dot-gain-20`, `dot-gain-25`, `dot-gain-30`, `monitor-rgb`, `acrobat5-cmyk`, `acrobat9-cmyk`
-<br><br>
+
 The above list of options represents the standard list of color profiles provided with the API. Select one of these profiles, specifying it by name in your JSON profile.
 
-See documentation for further information on these profiles.
   ::
-  ::field{name="color-convert-action" type="on/off"}
+  ::field{name="color-convert-action" type="string"}
 The type of color conversion. The values available include `convert` and `decalibrate`. The `decalibrate` setting will decalibrate calibrated color spaces in the PDF document.
 <br><br>
 If a color profile file is assigned to a PDF, or to a feature within that PDF document such as an image, the PDF is referred to as “calibrated.” This color profile will be used when rendering colors for that PDF.
 <br><br>
 If a color profile is not assigned to the document, a default color profile is used instead, usually installed on the local device or on a printer. So if you select `decalibrate` as the color-conversion-option, you can remove the ICC profile file stored in the PDF document, and thus reduce the size of the PDF output file.
   ::
-  ::field{name="convert-intent" type="on/off"}
+  ::field{name="convert-intent" type="string"}
 Use this setting to specify the color translation method for colors that are outside the gamut of the color profile. The intent lets the software determine how to substitute a color that can be written to the file. You can select from a list of standard strategies to apply when converting the colors in that original PDF document.
 <br><br>
 The conversion intent is used to describe how the destination device for the document reproduces the colors in the document. Thus, when you print or display the PDF output file, the colors in the output file will match as closely as possible the original color found in the source PDF document.
 <br><br>
 Set to one of:
-<br><br>
-`perceptual-intent`, `relative-colorimetric-intent`, `saturation-intent`, `absolute-colorimetric-intent`, `profile-intent`
+
+- `perceptual-intent`
+<br>Generally used for photography. This method does not map colors one for one but estimates to match colors. Hence it often provides the most pleasing result but not necessarily the most accurate.<br><br>
+- `relative-colorimetric-intent`
+<br>Generally used for photography. The relative method uses an algorithm to select the closest possible color map to be true to the specified color.<br><br>
+- `saturation-intent`
+<br>Commonly used in charts and diagrams with a limited palette of colors where hue is not as important.<br><br>
+- `absolute-colorimetric-intent`
+<br>Often used to select a specific color or set of colors for drawings or designs. Absolute serves to reproduce the exact colors provided in the original PDF document. A common reason for using absolute would be to reproduce the color used in a corporate logo such as IBM Blue. The color is changed by selecting a defined match. This method does not use a conversion algorithm to select the closest color available.<br><br>
+- `profile-intent`
+<br>If you specify a color profile in the convert-profile option the intent value defaults to that profile. In that case software will use the rendering intent provided with the ICC color profile currently in use for that PDF document. For example, the Adobe RGB 1998 color profile uses Relative Colormetric as its rendering intent. So if you specify Adobe RGB 1998 (srgb) as the color profile, and profile-intent is selected here, the API will use relative.
   ::
 
 ::
