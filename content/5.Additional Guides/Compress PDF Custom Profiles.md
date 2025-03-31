@@ -378,7 +378,7 @@ Place all the information needed to render the first page of the document near t
 When a PDF document is created that includes photographs, diagrams or drawings, the original graphic file, such as a JPEG photograph or a PNG image, become images in that PDF file. You can enter settings in the JSON profile file to compress these color, grayscale, or monochrome (black and white) images.
 <br>
 ::alert{type="secondary" icon="lucide:info"}
-See additional details about [Image Compression below](https://docs.pdfrest.com/additional-guides/compress-pdf-custom-profiles#image-compression-details).
+See additional details about [Image Compression below](/additional-guides/compress-pdf-custom-profiles#image-compression-details).
 ::
 <br>
 Select one of `color`, `grayscale`, `monochrome` and then set `downsample` and/or `recompress`.
