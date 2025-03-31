@@ -295,3 +295,200 @@ As the ICC profile can be quite large, you might want to remove it to reduce the
   ::
 ::
 ::
+
+::collapsible
+#title
+### User Data
+
+#content
+
+It is possible to edit PDF documents using Adobe Acrobat and other viewing and editing tools. For example, when reviewing the content in a PDF document, a user might want to add a comment. It is also possible to attach external files to a PDF document so that the file is saved as a part of the PDF, or embed a hyperlink to a web page. Finally, a user could add metadata. The compression feature can remove any of this content. It can also remove form fields, such as text boxes, check boxes, and radio buttons.
+<br>
+::field-group
+  ::field{name="discard-comments-forms-multimedia" type="on/off"}
+Removes interactive elements from the PDF document. These can include annotations, such as pop-up notes, comments, and highlights, as well as interactive Acrobat form fields and embedded multimedia. Besides removing the interactive elements, this option also removes the visual content associated with these elements.
+  ::
+  ::field{name="discard-xmp-metadata-padding" type="on/off"}
+XMP refers to the Extensible Metadata Platform, a standard created by Adobe Systems to guide the creation, processing, and exchange of metadata for a variety of digital resources. When XMP metadata is included in a PDF document, the application that creates the PDF leaves a “padding area” in the text stream, commonly 2 to 4 KB for each set of XMP metadata. This allows for the metadata to be edited in place, and expanded if needed, without disturbing the document as a whole. This option removes the XMP padding from the document.
+  ::
+  ::field{name="discard-document-information-and-metadata" type="on/off"}
+This option removes document descriptions and metadata.
+  ::
+  ::field{name="discard-file-attachments" type="on/off"}
+This option removes files attached to the document.
+  ::
+  ::field{name="discard-external-crossreferences" type="on/off"}
+Removes references to external data. This would include links to external resources, like a photograph or another PDF document that could be downloaded from a web page or FTP site. This option effectively removes the hyperlinks to these items.
+  ::
+  ::field{name="discard-private-data" type="on/off"}
+Removes piece data relevant to the application that created the file. Some applications, like Adobe Illustrator, add their own unique content to a PDF document when generating that document. This information is useful to the original software product if the PDF is opened and edited in that product again. But this information can be removed.
+  ::
+  ::field{name="discard-hidden-layer-content" type="on/off"}
+Layers in a PDF document allow content to be placed above or below other content. The content in layers can be hidden from view, so that, for example, copyright information provided on the bottom of a page does not appear in Adobe Reader but is included if the document sent to a printer. The layers in a PDF document can be displayed in the Layers panel in Adobe Acrobat. You can remove this hidden content to reduce the size of a PDF document.
+  ::
+::
+::
+
+::collapsible
+#title
+### Cleanup
+
+#content
+
+Use the Cleanup features to set compression values for a PDF document. You can compress the entire PDF document or parts of the content, and you can also remove redundant content or select a compression method to use, as well as other changes designed to make a PDF document open more quickly.
+<br>
+::field-group
+  ::field{name="compression" type="string" required}
+Select the compression action for the file. Enter one of these values:
+<br><br>
+- `compress-entire-file` Compress document as a single unit
+- `compress-document-structure` Compress the document structure only
+- `remove-compression` Removes compression from file streams
+  ::
+  ::field{name="flate-encode-uncompressed-streams" type="on/off"}
+Compress uncompressed streams using Flate.
+<br><br>
+Flate, or Deflate compression, is an open source standard widely used for creating zip files and in PDF documents. It is commonly used for PNG image files, and is much more widely used than LZW.
+  ::
+  ::field{name="convert-lzw-to-flate" type="on/off"}
+Recompress LZW-compressed streams using Flate.
+<br><br>
+Flate, or Deflate compression, is an open source standard widely used for creating zip files and in PDF documents. It is commonly used for PNG image files, and is much more widely used than LZW.
+<br><br>
+LZW, Lempel-Ziv-Welch, is a universal data compression algorithm, once widely used with Unix platforms. This method appears in some old PDF documents but it is rarely used any longer.
+  ::
+  ::field{name="optimize-page-content" type="on/off"}
+Removes redundant content streams, or page text.
+  ::
+  ::field{name="optimize-for-fast-web-view" type="on/off"}
+Place all the information needed to render the first page of the document near the beginning of the file. This process is also known as **linearization**. This allows a web browser to open the PDF document more quickly.
+  ::
+
+::
+::
+
+::collapsible
+#title
+### Images
+
+#content
+
+When a PDF document is created that includes photographs, diagrams or drawings, the original graphic file, such as a JPEG photograph or a PNG image, become images in that PDF file. You can enter settings in the JSON profile file to compress these color, grayscale, or monochrome (black and white) images.
+<br><br>
+Select one of `color`, `grayscale`, `monochrome` and then set `downsample` and/or `recompress`.
+
+```bash [Images Sample JSON]icon=lucide:code line-numbers
+# A code sample which shows `color` compression with both `downsample` and `recompress` turned on.
+
+"images": {
+    "color": {
+        "downsample": {
+            "trigger-dpi": 225,
+            "target-dpi": 150
+        },
+        "recompress": {
+            "type": "zip"
+            "quality": "medium"
+        }
+    },
+}
+```
+
+::field-group
+  ::field{name="color downsample" type="intiger"}
+Ability to specify a target resolution and a trigger resolution at which color images will be recompressed.
+<br><br>
+- `trigger-dpi` Number representing the Dots per Inch. All color images above this resolution will be downsampled.
+- `target-dpi` Number representing the Dots per Inch. The new resolution of downsampled color images.
+
+```bash [Color Downsample Example]icon=lucide:code line-numbers
+"color": {
+    "downsample": {
+        "trigger-dpi": 225,
+        "target-dpi": 150
+},
+```
+  ::field{name="color recompress" type="string"}
+Sets the type and quality of compression used to downsample color images. JPEG compression is a compression format commonly used for photographs. It uses a technique known as DCT, Discrete Cosine Transform.
+<br><br>
+- `type` One of the following: `same`, `zip`, `jpeg`, `jpeg2000`, `zip-jpeg`
+- `quality` These values are valid for JPEG and JPEG2000 compression only. One of the following: `minimum`, `low`, `medium`, `high`, `maximum`, `lossless`
+<br><br>
+
+With `quality`: `lossless` the original quality of the graphic is preserved (see Monochrome). Only available for JPEG2000.
+
+```bash [Color Recompress Example]icon=lucide:code line-numbers
+"color": {
+    "recompress": {
+        "type": "jpeg",
+        "quality": "medium"
+},
+```
+  ::
+  ::field{name="optimize-images-only-if-reduction-in-size" type="on/off"}
+Downsample an image found in a PDF document if the newly downsampled image is in fact smaller than the original. When compressing an image, the output file can possibly expand in size. If the process yields an image that is the same size as the original, or larger, the API will leave the image alone.
+  ::
+  ::field{name="consolidate-duplicate-image-and-forms" type="on/off"}
+Remove duplicate copies of alternate images and forms.
+  ::
+  ::field{name="down-convert-16-to-8-bpc-images" type="on/off"}
+Convert images that are 16 bits per component to 8 bits per component.
+<br><br>
+The color depth of an image is the number of bits used per pixel for each color component. RGB, for example, has three color components. By down-converting an image in a PDF file from 16 bpc to 8 bpc, you are reducing the resolution of the image, but also significantly reducing its size. If a PDF document features high-resolution images, the final PDF can also be significantly smaller.
+<br><br>
+This feature is not applicable if Color Conversion is enabled (see Color Conversion below). Color Conversion will attempt to down-convert 16 bpc images automatically if you turn it on. The down-convert feature only has an impact if Color Conversion is turned off.
+  ::
+
+::
+::
+
+::collapsible
+#title
+### Color Conversion
+
+#content
+
+Convert the colors in a PDF document to a color profile you select *before* compressing that document.
+
+```bash [Color Conversion Example]icon=lucide:code line-numbers
+"color-conversion": {
+    "enabled": "on",
+    "color-convert-action": "convert",
+    "convert-intent": "profile-intent",
+    "convert-profile": "acrobat9-cmyk"
+}
+```
+
+::field-group
+  ::field{name="enabled" type="on/off"}
+Convert colors in a PDF document using a target profile.
+  ::
+  ::field{name="convert-profile" type="string"}
+The profile used to convert colors in the PDF document. Set one of:
+<br><br>
+`lab-d50`, `srgb`, `apple-rgb`
+, `color-match-rgb`, `gamma-18`, `gamma-22`, `dot-gain-10`, `dot-gain-15`, `dot-gain-20`, `dot-gain-25`, `dot-gain-30`, `monitor-rgb`, `acrobat5-cmyk`, `acrobat9-cmyk`
+<br><br>
+The above list of options represents the standard list of color profiles provided with the API. Select one of these profiles, specifying it by name in your JSON profile.
+
+See documentation for further information on these profiles.
+  ::
+  ::field{name="color-convert-action" type="on/off"}
+The type of color conversion. The values available include `convert` and `decalibrate`. The `decalibrate` setting will decalibrate calibrated color spaces in the PDF document.
+<br><br>
+If a color profile file is assigned to a PDF, or to a feature within that PDF document such as an image, the PDF is referred to as “calibrated.” This color profile will be used when rendering colors for that PDF.
+<br><br>
+If a color profile is not assigned to the document, a default color profile is used instead, usually installed on the local device or on a printer. So if you select `decalibrate` as the color-conversion-option, you can remove the ICC profile file stored in the PDF document, and thus reduce the size of the PDF output file.
+  ::
+  ::field{name="convert-intent" type="on/off"}
+Use this setting to specify the color translation method for colors that are outside the gamut of the color profile. The intent lets the software determine how to substitute a color that can be written to the file. You can select from a list of standard strategies to apply when converting the colors in that original PDF document.
+<br><br>
+The conversion intent is used to describe how the destination device for the document reproduces the colors in the document. Thus, when you print or display the PDF output file, the colors in the output file will match as closely as possible the original color found in the source PDF document.
+<br><br>
+Set to one of:
+<br><br>
+`perceptual-intent`, `relative-colorimetric-intent`, `saturation-intent`, `absolute-colorimetric-intent`, `profile-intent`
+  ::
+
+::
+::
