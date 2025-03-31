@@ -12,8 +12,6 @@ We provide three standard values for compressing your PDF document:
 
 The `compression_level` parameter applies different effects to different resources within a PDF. The following is a list of how `high`, `medium`, and `low` affect resources such as images, transparencies, and more:
 
-#### Images
-
 
 ::tabs{variant="card"}
   ::div{label="Images"}
