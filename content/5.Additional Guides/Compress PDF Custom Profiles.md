@@ -175,7 +175,9 @@ Only use lowercase characters for the keys and values you add to the JSON profil
 }
 ```
 
-## Optimization Categories
+## Optimization Parameters
+
+### Parameter Categories
 
 The methods you can use to optimize a PDF document are sorted into the following categories:
 <br><br>
@@ -374,7 +376,11 @@ Place all the information needed to render the first page of the document near t
 #content
 
 When a PDF document is created that includes photographs, diagrams or drawings, the original graphic file, such as a JPEG photograph or a PNG image, become images in that PDF file. You can enter settings in the JSON profile file to compress these color, grayscale, or monochrome (black and white) images.
-<br><br>
+<br>
+::alert{type="secondary" icon="lucide:info"}
+See additional details about [Image Compression below](https://docs.pdfrest.com/additional-guides/compress-pdf-custom-profiles#image-compression-details).
+::
+<br>
 Select one of `color`, `grayscale`, `monochrome` and then set `downsample` and/or `recompress`.
 
 ```bash [Images Sample JSON]icon=lucide:code line-numbers
@@ -531,3 +537,33 @@ Set to one of:
 
 ::
 ::
+
+### Image Compression Details
+
+#### Downsampling Images
+
+If you have images in a PDF document that you want to make smaller, and you know that these images don’t need to have a high resolution in the output file, you can reduce the resolution of these images. You can also compress these images within the file. Both steps will reduce the final size of the PDF document.
+
+The process of reducing the resolution of images is called downsampling. You can choose to downsample color images in a PDF document, or grayscale, or monochrome (black & white). The settings for reducing the resolution for these three kinds of images in a PDF document must be added separately to the JSON profile file. Each type of image can have its own settings and resolution values. So you could, for example, enable resampling to only apply to the color images in a PDF document. Or you could include only grayscale and black and white images.
+
+#### Downsampling and Recompression
+
+Downsampling reduces the size of the image directly by reducing the resolution. In recompression, compressed images in a document are decompressed and then compressed again. You can enter a recompression setting to change the compression algorithm used for recompression, such as ZIP, JPEG or Flate, and another setting to change the final image quality. The image quality is part of the compression method used.
+
+If you add settings in the JSON profile file to downsample images, the Datalogics PDF REST APIs will also recompress the images involved whether you provide recompression settings or not.
+
+If you do not add recompression settings to the JSON profile, the API downsamples and recompresses each image in the PDF document using the default compression algorithm and quality value defined in the image itself. For example, if you provide downsample settings but not recompression settings in your JSON profile, and apply that profile to a document that only holds images using JPEG compression, the API will use the JPEG compression method. It will also use the highest quality recompression setting available (“maximum”) to keep from reducing the quality of the images as they are recompressed.
+
+On the other hand, if you decide to leave out downsample settings from your JSON profile file, but add recompression settings, the API will recompress the images using the recompression algorithm you provide while keeping the image downsampling resolution (DPI) the same. Note that if you add recompression settings you must include both values in the JSON file, the compression algorithm and the recompression quality level.
+
+#### Image Resolution
+
+When we refer to the resolution of an image, we generally refer to the number of pixels in that image. This can be expressed in terms of megapixels, or in Dots per Inch (DPI). With an image in a PDF document, the resolution of the image is expressed as a certain number of pixels wide and pixels high. The downsampling process involves changing the width and height of an image in pixels, in order to reach a given target resolution. The API calculates the resolution for every image in the document. Keep in mind that the resolution values used with downsampling are distinct from the image quality settings used for image recompression.
+
+You can specify a target resolution to use for downsampling images in a document (target-dpi) and a trigger resolution (trigger-dpi). If you decide to downsample an image type, both the target and the trigger resolution settings must be included in your profile file. The target resolution defines the goal—the maximum resolution for every image in the file. So if you add a target resolution to your JSON profile and set that target resolution to 600 DPI, the API will downsample every graphic in the PDF document to 600 DPI unless it that image is already at 600 DPI or less.
+
+The trigger resolution, if used, defines the resolution the API uses as its starting point. Any image with a resolution greater than the trigger resolution will be downsampled. If an image has a resolution less than the trigger resolution, PDF Optimizer ignores it.
+
+So if you set the trigger resolution to 800 DPI, and the target resolution to 400 DPI, it means that you want to downsample every image in the PDF document to 400 DPI, but only if the image is larger than 800 DPI to begin with. In this example you would be telling the API to look for only the really large images (the ones with a resolution at 800 DPI or more) and then downsample just those images to a certain set value, in this example 400 DPI.
+
+If the trigger resolution is 500 DPI, and the target resolution is 400 DPI, the API will not downsample an image if it is 480 DPI. But if the trigger resolution is 500 and the target is 400, if the API finds an image with a resolution of 680 DPI, it will downsample it to 400 DPI.
