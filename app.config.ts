@@ -28,16 +28,44 @@ export default defineAppConfig({
       },
       darkModeToggle: true,
       nav: [{
-        title: 'pdfRest',
+        title: 'pdfRest Home',
         to: 'https://pdfrest.com/',
         target: '_blank',
         showLinkIcon: true,
-      }],
-      links: [{
-        icon: 'lucide:github',
-        to: 'https://github.com/datalogics/pdf-rest-api-samples',
+      }, {
+        title: 'Resources',
+        links: [{
+          title: 'API Lab',
+          to: 'https://pdfrest.com/apilab/',
+          description: 'Customize options, autogenerate code, and process files with pdfRest instantly online.',
+          target: '_blank',
+          icon: 'pdfrest:api-lab',
+        }, {
+          title: 'GitHub',
+          to: 'https://github.com/datalogics/pdf-rest-api-samples',
+          description: 'Dozens of code samples in JavaScript, Python, PHP, cURL, and more.',
+          target: '_blank',
+          icon: 'mdi:github',
+        }, {
+          title: 'Postman',
+          to: 'https://www.postman.com/pdfrest/',
+          description: 'Send preconfigured pdfRest API Calls through the simple Postman interface.',
+          target: '_blank',
+          icon: 'vscode-icons:file-type-postman',
+        }, {
+          title: 'Status',
+          to: 'https://status.pdfrest.com/',
+          description: 'Check the status of pdfRest.',
+          target: '_blank',
+          icon: 'pajamas:status-health',
+        }],
+      }, {
+        title: 'Support',
+        to: 'https://pdfrest.com/support/',
         target: '_blank',
+        showLinkIcon: true,
       }],
+      links: [],
     },
     aside: {
       useLevel: true,
