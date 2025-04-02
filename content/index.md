@@ -27,6 +27,9 @@ Integrate powerful PDF processing into your project with pdfRest's flexible API 
 
 Streamline your development with [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/). Eliminate the overhead of installation and maintenance, and integrate powerful PDF solutions effortlessly through standard REST API connections. pdfRest takes care of the infrastructure, allowing you to focus on your core application.
 
+- [Getting Started](https://docs.pdfrest.com/cloud-api/getting-started/)
+- [FAQ](https://docs.pdfrest.com/cloud-api/frequently-asked-questions/)
+
 ### Self-Hosted API on AWS
 
 Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), put you in full control of your PDF processing solutions, supporting the most rigorous data protection and compliance requirements.
