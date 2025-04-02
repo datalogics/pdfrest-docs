@@ -28,11 +28,16 @@ Integrate powerful PDF processing into your project with pdfRest's flexible API 
 Streamline your development with [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/). Eliminate the overhead of installation and maintenance, and integrate powerful PDF solutions effortlessly through standard REST API connections. pdfRest takes care of the infrastructure, allowing you to focus on your core application.
 
 - [Getting Started](https://docs.pdfrest.com/cloud-api/getting-started/)
-- [FAQ](https://docs.pdfrest.com/cloud-api/frequently-asked-questions/)
+- [Frequently Asked Questions](https://docs.pdfrest.com/cloud-api/frequently-asked-questions/)
 
 ### Self-Hosted API on AWS
 
 Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), put you in full control of your PDF processing solutions, supporting the most rigorous data protection and compliance requirements.
+
+- [Getting Started](https://docs.pdfrest.com/self-hosted-api-on-aws/getting-started/)
+- [Deploy on AWS](https://docs.pdfrest.com/self-hosted-api-on-aws/deploy-on-aws/)
+- [Configure AWS Deployment](https://docs.pdfrest.com/self-hosted-api-on-aws/configure-aws-deployment/)
+- [Frequently Asked Questions](https://docs.pdfrest.com/self-hosted-api-on-aws/faq/)
 
 #### AWS Marketplace Products
 
@@ -94,7 +99,11 @@ Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.ama
 
 Deploy and manage robust PDF solutions on-premises or within private cloud environments. Our self-hosted [Container API](https://pdfrest.com/products/pdf-toolkit-container-api/) offers full control over your backend, storage, and security, and can be deployed on any platform that supports Docker, including Kubernetes.
 
+- [Getting Started](https://docs.pdfrest.com/container-api-with-docker/getting-started/)
+- [Deploy Container API](https://docs.pdfrest.com/container-api-with-docker/deploy-container-api/)
+- [Configure Container API](https://docs.pdfrest.com/container-api-with-docker/configure-container-api/)
+
   :::alert{icon="lucide:info" type="secondary"}
-  Evaluation access and pricing for Container API is available through the [Datalogics Enterprise Sales Team](mailto\:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry)
+  Please [contact us](http://pdfrest.com/support/) for evaluation access and pricing information.
   :::
 ::
