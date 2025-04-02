@@ -1,10 +1,10 @@
 ---
 title: Acknowledgements
 description: Acknowledgements for pdfRest API service.
-meta_title: pdfRest API | Acknowledgements
+meta_title: Acknowledgements
 meta_description: Acknowledgements for pdfRest API service.
+breadcrumb: false
 ---
-
 
 ### Adobe, Inc.
 
