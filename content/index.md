@@ -104,6 +104,6 @@ Deploy and manage robust PDF solutions on-premises or within private cloud envir
 - [Configure Container API](https://docs.pdfrest.com/container-api-with-docker/configure-container-api/)
 
   :::alert{icon="lucide:info" type="secondary"}
-  Please [contact us](http://pdfrest.com/support/) for evaluation access and pricing information.
+  Evaluation access and pricing for Container API is available through the [Datalogics Enterprise Sales Team](mailto\:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry)
   :::
 ::
