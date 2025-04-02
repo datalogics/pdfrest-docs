@@ -1,130 +1,94 @@
 ---
 navigation: false
-title: Home
-description: Learn how to setup and use pdfRest.
+title: pdfRest API Documentation | Cloud, Self-Hosted, Container
+description: Explore pdfRest API Documentation to integrate PDF processing into your projects. Get up and running quickly with Cloud, Self-Hosted on AWS, and Docker options.
+
 ---
 
 ::hero-alt
 ---
-actions:
-  - name: GitHub Code Samples
-    variant: outline
-    to: https://github.com/datalogics/pdf-rest-api-samples
-    leftIcon: lucide:github
----
+
 #title
 pdfRest API Documentation
 
 #description
-Learn about using the pdfRest PDF processing API. Whether you're self-hosting or subscribed to our Cloud API, all of the documentation you need is here!
+Find everything you need to set up, configure, and use pdfRest to power your PDF processing solutions. Whether you're self-hosting the API or using our Cloud API service, get started quickly and easily with documentation and tutorials.
 ::
 
+## pdfRest Deployment Options
 
-## Where is pdfRest Available?
+Integrate powerful PDF processing into your project with pdfRest's flexible API deployment options.
 
-Read below about the different ways you can access and deploy the pdfRest API.
-
-::steps{level=3}
-
+::steps{level="3"}
 ### Cloud API
 
-The [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/) is our publicly available, fully-featured and trusted enterprise-grade solution with affordable subscription plans for every project.
-
+Streamline your development with [pdfRest Cloud API](https://pdfrest.com/products/cloud-api/). Eliminate the overhead of installation and maintenance, and integrate powerful PDF solutions effortlessly through standard REST API connections. pdfRest takes care of the infrastructure, allowing you to focus on your core application.
 
 ### Self-Hosted API on AWS
 
-Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), put you in full control of your PDF processing solutions, supporting the most rigorous data protection and compliance requirements. Click the links below to view the products in the AWS Marketplace.
+Our Self-Hosted API products, available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), put you in full control of your PDF processing solutions, supporting the most rigorous data protection and compliance requirements.
 
 #### AWS Marketplace Products
 
+  :::card
+  ---
+  horizontal: true
+  icon-size: 83
+  icon: pdfrest:pdf-toolkit-self-hosted
+  target: _blank
+  to: https://aws.amazon.com/marketplace/pp/prodview-lvleu34bj4cn6
+  ---
+  #title
+  ##### PDF Toolkit Self-Hosted API
+  
+  #description
+  Over 25 powerful API Tools to convert, optimize, modify, extract, secure, and simplify your digital documents.
+  
+  #content
+  Automate robust document workflows with our comprehensive PDF API toolkit. Among its many features, convert files to and from PDF, reduce file sizes, merge and split documents, and add text and images. Explore advanced tools for print readiness, archival compliance, and data extraction for processing and machine learning.
+  :::
 
+  :::card
+  ---
+  horizontal: true
+  icon-size: 76
+  icon: pdfrest:pdf-forms-pro
+  target: _blank
+  to: https://aws.amazon.com/marketplace/pp/prodview-2xxmqtam6s54s
+  ---
+  #title
+  ##### PDF Forms Pro Self-Hosted API
+  
+  #description
+  Complete PDF forms processing toolkit supporting data import and export, form flattening, and form conversion.
+  
+  #content
+  Automate PDF form processing with pdfRest: directly fill forms with external data, extract field values for aggregation, lock form fields to prevent changes, and flatten or convert form types for universal viewing. pdfRest offers the only REST API service for processing all PDF form types including Static XFA, Dynamic XFA, and Acroforms.
+  :::
 
-
-
-::card
----
-icon: 'pdfrest:pdf-toolkit-self-hosted'
-icon-size: 83
-horizontal: true
-to: https://aws.amazon.com/marketplace/pp/prodview-lvleu34bj4cn6
-target: _blank
-#showLinkIcon: false
----
-
-#title
-##### PDF Toolkit Self-Hosted API
-
-#description
-Over 25 powerful API Tools to convert, optimize, modify, inspect, secure, and simplify your digital documents and processing workflows.
-
-#content
-Includes all the standard PDF processing tools you'd expect, such as Convert to PDF, Compress PDF, Merge PDFs, and Split PDF, as well as professional-grade tools like Flatten Transparencies, Convert to PDF/A, and Extract Text to prepare your documents for specific use cases, like print, archival, and machine learning.
-::
-
-
-
-::card
----
-icon: 'pdfrest:pdf-forms-pro'
-icon-size: 76
-horizontal: true
-to: https://aws.amazon.com/marketplace/pp/prodview-2xxmqtam6s54s
-target: _blank
-#showLinkIcon: false
----
-
-#title
-##### PDF Forms Pro Self-Hosted API
-
-#description
-The one-stop-shop for automation and batch processing of PDF form documents with all the API Tools you'll need.
-
-#content
- Avoid manual data entry and save time by directly filling forms with external data. Extract form field values to collect data from multiple documents and aggregate into a single repository. Lock form field values to prevent further modification. Flatten PDF forms to make them universally compatible with all PDF viewing and processing applications. pdfRest offers the only REST API service for processing all PDF form types including Static XFA, Dynamic XFA, and Acroforms.
-::
-
-
-
-::card
----
-icon: 'pdfrest:pdf-to-office'
-icon-size: 76
-horizontal: true
-to: https://aws.amazon.com/marketplace/pp/prodview-gilhkmjyjxyrs
-target: _blank
-#showLinkIcon: false
----
-
-#title
-##### PDF to Office Pro Self-Hosted API
-
-#description
-All of the tools for transforming static PDFs into fully editable Microsoft Office formats.
-
-#content
-This toolkit handles everything you need, seamlessly converting your PDFs into Word documents, Excel spreadsheets, and PowerPoint presentations. PDF to Office Pro integrates effortlessly with any development project. Its intuitive API allows you to seamlessly add powerful PDF conversion capabilities to your applications, streamlining workflows and empowering users to unlock the true potential of their documents.
-::
+  :::card
+  ---
+  horizontal: true
+  icon-size: 76
+  icon: pdfrest:pdf-to-office
+  target: _blank
+  to: https://aws.amazon.com/marketplace/pp/prodview-gilhkmjyjxyrs
+  ---
+  #title
+  ##### PDF to Office Pro Self-Hosted API
+  
+  #description
+  Transform static PDFs into fully editable Microsoft Office formats, including Word, Excel, and PowerPoint.
+  
+  #content
+  Easily integrate high-quality PDF to Microsoft Office conversion capabilities into your projects. Convert your PDFs into fully editable Word documents, Excel spreadsheets, and PowerPoint presentations, transforming static documents into more flexible, fully editable formats.
+  :::
 
 ### Container API with Docker
 
-Deploy and manage powerful PDF solutions on-premises. This self-hosted container API provides complete control over your backend, storage, and security, Deployable anywhere that supports Docker, such as Kubernetes.
+Deploy and manage robust PDF solutions on-premises or within private cloud environments. Our self-hosted [Container API](https://pdfrest.com/products/pdf-toolkit-container-api/) offers full control over your backend, storage, and security, and can be deployed on any platform that supports Docker, including Kubernetes.
 
-Read more about all of the functionality available in the Container API on [pdfRest.com](https://pdfrest.com/products/pdf-toolkit-container-api/)!
-
-::alert{type="secondary" icon="lucide:info"}
-  Evaluation access and pricing for Container API is available through the [Datalogics Enterprise Sales Team](mailto:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry)
+  :::alert{icon="lucide:info" type="secondary"}
+  Evaluation access and pricing for Container API is available through the [Datalogics Enterprise Sales Team](mailto\:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry)
+  :::
 ::
-::
-
-## **Acknowledgments**
-
-#### Adobe, Inc.
-
-- pdfRest REST APIs include the Adobe® PDF Library™ and Adobe® PDF Converter™ software products, and any upgrades, modified versions, updates, additions, and copies thereof. Adobe, Adobe PDF Library, and Adobe PDF Converter are either registered trademarks or trademarks of Adobe Inc. in the United States and/or other countries.
-
-#### **URW++ GmbH**
-
-- URW++ GmbH, a German corporation having a place of business at Poppenbütteler Bogen 36, D-22399 Hamburg, Germany (“URW++”) is the owner and developer of certain fonts (“URW++ Fonts”). URW++ and Datalogics, Inc. have entered into an agreement (the “URW++ Enabling Agreement”) which entitles Datalogics, Inc. to sublicense certain rights to use and distribute URW++ Fonts.
-- Use of URW++ Fonts. Upon full payment of the agreed upon licensee fee, you are granted a non-exclusive right to use the URW++ Fonts.
-- Exclusion of Other Usage. It is prohibited to change or modify the font/trademark names used as identifying tags in the URW++ Fonts in any form or manner with prior written consent of URW.
-- No Other Rights. In the event your use of the URW++ Fonts is found to infringe on the intellectual property rights of any third party, in any jurisdiction, you will cease use of such URW++ Fonts in such jurisdiction unless or you secure any additional rights necessary for such use. End of Term. You are responsible for removing and deleting URW++ Fonts from any AMI on which they have been installed at the end of your license term.
