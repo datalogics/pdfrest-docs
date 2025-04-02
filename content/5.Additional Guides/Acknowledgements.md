@@ -1,6 +1,6 @@
 ---
-title: Acknowledgements
-description: Acknowledgements for pdfRest.
+title: pdfRest API | Acknowledgements
+description: Acknowledgements for pdfRest API service
 ---
 
 # Acknowledgements

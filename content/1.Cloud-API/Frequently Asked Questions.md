@@ -1,3 +1,8 @@
+---
+title: pdfRest Cloud API | FAQ
+description: Find answers to the most frequently asked questions related to pdfRest Cloud API service.
+---
+
 ## General API
 
 ::accordion{collapsible}

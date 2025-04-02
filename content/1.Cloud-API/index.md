@@ -1,7 +1,7 @@
 ---
 navigation: false
 navigation.redirect: /cloud-api/getting-started
-title: Cloud API
+title: pdfRest Cloud API | Documentation
 icon: vscode-icons:file-type-apib2
 sidebar:
   style: tree

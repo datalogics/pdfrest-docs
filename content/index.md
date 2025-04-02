@@ -6,7 +6,7 @@ description: Explore pdfRest API Documentation to integrate PDF processing into 
 ---
 
 ::hero-alt
----
+
 
 #title
 pdfRest API Documentation
