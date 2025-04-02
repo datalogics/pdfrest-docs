@@ -21,10 +21,10 @@ const { page } = useContent();
 const config = useConfig();
 
 useSeoMeta({
-  title: `${page.value?.title ?? '404'} | ${config.value.site.name}`,
-  ogTitle: page.value?.title,
-  description: page.value?.description,
-  ogDescription: page.value?.description,
+  title: `${page.value?.meta_title ?? page.value?.title ?? '404'} | ${config.value.site.name}`,
+  ogTitle: page.value?.meta_title ?? page.value?.title,
+  description: page.value?.description ?? page.value?.meta_description,
+  ogDescription: page.value?.description ?? page.value?.meta_description,
   ogImage: config.value.site.ogImage,
   twitterCard: 'summary_large_image',
 });
