@@ -126,14 +126,8 @@ export default defineAppConfig({
       credits: `© ${new Date().getFullYear()} Datalogics, Inc. All rights reserved.`,
       links: [
         {
-          title: 'pdfRest',
-          to: 'https://pdfrest.com/',
-          target: '_blank',
-        },
-        {
-          icon: 'lucide:github',
-          to: 'https://github.com/datalogics/pdf-rest-api-samples',
-          target: '_blank',
+          title: 'Acknowledgements',
+          to: '/additional-guides/acknowledgements/',
         },
       ],
     },
