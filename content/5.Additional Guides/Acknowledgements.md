@@ -1,9 +1,10 @@
 ---
-title: pdfRest API | Acknowledgements
-description: Acknowledgements for pdfRest API service
+title: Acknowledgements
+description: Acknowledgements for pdfRest API service.
+meta_title: pdfRest API | Acknowledgements
+meta_description: Acknowledgements for pdfRest API service.
 ---
 
-# Acknowledgements
 
 ### Adobe, Inc.
 

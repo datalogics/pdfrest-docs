@@ -1,13 +1,16 @@
 ---
 navigation: false
-title: pdfRest API Documentation | Cloud, Self-Hosted, Container
-description: Explore pdfRest API Documentation to integrate PDF processing into your projects. Get up and running quickly with Cloud, Self-Hosted on AWS, and Docker options.
-
+title: pdfRest API Documentation
+description: Explore pdfRest API Documentation to integrate PDF processing into
+  your projects. Get up and running quickly with Cloud, Self-Hosted on AWS, and
+  Docker options.
+meta_title: pdfRest API Documentation | Cloud, Self-Hosted, Container
+meta_description: Explore pdfRest API Documentation to integrate PDF processing
+  into your projects. Get up and running quickly with Cloud, Self-Hosted on AWS,
+  and Docker options.
 ---
 
 ::hero-alt
-
-
 #title
 pdfRest API Documentation
 

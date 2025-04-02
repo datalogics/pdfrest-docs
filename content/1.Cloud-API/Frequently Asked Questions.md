@@ -1,6 +1,8 @@
 ---
-title: pdfRest Cloud API | FAQ
-description: Find answers to the most frequently asked questions related to pdfRest Cloud API service.
+title: Frequently Asked Questions
+description: Find answers to common questions related to pdfRest Cloud API service.
+meta_title: pdfRest Cloud API | FAQ
+meta_description: Find answers to common questions related to pdfRest Cloud API service.
 ---
 
 ## General API
