@@ -1,4 +1,9 @@
-
+---
+title: API Reference Directory
+description: Access API reference guides for all pdfRest PDF document solutions products.
+meta_title: API Reference Guides | Directory
+meta_description: Access API reference guides for all pdfRest PDF document solutions products.
+---
 
 ## Cloud API
 ::card
