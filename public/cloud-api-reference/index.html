@@ -131,6 +131,8 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Compress PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/compressed-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/compressed-pdf</a><br/></div>
 			<div class='menu-row'>
+			<span class='menu-cat'><b>Redact PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-redacted-text-preview'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-redacted-text-preview</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-redacted-text-applied'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-redacted-text-applied</a><br/></div>
+			<div class='menu-row'>
 			<span class='menu-cat'><b>Watermark PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/watermarked-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/watermarked-pdf</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Encrypt PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/encrypted-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/encrypted-pdf</a><br/>&nbsp;&nbsp;&#8226; <a href='#/decrypted-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/decrypted-pdf</a><br/></div>
@@ -688,6 +690,115 @@
    "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 					<tr class='info'><td>422</td><td>Unprocessable Entity</td><td><pre>{
    "error": "The 'profile' file provided is not a JSON file, please see documentation for sample profile."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/pdf-with-redacted-text-preview'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-redacted-text-preview</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Generates a visual preview of redactions to be applied to a PDF document, highlighting the areas to be redacted with red rectangles based on the specified JSON redaction parameters. This step is required before applying the final redactions, allowing users to review and verify the redactions for accuracy and completeness. To apply redactions, send the output from this endpoint to the <code>/pdf-with-redacted-text-applied</code> endpoint. <br/><br/> <span class='summary'>Examples</span> <div class="tab">
+  <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'cURL', 'pdf-with-redacted-text-preview')" id="pdf-with-redacted-text-preview-defaultOpen">cURL</button>
+  <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'JavaScript', 'pdf-with-redacted-text-preview')">JavaScript</button>
+  <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'Python', 'pdf-with-redacted-text-preview')">Python</button>
+  <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'PHP', 'pdf-with-redacted-text-preview')">PHP</button>
+  <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'DotNET', 'pdf-with-redacted-text-preview')">.NET</button>
+  <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'Java', 'pdf-with-redacted-text-preview')">Java</button>
+</div> <div id="pdf-with-redacted-text-preview-cURL" class="pdf-with-redacted-text-preview-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FcURL%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-preview.sh&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-preview-JavaScript" class="pdf-with-redacted-text-preview-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJavaScript%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-preview.js&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script> 
+</div> <div id="pdf-with-redacted-text-preview-Python" class="pdf-with-redacted-text-preview-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPython%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-preview.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-preview-PHP" class="pdf-with-redacted-text-preview-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPHP%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-preview.php&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-preview-DotNET" class="pdf-with-redacted-text-preview-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FDotNET%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-preview.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-preview-Java" class="pdf-with-redacted-text-preview-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJava%2FEndpoint%20Examples%2FMultipart%20Payload%2FPDFWithRedactedTextPreview.java&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <script> document.getElementById("pdf-with-redacted-text-preview-defaultOpen").click(); </script> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre> <pre>Api-Key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>PDF file to be uploaded for redaction.<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing PDF file on server for redaction.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>redactions</td><td>Specifies the redactions to be applied to a PDF document. Each redaction entry in the array defines the type of redaction and the value to search for and redact.
+<br/><br/><b>Accepts:</b><br/>Types of Redactions:<br/> <ul> <li><strong>literal</strong> - The value is the exact string to search for and redact. This type is useful for removing specific names, words, or phrases.</li> <li><strong>regex</strong> - The value is a regular expression used to search for pattern matches and redact them. This type is ideal for identifying and removing patterns such as sequences of numbers or specific text formats.</li> <li><strong>preset</strong> - The value can be set to one of the following predefined types to automatically redact common patterns using a predefined regex:
+    <ul>
+    <li><strong>email</strong> - Email addresses</li>
+    <li><strong>phone_number</strong> - Phone numbers</li>
+    <li><strong>date</strong> - Dates</li>
+    <li><strong>us_ssn</strong> - US Social Security numbers</li>
+    <li><strong>url</strong> - URLs</li>
+    <li><strong>credit_card</strong> - Credit card numbers</li>
+    <li><strong>credit_debit_pin</strong> - Credit/Debit PIN numbers</li>
+    <li><strong>bank_routing_number</strong> - Bank routing numbers</li>
+    <li><strong>international_bank_account_number</strong> - International bank account numbers</li>
+    <li><strong>swift_bic_number</strong> - SWIFT/BIC numbers</li>
+    <li><strong>ipv4</strong> - IPv4 addresses</li>
+    <li><strong>ipv6</strong> - IPv6 addresses</li>
+    </ul>
+</li> </ul>
+<br/><br/><b>Example:</b><br/><pre> [
+    {
+        "type": "literal",
+        "value": "John Doe"        
+    },
+    {
+        "type": "regex",
+        "value": "(\\$|USD)\\s*\\d{1,3}(,\\d{3})*(\\.\\d{2})?"        
+    },
+    {
+        "type": "preset",
+        "value": "credit_card"
+    },
+    {  
+        "type": "preset",
+        "value": "email"
+    } 
+] </pre>
+</td><td>None</td><td class='yes'>Yes</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension.<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_pdf-with-redacted-text-preview</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "https://api.pdfrest.com/resource/2e7de20c3-0dcd-4bed-b446-3c9c0d3f8c8c?format=file"<br/>
+   "outputId": "2e7de20c3-0dcd-4bed-b446-3c9c0d3f8c8c"<br/>
+   "inputId": "1e3c7fefe-45e0-48f2-bf8d-fe506e1d7838"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The provided key is not valid."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/pdf-with-redacted-text-applied'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-redacted-text-applied</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Finalizes the redaction process by applying the specified redactions to a PDF document. This endpoint takes the redaction preview generated by <code>/pdf-with-redacted-text-preview</code> and permanently removes the identified sensitive information from the document. Users can automate this step following a manual review or execute it in succession with the preview step for a fully automated redaction workflow. This ensures that all sensitive data is securely and irreversibly redacted, safeguarding against unauthorized access and ensuring compliance with data protection regulations. <br/><br/> <span class='summary'>Examples</span> <div class="tab">
+  <button class="pdf-with-redacted-text-applied-tablinks" onclick="openTab(event, 'cURL', 'pdf-with-redacted-text-applied')" id="pdf-with-redacted-text-applied-defaultOpen">cURL</button>
+  <button class="pdf-with-redacted-text-applied-tablinks" onclick="openTab(event, 'JavaScript', 'pdf-with-redacted-text-applied')">JavaScript</button>
+  <button class="pdf-with-redacted-text-applied-tablinks" onclick="openTab(event, 'Python', 'pdf-with-redacted-text-applied')">Python</button>
+  <button class="pdf-with-redacted-text-applied-tablinks" onclick="openTab(event, 'PHP', 'pdf-with-redacted-text-applied')">PHP</button>
+  <button class="pdf-with-redacted-text-applied-tablinks" onclick="openTab(event, 'DotNET', 'pdf-with-redacted-text-applied')">.NET</button>
+  <button class="pdf-with-redacted-text-applied-tablinks" onclick="openTab(event, 'Java', 'pdf-with-redacted-text-applied')">Java</button>
+</div> <div id="pdf-with-redacted-text-applied-cURL" class="pdf-with-redacted-text-applied-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FcURL%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-applied.sh&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-applied-JavaScript" class="pdf-with-redacted-text-applied-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJavaScript%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-applied.js&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script> 
+</div> <div id="pdf-with-redacted-text-applied-Python" class="pdf-with-redacted-text-applied-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPython%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-applied.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-applied-PHP" class="pdf-with-redacted-text-applied-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPHP%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-applied.php&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-applied-DotNET" class="pdf-with-redacted-text-applied-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FDotNET%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-redacted-text-applied.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-redacted-text-applied-Java" class="pdf-with-redacted-text-applied-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJava%2FEndpoint%20Examples%2FMultipart%20Payload%2FPDFWithRedactedTextPreview.java&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <script> document.getElementById("pdf-with-redacted-text-applied-defaultOpen").click(); </script> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre> <pre>Api-Key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>PDF file to be uploaded for redaction.<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing PDF file on server for redaction.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>rgb_color</td><td>Set the RGB color for the redaction blocks when they are applied.<br/><br/><b>Accepts:</b><br/>3 comma-separated integers from 0 to 255<br/><br/><b>Example:</b><br/>255, 255, 255</td><td>0, 0, 0 (black)</td><td class='No'>No</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension.<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_pdf-with-redacted-text-applied</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "https://api.pdfrest.com/resource/2e7de20c3-0dcd-4bed-b446-3c9c0d3f8c8c?format=file"<br/>
+   "outputId": "2e7de20c3-0dcd-4bed-b446-3c9c0d3f8c8c"<br/>
+   "inputId": "1e3c7fefe-45e0-48f2-bf8d-fe506e1d7838"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The provided key is not valid."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/watermarked-pdf'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/watermarked-pdf</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Apply either a text-based or an image-based watermark to all pages of a PDF with customizable font, text size, color, opacity, scale, positioning, and rotation. <br/><br/> <span class='summary'>Examples</span> <div class="tab">
   <button class="watermarked-pdf-tablinks" onclick="openTab(event, 'cURL', 'watermarked-pdf')" id="watermarked-pdf-defaultOpen">cURL</button>
