@@ -41,24 +41,6 @@ meta_description: Find answers to common questions related to pdfRest Cloud API 
 
   :::accordion-item
   #title
-  What are Pro Tools?
-  
-  #content
-  Pro Tools are powerful API Tools that require a Pro or Enterprise plan for unrestricted access. All plans may be used to test Pro Tools, but output will be watermarked, redacted, or otherwise limited with a Starter, or Premium account.
-  
-  The current list of Pro Tools includes:
-  
-  - [Flatten Forms](https://pdfrest.com/apitools/flatten-forms/)
-  - [Import Form Data](https://pdfrest.com/apitools/import-form-data/)
-  - [Export Form Data](https://pdfrest.com/apitools/export-form-data/)
-  - [XFA to Acroforms](https://pdfrest.com/apitools/xfa-to-acroforms/)
-  - [PDF to Word](https://pdfrest.com/apitools/pdf-to-word/)
-  - [PDF to Excel](https://pdfrest.com/apitools/pdf-to-excel/)
-  - [PDF to PowerPoint](https://pdfrest.com/apitools/pdf-to-powerpoint/)
-  :::
-
-  :::accordion-item
-  #title
   What is the File Retention Period?
   
   #content
