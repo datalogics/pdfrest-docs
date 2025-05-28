@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-	<link rel="canonical" href="https://pdfrest.com/documentation">
+	<link rel="canonical" href="https://docs.pdfrest.com/cloud-api-reference/">
 	<style>
 		table { border: 2px solid #000; font-size: 18px; }
 		body { font-family: 'Baloo Bhai 2', sans-serif; padding:0px; margin:0px; background-color:#0C0C0C; color:#fff}
@@ -146,6 +146,8 @@
 			<span class='menu-cat'><b>Add to PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-text</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-image'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-image</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-added-attachment'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-added-attachment</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>PDF to Images</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/bmp'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/bmp</a><br/>&nbsp;&nbsp;&#8226; <a href='#/jpg'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/jpg</a><br/>&nbsp;&nbsp;&#8226; <a href='#/png'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/png</a><br/>&nbsp;&nbsp;&#8226; <a href='#/gif'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/gif</a><br/>&nbsp;&nbsp;&#8226; <a href='#/tif'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/tif</a><br/></div>
+			<div class='menu-row'>
+			<span class='menu-cat'><b>Set Page Boxes</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-page-boxes-set'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-page-boxes-set</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Convert PDF Colors</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-converted-colors'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-converted-colors</a><br/></div>
 			<div class='menu-row'>
@@ -1279,6 +1281,7 @@
 					<tr class='info'><td>pages</td><td>Page or range of pages to process<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
 					<tr class='info'><td>resolution</td><td>Output image resolution in Dots Per Inch (DPI)<br/><br/><b>Accepts:</b><br/>12 to 2400</td><td>300</td><td class='No'>No</tr>
 					<tr class='info'><td>color_model</td><td>Color model of the output file<br/><br/><b>Accepts:</b><br/><ul><li>rgb</li><li>gray</li></ul></td><td>rgb</td><td class='No'>No</tr>
+					<tr class='info'><td>smoothing</td><td>Enable anti-aliasing, or "smoothing," for text, line art, images, or any combination. Multiple selections should be separated by commas.<br/><br/><b>Accepts:</b><br/><ul><li>none</li><li>all</li><li>text</li><li>line</li><li>image</li></ul><br/><br/><b>Example:</b><br/>text,image</td><td>none</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -1319,6 +1322,7 @@
 					<tr class='info'><td>resolution</td><td>Output image resolution in Dots Per Inch (DPI)<br/><br/><b>Accepts:</b><br/>12 to 2400</td><td>300</td><td class='No'>No</tr>
 					<tr class='info'><td>color_model</td><td>Color model of the output file<br/><br/><b>Accepts:</b><br/><ul><li>rgb</li><li>cmyk</li><li>gray</li></ul></td><td>rgb</td><td class='No'>No</tr>
 					<tr class='info'><td>jpeg_quality</td><td>JPEG compression quality. Higher values produce a higher quality image but also a larger output file size.<br/><br/><b>Accepts:</b><br/>1 to 100</td><td>75</td><td class='No'>No</tr>
+					<tr class='info'><td>smoothing</td><td>Enable anti-aliasing, or "smoothing," for text, line art, images, or any combination. Multiple selections should be separated by commas.<br/><br/><b>Accepts:</b><br/><ul><li>none</li><li>all</li><li>text</li><li>line</li><li>image</li></ul><br/><br/><b>Example:</b><br/>text,image</td><td>none</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -1359,6 +1363,7 @@
 					<tr class='info'><td>pages</td><td>Page or range of pages to process<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
 					<tr class='info'><td>resolution</td><td>Output image resolution in Dots Per Inch (DPI)<br/><br/><b>Accepts:</b><br/>12 to 2400</td><td>300</td><td class='No'>No</tr>
 					<tr class='info'><td>color_model</td><td>Color model of the output file<br/><br/><b>Accepts:</b><br/><ul><li>rgb</li><li>rgba</li><li>gray</li></ul></td><td>rgb</td><td class='No'>No</tr>
+					<tr class='info'><td>smoothing</td><td>Enable anti-aliasing, or "smoothing," for text, line art, images, or any combination. Multiple selections should be separated by commas.<br/><br/><b>Accepts:</b><br/><ul><li>none</li><li>all</li><li>text</li><li>line</li><li>image</li></ul><br/><br/><b>Example:</b><br/>text,image</td><td>none</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -1399,6 +1404,7 @@
 					<tr class='info'><td>pages</td><td>Page or range of pages to process<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
 					<tr class='info'><td>resolution</td><td>Output image resolution in Dots Per Inch (DPI)<br/><br/><b>Accepts:</b><br/>12 to 2400</td><td>300</td><td class='No'>No</tr>
 					<tr class='info'><td>color_model</td><td>Color model of the output file<br/><br/><b>Accepts:</b><br/><ul><li>rgb</li><li>gray</li></ul></td><td>rgb</td><td class='No'>No</tr>
+					<tr class='info'><td>smoothing</td><td>Enable anti-aliasing, or "smoothing," for text, line art, images, or any combination. Multiple selections should be separated by commas.<br/><br/><b>Accepts:</b><br/><ul><li>none</li><li>all</li><li>text</li><li>line</li><li>image</li></ul><br/><br/><b>Example:</b><br/>text,image</td><td>none</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -1438,6 +1444,7 @@
 					<tr class='info'><td>pages</td><td>Page or range of pages to process<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
 					<tr class='info'><td>resolution</td><td>Output image resolution in Dots Per Inch (DPI)<br/><br/><b>Accepts:</b><br/>12 to 2400</td><td>300</td><td class='No'>No</tr>
 					<tr class='info'><td>color_model</td><td>Color model of the output file<br/><br/><b>Accepts:</b><br/><ul><li>rgb</li><li>rgba</li><li>cmyk</li><li>lab</li><li>gray</li></ul></td><td>rgb</td><td class='No'>No</tr>
+					<tr class='info'><td>smoothing</td><td>Enable anti-aliasing, or "smoothing," for text, line art, images, or any combination. Multiple selections should be separated by commas.<br/><br/><b>Accepts:</b><br/><ul><li>none</li><li>all</li><li>text</li><li>line</li><li>image</li></ul><br/><br/><b>Example:</b><br/>text,image</td><td>none</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK</td><td><pre>{
@@ -1446,6 +1453,105 @@
    "inputId": "112f7ea0d-0e56-44bc-a3d2-42fdff96d993"<br/>}</pre></td></tr>
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "0 is not within the acceptable range for resolution."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/pdf-with-page-boxes-set'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-page-boxes-set</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Set one or more PDF page boundary boxes, including the MediaBox (page size), CropBox (visible content area for cropping PDF and removing white space), BleedBox (extra margin for professional printing with bleed), TrimBox (final printed page dimensions), and ArtBox (boundary of the artwork or content). <br/><br/> <span class='summary'>Examples</span> <div class="tab">
+  <button class="pdf-with-page-boxes-set-tablinks" onclick="openTab(event, 'cURL', 'pdf-with-page-boxes-set')" id="pdf-with-page-boxes-set-defaultOpen">cURL</button>
+  <button class="pdf-with-page-boxes-set-tablinks" onclick="openTab(event, 'JavaScript', 'pdf-with-page-boxes-set')">JavaScript</button>
+  <button class="pdf-with-page-boxes-set-tablinks" onclick="openTab(event, 'Python', 'pdf-with-page-boxes-set')">Python</button>
+  <button class="pdf-with-page-boxes-set-tablinks" onclick="openTab(event, 'PHP', 'pdf-with-page-boxes-set')">PHP</button>
+  <button class="pdf-with-page-boxes-set-tablinks" onclick="openTab(event, 'DotNET', 'pdf-with-page-boxes-set')">.NET</button>
+  <button class="pdf-with-page-boxes-set-tablinks" onclick="openTab(event, 'Java', 'pdf-with-page-boxes-set')">Java</button>
+</div> <div id="pdf-with-page-boxes-set-cURL" class="pdf-with-page-boxes-set-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FcURL%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-page-boxes-set.sh&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-page-boxes-set-JavaScript" class="pdf-with-page-boxes-set-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJavaScript%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-page-boxes-set.js&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-page-boxes-set-Python" class="pdf-with-page-boxes-set-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPython%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-page-boxes-set.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-page-boxes-set-PHP" class="pdf-with-page-boxes-set-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPHP%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-page-boxes-set.php&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-page-boxes-set-DotNET" class="pdf-with-page-boxes-set-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FDotNET%2FEndpoint%20Examples%2FMultipart%20Payload%2Fpdf-with-page-boxes-set.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="pdf-with-page-boxes-set-Java" class="pdf-with-page-boxes-set-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJava%2FEndpoint%20Examples%2FMultipart%20Payload%2FPDFWithPageBoxesSet.java&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <script> document.getElementById("pdf-with-page-boxes-set-defaultOpen").click(); </script> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre> <pre>Api-Key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>boxes</td><td>JSON string structured to define the page boundary boxes to be set. <br><br> This JSON string should contain a top-level "boxes" key, whose value is an array of box definition objects. Each of these objects requires a "box" key, specifying the type of box to modify (e.g., "media", "crop", "bleed", "trim", "art"), and a "pages" key. The "pages" key holds an array of page specifications, allowing you to target specific page ranges with corresponding margin adjustments. <br><br> Each page specification object within the "pages" array must include a "range" key, which can accept a single page number ("1"), a page range ("1-3"), "all", "even", "odd", or include "last" (e.g., "2-last"). Additionally, each page specification object should contain "top", "bottom", "left", and "right" keys, defining the margin values (in PDF Units, where 72 PDF Units = 1 inch) to apply for the specified box type and page range. Margins are relative to the current MediaBox and must be positive values.  For MediaBox only, negative values can be used to increase the page size.
+<br/><br/><b>Accepts:</b><br/><ul>
+  <li>
+    <strong>boxes</strong> - String | Required | A JSON string containing an array of box definition objects. Each object defines a specific page boundary box to modify.
+  </li>
+  <li>
+    <strong>boxes[].box</strong> - String | Required | Specifies the type of page boundary box to modify. Accepted values are "media", "crop", "bleed", "trim", and "art".
+  </li>
+  <li>
+    <strong>boxes[].pages</strong> - String | Required | An array of page specification objects. Each object defines the page range and the corresponding margin adjustments for the specified box type.
+  </li>
+  <li>
+    <strong>boxes[].pages[].range</strong> - String | Required | Specifies the page or range of pages to which the margin adjustments will be applied. Accepts a single page number ("1"), a page range ("1-3"), "all" to apply to every page, "even" for even-numbered pages, "odd" for odd-numbered pages, or ranges including "last" (e.g., "2-last").
+  </li>
+  <li>
+    <strong>boxes[].pages[].top</strong> - Number | Required | The top margin adjustment to apply, in positive PDF Units (72 PDF Units = 1 inch) relative to the current MediaBox. For MediaBox only, negative values can be used to increase the page size.
+  </li>
+  <li>
+    <strong>boxes[].pages[].bottom</strong> - Number | Required | The bottom margin adjustment to apply, in positive PDF Units (72 PDF Units = 1 inch) relative to the current MediaBox. For MediaBox only, negative values can be used to increase the page size.
+  </li>
+  <li>
+    <strong>boxes[].pages[].left</strong> - Number | Required | The left margin adjustment to apply, in positive PDF Units (72 PDF Units = 1 inch) relative to the current MediaBox. For MediaBox only, negative values can be used to increase the page size.
+  </li>
+  <li>
+    <strong>boxes[].pages[].right</strong> - Number | Required | The right margin adjustment to apply, in positive PDF Units (72 PDF Units = 1 inch) relative to the current MediaBox. For MediaBox only, negative values can be used to increase the page size.
+  </li>
+</ul>
+<br/><br/><b>Example:</b><br/><pre> {
+    "boxes": [
+        {
+            "box": "crop",
+            "pages": [
+                {
+                    "range": "1-10",
+                    "left": 72,
+                    "top": 36,
+                    "bottom": 36,
+                    "right": 72
+                },
+                {
+                    "range": "11-last",
+                    "left": 72,
+                    "top": 72,
+                    "bottom": 72,
+                    "right": 72
+                }
+            ]
+        },
+        {
+            "box": "bleed",
+            "pages": [
+                {
+                    "range": "1-last",
+                    "left": 144,
+                    "top": 144,
+                    "bottom": 144,
+                    "right": 144
+                }
+            ]
+        }
+    ]
+} </pre>
+</td><td>None</td><td class='yes'>Yes</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_pdf-with-page-boxes-set</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "https://api.pdfrest.com/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
+   "outputId": "01240b25a-8936-4437-8652-8410130f1199"<br/>
+   "inputId": "138aadb71-ee34-4621-9098-9686441e84e2"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
 					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
    "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
