@@ -37,7 +37,7 @@ Our API Toolkit is available on the [AWS Marketplace](https://aws.amazon.com/mar
 - [Configure AWS Deployment](https://docs.pdfrest.com/self-hosted-api-on-aws/configure-aws-deployment/)
 - [Frequently Asked Questions](https://docs.pdfrest.com/self-hosted-api-on-aws/faq/)
 
-#### AWS Marketplace Products
+#### AWS Marketplace Product
 
   :::card
   ---
