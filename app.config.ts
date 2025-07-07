@@ -1,7 +1,7 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'pdfRest Documentation',
+      name: 'pdfRest API Toolkit Documentation',
       description: 'Learn how to setup and use pdfRest.',
       ogImage: '/hero.png',
       ogImageComponent: 'ShadcnDocs',
@@ -14,13 +14,13 @@ export default defineAppConfig({
     banner: {
       enable: false,
       showClose: true,
-      content: 'Welcome to **pdfRest Documentation**',
+      content: 'Welcome to **pdfRest API Toolkit Documentation**',
       to: 'https://github.com/datalogics/pdf-rest-api-samples',
       target: '_blank',
       border: true,
     },
     header: {
-      title: 'Documentation',
+      title: 'API Toolkit Documentation',
       showTitle: true,
       logo: {
         light: '/logo.svg',
