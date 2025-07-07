@@ -1,6 +1,6 @@
 # Dir page
 
-title: Self-Hosted API on AWS
+title: On AWS
 icon: vscode-icons:file-type-aws
 navigation.redirect: /self-hosted-api-on-aws/getting-started/
 #navBadges:

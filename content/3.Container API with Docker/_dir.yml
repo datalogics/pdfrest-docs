@@ -1,6 +1,6 @@
 # Dir page
 
-title: Container API with Docker
+title: Container
 icon: vscode-icons:file-type-docker2
 navigation.redirect: /container-api-with-docker/getting-started/
 # navBadges:
