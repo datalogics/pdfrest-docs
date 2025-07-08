@@ -3,7 +3,7 @@ navigation: false
 title: pdfRest API Documentation
 description: Explore pdfRest API Documentation to integrate PDF processing into
   your projects. Get up and running quickly in the Cloud, with a Container, and on AWS.
-meta_title: pdfRest API Documentation | Cloud, Self-Hosted, Container
+meta_title: PDF API Documentation | pdfRest API Documentation
 meta_description: Explore pdfRest API Documentation to integrate PDF processing
   into your projects. Get up and running quickly in the Cloud, with a Container, and on AWS.
 ---
