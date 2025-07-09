@@ -1,5 +1,0 @@
-# content/blog/_dir.yml
-title: "Second Level Dir"
-navigation:
-  icon: "📝"
-  redirect: "/cloud-api-reference/"
