@@ -113,5 +113,6 @@ export default defineNuxtConfig({
     '/pdf-to-office-pro-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
     '/pdf-toolkit-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
   },
+  nitro: { prerender: { ignore: ['/pdfrest-api-toolkit-cloud/api-reference-guide/', '/pdfrest-api-toolkit-container/api-reference-guide/'] } },
   compatibilityDate: '2024-07-05',
 });

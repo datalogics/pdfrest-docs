@@ -32,6 +32,22 @@
       :level="0"
       :class="[config.aside.useLevel ? 'pt-4' : 'pt-1']"
     />
+    <a
+      v-if="route.path.includes('pdfrest-api-toolkit-cloud')"
+      href="/pdfrest-api-toolkit-cloud/api-reference-guide/"
+      target="_blank"
+      class="flex items-center gap-3 rounded-md p-1 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+    >
+      API Reference Guide
+    </a>
+    <a
+      v-else-if="route.path.includes('pdfrest-api-toolkit-on-aws') || route.path.includes('pdfrest-api-toolkit-container')"
+      href="/pdfrest-api-toolkit-container/api-reference-guide/"
+      target="_blank"
+      class="flex items-center gap-3 rounded-md p-1 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
+    >
+      API Reference Guide
+    </a>
   </UiScrollArea>
 </template>
 
@@ -41,6 +57,7 @@ defineProps<{ isMobile: boolean }>();
 const { navDirFromPath } = useContentHelpers();
 const { navigation } = useContent();
 const config = useConfig();
+const route = useRoute();
 
 const tree = computed(() => {
   const route = useRoute();
@@ -51,7 +68,7 @@ const tree = computed(() => {
     const dir = navDirFromPath(leveledPath, navigation.value);
     return dir ?? [];
   }
-
+  
   return navigation.value;
 });
 

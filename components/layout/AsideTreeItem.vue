@@ -39,8 +39,7 @@
     <!-- Page -->
     <NuxtLink
       v-else
-      :to="link.redirect ?? link._path"
-      :target="link.redirect ? '_blank' : '_self'"
+      :to="link._path"
       class="flex items-center gap-3 rounded-md p-1 text-sm text-foreground/80 hover:bg-muted hover:text-primary"
       :class="[
         isActive && 'bg-muted !text-primary',
