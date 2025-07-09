@@ -25,17 +25,17 @@ Integrate powerful PDF processing into your project with pdfRest's flexible API 
 
 Streamline your development with [pdfRest API Toolkit Cloud](https://pdfrest.com/products/cloud-api/). Eliminate the overhead of installation and maintenance, and integrate powerful PDF solutions effortlessly through standard REST API connections. pdfRest takes care of the infrastructure, allowing you to focus on your core application.
 
-- [Getting Started](https://docs.pdfrest.com/pdfrest-api-toolkit-cloud/getting-started/)
-- [Frequently Asked Questions](https://docs.pdfrest.com/pdfrest-api-toolkit-cloud/frequently-asked-questions/)
+- [Getting Started](/pdfrest-api-toolkit-cloud/getting-started/)
+- [Frequently Asked Questions](/pdfrest-api-toolkit-cloud/frequently-asked-questions/)
 
 ### AWS
 
 Our API Toolkit is available on the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=pdfrest), putting you in full control of your PDF processing solutions while supporting the most rigorous data protection and compliance requirements.
 
-- [Getting Started](https://docs.pdfrest.com/pdfrest-api-toolkit-on-aws/getting-started/)
-- [Deploy on AWS](https://docs.pdfrest.com/pdfrest-api-toolkit-on-aws/deploy-on-aws/)
-- [Configure AWS Deployment](https://docs.pdfrest.com/pdfrest-api-toolkit-on-aws/configure-aws-deployment/)
-- [Frequently Asked Questions](https://docs.pdfrest.com/pdfrest-api-toolkit-on-aws/faq/)
+- [Getting Started](/pdfrest-api-toolkit-on-aws/getting-started/)
+- [Deploy on AWS](/pdfrest-api-toolkit-on-aws/deploy-on-aws/)
+- [Configure AWS Deployment](/pdfrest-api-toolkit-on-aws/configure-aws-deployment/)
+- [Frequently Asked Questions](/pdfrest-api-toolkit-on-aws/faq/)
 
 #### AWS Marketplace Product
 
@@ -62,9 +62,9 @@ Our API Toolkit is available on the [AWS Marketplace](https://aws.amazon.com/mar
 
 Deploy and manage robust PDF solutions on-premises or within private cloud environments. Our self-hosted [API Toolkit Container](https://pdfrest.com/products/pdf-toolkit-container-api/) offers full control over your backend, storage, and security, and can be deployed on any platform that supports Docker, including Kubernetes.
 
-- [Getting Started](https://docs.pdfrest.com/pdfrest-api-toolkit-container/getting-started/)
-- [Deploy the API Container](https://docs.pdfrest.com/pdfrest-api-toolkit-container/deploy-container-api/)
-- [Configure the API Container](https://docs.pdfrest.com/pdfrest-api-toolkit-container/configure-container-api/)
+- [Getting Started](/pdfrest-api-toolkit-container/getting-started/)
+- [Deploy the API Container](/pdfrest-api-toolkit-container/deploy-container-api/)
+- [Configure the API Container](/pdfrest-api-toolkit-container/configure-container-api/)
 
   :::alert{icon="lucide:info" type="secondary"}
   Evaluation access and pricing for the API Toolkit Container is available through the [Datalogics Enterprise Sales Team](mailto\:sales@datalogics.com?subject=pdfRest%20Container%20API%20Inquiry)

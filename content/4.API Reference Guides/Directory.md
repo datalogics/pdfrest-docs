@@ -11,7 +11,7 @@ meta_description: Access API reference guides pdfRest API Toolkit Cloud and self
 icon: vscode-icons:file-type-source
 icon-size: 70
 horizontal: true
-to: https://docs.pdfrest.com/cloud-api-reference/
+to: /pdfrest-api-toolkit-cloud/api-reference-guide/
 target: _blank
 # showLinkIcon: false
 ---
@@ -31,7 +31,7 @@ All self-hosted Toolkit API products use the same API Reference Guide. This incl
 icon: 'pdfrest:pdf-toolkit-self-hosted'
 icon-size: 70
 horizontal: true
-to: https://docs.pdfrest.com/pdfrest-api-toolkit-container/api-reference-guide/
+to: /pdfrest-api-toolkit-container/api-reference-guide/
 target: _blank
 # showLinkIcon: false
 ---
