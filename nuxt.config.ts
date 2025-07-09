@@ -105,8 +105,8 @@ export default defineNuxtConfig({
     '/cloud-api/getting-started/': { redirect: '/pdfrest-api-toolkit-cloud/getting-started/' },
 
     '/container-api-with-docker/getting-started/': { redirect: '/pdfrest-api-toolkit-container/getting-started/' },
-    '/container-api-with-docker/configure-container-api/': { redirect: '/pdfrest-api-toolkit-container/configure-container/' },
-    '/container-api-with-docker/deploy-container-api/': { redirect: '/pdfrest-api-toolkit-container/deploy-container/' },
+    '/container-api-with-docker/configure-container-api/': { redirect: '/pdfrest-api-toolkit-container/configure-container-api/' },
+    '/container-api-with-docker/deploy-container-api/': { redirect: '/pdfrest-api-toolkit-container/deploy-container-api/' },
 
     '/cloud-api-reference/': { redirect: '/pdfrest-api-toolkit-cloud/api-reference-guide/' },
     '/pdf-forms-pro-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
