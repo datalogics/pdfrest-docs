@@ -1,8 +1,8 @@
 ---
-title: API Reference Directory
-description: Access API reference guides for all pdfRest PDF document solutions products.
-meta_title: API Reference Guides | Directory
-meta_description: Access API reference guides for all pdfRest PDF document solutions products.
+title: API Reference Guides
+description: Access API reference guides pdfRest API Toolkit Cloud and self-hosted deployments.
+meta_title: API Reference Guides | pdfRest API Toolkit
+meta_description: Access API reference guides pdfRest API Toolkit Cloud and self-hosted deployments.
 ---
 
 ## Cloud API
@@ -20,54 +20,22 @@ target: _blank
 Cloud API Reference Guide
 ::
 
-## Self-Hosted API on AWS
-::card-group
-  ::card
-  ---
-  title: PDF Toolkit
-  icon: 'pdfrest:pdf-toolkit-self-hosted'
-  icon-size: 83
-  horizontal: true
-  to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
-  target: _blank
-  ---
-  ::
-  ::card
-  ---
-  title: PDF Forms Pro
-  icon: 'pdfrest:pdf-forms-pro'
-  icon-size: 90
-  horizontal: true
-  to: https://docs.pdfrest.com/pdf-forms-pro-self-hosted-reference/
-  target: _blank
-  ---
-  ::
-  ::card
-  ---
-  title: PDF to Office Pro
-  icon: 'pdfrest:pdf-to-office'
-  icon-size: 90
-  horizontal: true
-  to: https://docs.pdfrest.com/pdf-to-office-pro-self-hosted-reference/
-  target: _blank
-  ---
-  ::
+## Self-Hosted APIs
 
+::alert{icon="lucide:info"}
+All self-hosted Toolkit API products use the same API Reference Guide. This includes on AWS and Container deployments.
 ::
 
-## Container API with Docker
 ::card
 ---
-icon: 'vscode-icons:file-type-docker2'
-icon-size: 80
+icon: 'pdfrest:pdf-toolkit-self-hosted'
+icon-size: 70
 horizontal: true
-to: https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/
+to: https://docs.pdfrest.com/pdfrest-api-toolkit-container/api-reference-guide/
 target: _blank
 # showLinkIcon: false
 ---
 
 #title
-Container API Reference Guide
-
-#content
+Self-Hosted API Toolkit
 ::

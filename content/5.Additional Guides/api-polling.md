@@ -93,4 +93,4 @@ curl -X GET "https://example.com/converted-document.docx"
 
 API Polling is a powerful technique for managing long-running processes in pdfRest. By following this guide, you can effectively implement and use the `/request-status` endpoint to monitor and retrieve the status of your requests.
 
-For more detailed information, refer to the [Cloud API Reference Guide](https://docs.pdfrest.com/cloud-api-reference/).
+For more detailed information, refer to the [Cloud API Reference Guide](https://docs.pdfrest.com/pdfrest-api-toolkit-cloud/api-reference-guide/).

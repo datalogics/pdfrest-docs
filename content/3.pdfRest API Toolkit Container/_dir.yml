@@ -2,7 +2,7 @@
 
 title: Container
 icon: vscode-icons:file-type-docker2
-navigation.redirect: /container-api-with-docker/getting-started/
+navigation.redirect: /pdfrest-api-toolkit-container/getting-started/
 # navBadges:
 #   - value: Enterprise
 #     type: pink

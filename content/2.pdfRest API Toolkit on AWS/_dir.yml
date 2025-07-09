@@ -2,7 +2,7 @@
 
 title: On AWS
 icon: vscode-icons:file-type-aws
-navigation.redirect: /self-hosted-api-on-aws/getting-started/
+navigation.redirect: /pdfrest-api-toolkit-on-aws/getting-started/
 #navBadges:
 #  - value: AWS
 #    type: yellow
