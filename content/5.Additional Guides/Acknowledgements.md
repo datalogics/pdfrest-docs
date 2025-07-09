@@ -1,8 +1,8 @@
 ---
 title: Acknowledgements
-description: Acknowledgements for pdfRest API service.
+description: Acknowledgements for pdfRest API products.
 meta_title: Acknowledgements
-meta_description: Acknowledgements for pdfRest API service.
+meta_description: Acknowledgements for pdfRest API products.
 breadcrumb: false
 ---
 

@@ -2,10 +2,14 @@
 
 API Polling is a technique used to repeatedly check the status of a long-running process by making periodic requests to a specific endpoint. In pdfRest, the `/request-status` endpoint is designed for this purpose. This guide will walk you through the steps to implement and use API Polling effectively.
 
+::alert{to="https://pdfrest.com/apitools?signup=true" target="_blank" icon="lucide:link"}
+API Polling is exclusive to API Toolkit Cloud subscriptions, and not available on self-hosted installations of pdfRest. Click this link to create an account on pdfRest.com now!
+::
+
 ## Prerequisites
 
 Before you start, ensure you have:
-- Access to the pdfRest API.
+- Access to the pdfRest API Toolkit Cloud.
 - An API key for authentication.
 - Basic knowledge of HTTP requests and responses.
 
@@ -89,4 +93,4 @@ curl -X GET "https://example.com/converted-document.docx"
 
 API Polling is a powerful technique for managing long-running processes in pdfRest. By following this guide, you can effectively implement and use the `/request-status` endpoint to monitor and retrieve the status of your requests.
 
-For more detailed information, refer to the pdfRest API Reference Guide.
+For more detailed information, refer to the [Cloud API Reference Guide](https://docs.pdfrest.com/cloud-api-reference/).
