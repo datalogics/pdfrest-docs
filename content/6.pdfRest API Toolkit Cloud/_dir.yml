@@ -1,7 +1,7 @@
 # Dir page
 title: Cloud New
 icon: vscode-icons:file-type-pdf2
-#navigation: true
+navigation: false
 navigation.redirect: /pdfrest-api-toolkit-cloud/getting-started/
 sidebar:
   style: tree
