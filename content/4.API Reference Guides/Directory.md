@@ -37,5 +37,5 @@ target: _blank
 ---
 
 #title
-Self-Hosted API Toolkit
+Self-Hosted API Reference Guide
 ::
