@@ -81,7 +81,7 @@ export default defineNuxtConfig({
     customCollections: [
       {
         prefix: 'pdfrest',
-        dir: './public/self-hosted-product-icons'
+        dir: './public/self-hosted-product-icons',
       },
     ],
   },
@@ -95,5 +95,24 @@ export default defineNuxtConfig({
   build: {
     transpile: ['shiki'],
   },
+  routeRules: {
+    '/self-hosted-api-on-aws/getting-started/': { redirect: '/pdfrest-api-toolkit-on-aws/getting-started/' },
+    '/self-hosted-api-on-aws/configure-aws-deployment/': { redirect: '/pdfrest-api-toolkit-on-aws/configure-aws-deployment/' },
+    '/self-hosted-api-on-aws/deploy-on-aws/': { redirect: '/pdfrest-api-toolkit-on-aws/deploy-on-aws/' },
+    '/self-hosted-api-on-aws/faq/': { redirect: '/pdfrest-api-toolkit-on-aws/faq/' },
+
+    '/cloud-api/frequently-asked-questions/': { redirect: '/pdfrest-api-toolkit-cloud/frequently-asked-questions/' },
+    '/cloud-api/getting-started/': { redirect: '/pdfrest-api-toolkit-cloud/getting-started/' },
+
+    '/container-api-with-docker/getting-started/': { redirect: '/pdfrest-api-toolkit-container/getting-started/' },
+    '/container-api-with-docker/configure-container-api/': { redirect: '/pdfrest-api-toolkit-container/configure-container-api/' },
+    '/container-api-with-docker/deploy-container-api/': { redirect: '/pdfrest-api-toolkit-container/deploy-container-api/' },
+
+    '/cloud-api-reference/': { redirect: '/pdfrest-api-toolkit-cloud/api-reference-guide/' },
+    '/pdf-forms-pro-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
+    '/pdf-to-office-pro-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
+    '/pdf-toolkit-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
+  },
+  nitro: { prerender: { ignore: ['/pdfrest-api-toolkit-cloud/api-reference-guide/', '/pdfrest-api-toolkit-container/api-reference-guide/'] } },
   compatibilityDate: '2024-07-05',
 });
