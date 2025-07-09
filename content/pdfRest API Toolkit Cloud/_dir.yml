@@ -1,9 +1,9 @@
 # Dir page
-
-title: Cloud
+title: Cloud New
 icon: vscode-icons:file-type-pdf2
-navigation.redirect: /cloud-api/getting-started/
-# navBadges:
+navigation: true
+navigation.redirect: /pdfrest-api-toolkit-cloud/getting-started/
+#navBadges:
 #  - value: AWS
 #    type: yellow
 sidebar:
