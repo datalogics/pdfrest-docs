@@ -1,0 +1,11 @@
+# Dir page
+
+title: Cloud
+icon: vscode-icons:file-type-pdf2
+navigation.redirect: /cloud-api/getting-started/
+# navBadges:
+#  - value: AWS
+#    type: yellow
+sidebar:
+  style: tree
+collapse: false
