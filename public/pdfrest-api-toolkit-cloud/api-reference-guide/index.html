@@ -23,8 +23,8 @@
 				color: #F8CA87; /* old IE */
 				background-color: #F8CA87; /* Modern Browsers */
 			}
-		#left-pane { width:320px; min-width:320px; }
-		#left-div { position:fixed; width:320px; top:0px; left:0px; bottom:0px; padding:16px; background-color:#28004F; overflow-y:scroll; }
+		#left-pane { width:340px; min-width:340px; }
+		#left-div { position:fixed; width:340px; top:0px; left:0px; bottom:0px; padding:16px; background-color:#28004F; overflow-y:scroll; }
 		.title { font-size:40px; font-weight:bold }
 		.header { font-size:28px; font-weight:bold }
 		.section-header { width:98%; background-color:#350566; padding: 8px; border:1px solid #350566; }
@@ -99,7 +99,7 @@
 <body>
 	<table width=100% height=100% cellpadding=15 cellspacing=0 border=0>
 		<tr>
-			<td id='left-pane' width=320 valign='top'>
+			<td id='left-pane' width=340 valign='top'>
 			<div id='left-div'>
 				<a href='https://docs.pdfrest.com/'><img width=200 src='https://pdfrest.com/pdfRest_logo_sm.png'></a><br/><br/>
 				<div class='menu-row'>&nbsp;&nbsp;&#8226; <a href='#overview' class='menu-item'>Getting Started</a></div>
@@ -132,6 +132,8 @@
 			<span class='menu-cat'><b>PDF to PowerPoint</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/powerpoint'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/powerpoint</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Compress PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/compressed-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/compressed-pdf</a><br/></div>
+			<div class='menu-row'>
+			<span class='menu-cat'><b>Sign PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/signed-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/signed-pdf</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Redact PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-redacted-text-preview'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-redacted-text-preview</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-redacted-text-applied'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-redacted-text-applied</a><br/></div>
 			<div class='menu-row'>
@@ -736,6 +738,87 @@
    "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 					<tr class='info'><td>422</td><td>Unprocessable Entity</td><td><pre>{
    "error": "The 'profile' file provided is not a JSON file, please see documentation for sample profile."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/signed-pdf'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/signed-pdf</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Digitally sign PDF documents programmatically, ensuring authenticity and integrity. This tool allows for the application of digital signatures with various configurations, including visual representations. <br/><br/> <span class='summary'>Examples</span> <div class="tab">
+  <button class="signed-pdf-tablinks" onclick="openTab(event, 'cURL', 'signed-pdf')" id="signed-pdf-defaultOpen">cURL</button>
+  <button class="signed-pdf-tablinks" onclick="openTab(event, 'JavaScript', 'signed-pdf')">JavaScript</button>
+  <button class="signed-pdf-tablinks" onclick="openTab(event, 'Python', 'signed-pdf')">Python</button>
+  <button class="signed-pdf-tablinks" onclick="openTab(event, 'PHP', 'signed-pdf')">PHP</button>
+  <button class="signed-pdf-tablinks" onclick="openTab(event, 'DotNET', 'signed-pdf')">.NET</button>
+  <button class="signed-pdf-tablinks" onclick="openTab(event, 'Java', 'signed-pdf')">Java</button>
+</div> <div id="signed-pdf-cURL" class="signed-pdf-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FcURL%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsigned-pdf.sh&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="signed-pdf-JavaScript" class="signed-pdf-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJavaScript%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsigned-pdf.js&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="signed-pdf-Python" class="signed-pdf-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPython%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsigned-pdf.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="signed-pdf-PHP" class="signed-pdf-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPHP%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsigned-pdf.php&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="signed-pdf-DotNET" class="signed-pdf-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FDotNET%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsigned-pdf.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div>
+  <div id="signed-pdf-Java" class="signed-pdf-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJava%2FEndpoint%20Examples%2FMultipart%20Payload%2FSignedPDF.java&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <script> document.getElementById("signed-pdf-defaultOpen").click(); </script> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre> <pre>Api-Key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>signature_configuration</td><td>JSON string defining the signature properties, including type, name, logo opacity, location, and display settings.<br/><br/><b>Accepts:</b><br/>A JSON object with the following properties:
+<ul>
+  <li><code>type</code> (string, required): Type of signature, e.g., "new".</li>
+  <li><code>name</code> (string, optional): Name of the signature, e.g., "esignature".</li>
+  <li><code>logo_opacity</code> (number, optional): Opacity of the signature logo (0.0 to 1.0).</li>
+  <li><code>location</code> (object, optional): Defines the signature's bounding box and page.
+    <ul>
+      <li><code>bottom_left</code> (object, required): Coordinates for the bottom-left corner.
+        <ul>
+          <li><code>x</code> (string, required): X-coordinate.</li>
+          <li><code>y</code> (string, required): Y-coordinate.</li>
+        </ul>
+      </li>
+      <li><code>top_right</code> (object, required): Coordinates for the top-right corner.
+        <ul>
+          <li><code>x</code> (string, required): X-coordinate.</li>
+          <li><code>y</code> (string, required): Y-coordinate.</li>
+        </ul>
+      </li>
+      <li><code>page</code> (string, required): Page number for the signature.</li>
+    </ul>
+  </li>
+  <li><code>display</code> (object, optional): Defines what information to display in the signature.
+    <ul>
+      <li><code>include_distinguished_name</code> (string, optional): "true" or "false".</li>
+      <li><code>include_datetime</code> (string, optional): "true" or "false".</li>
+      <li><code>contact</code> (string, optional): Contact information.</li>
+      <li><code>location</code> (string, optional): Signing location.</li>
+      <li><code>name</code> (string, optional): Signer's name.</li>
+      <li><code>reason</code> (string, optional): Reason for signing.</li>
+    </ul>
+  </li>
+</ul>
+<br/><br/><b>Example:</b><br/>{"type": "new", "name": "esignature", "logo_opacity": "0.5", "location": {"bottom_left": {"x": "0", "y": "0"}, "top_right": {"x": "216", "y": "72"}, "page": "1"}, "display": {"include_distinguished_name": "true", "include_datetime": "true", "contact": "My contact information", "location": "My signing location", "name": "John Doe", "reason": "My reason for signing"}}</td><td>None</td><td class='yes'>Yes</tr>
+					<tr class='info'><td>pfx_credential_file</td><td>A .pfx or .p12 formatted file containing the digital certificate and private key for PFX credentials.<br/><br/><b>Accepts:</b><br/>A PKCS#12 (.pfx or .p12) file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/credentials.pfx</td><td>None</td><td class='partial'>One of:<ul><li>pfx_credential_file</li><li>pfx_credential_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>pfx_credential_id</td><td>Resource ID of a .pfx or .p12 formatted file containing the digital certificate and private key for PFX credentials.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>pfx_credential_file</li><li>pfx_credential_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>pfx_passphrase_file</td><td>A .txt file with a passphrase for the PFX credential file.<br/><br/><b>Accepts:</b><br/>A text file containing the passphrase<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/passphrase.txt</td><td>None</td><td class='partial'>One of:<ul><li>pfx_passphrase_file</li><li>pfx_passphrase_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>pfx_passphrase_id</td><td>Resource ID of a .txt file with a passphrase for the PFX credential file.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>pfx_passphrase_file</li><li>pfx_passphrase_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>certificate_file</td><td>A .der or .pem formatted certificate file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>A .der or .pem certificate file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/certificate.pem</td><td>None</td><td class='partial'>One of:<ul><li>certificate_file</li><li>certificate_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>certificate_id</td><td>Resource ID of a .der or .pem formatted certificate file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>certificate_file</li><li>certificate_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>private_key_file</td><td>A .der or .pem formatted private key file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>A .der or .pem private key file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/private_key.pem</td><td>None</td><td class='partial'>One of:<ul><li>private_key_file</li><li>private_key_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>private_key_id</td><td>Resource ID of a .der or .pem formatted private key file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>private_key_file</li><li>private_key_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>logo_file</td><td>An image file (PNG, JPG) to be used as a visual logo for the signature.<br/><br/><b>Accepts:</b><br/>Any PNG or JPG image file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/logo.png</td><td>None</td><td class='partial'>One of:<ul><li>logo_file</li><li>logo_id</li></ul> (Optional)</tr>
+					<tr class='info'><td>logo_id</td><td>Resource ID of an image file (PNG, JPG) to be displayed on the signature as a logo.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>logo_file</li><li>logo_id</li></ul> (Optional)</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_signed_doc</td><td>[INPUT_FILE_NAME]_pdfrest_signed_pdf</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "https://api.pdfrest.com/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
+   "outputId": "01240b25a-8936-4437-8652-8410130f1199"<br/>
+   "inputId": ["1e3c7fefe-45e0-48f2-bf8d-fe506e1d7838", "11e24955f-bbe9-4267-aac6-d1c7e531a426"]<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "Uploaded file is not valid input for this route. See documentation for valid file format(s)."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "An Api-Key header is required to send this request."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/pdf-with-redacted-text-preview'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-redacted-text-preview</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Generates a visual preview of redactions to be applied to a PDF document, highlighting the areas to be redacted with red rectangles based on the specified JSON redaction parameters. This step is required before applying the final redactions, allowing users to review and verify the redactions for accuracy and completeness. To apply redactions, send the output from this endpoint to the <code>/pdf-with-redacted-text-applied</code> endpoint. <br/><br/> <span class='summary'>Examples</span> <div class="tab">
   <button class="pdf-with-redacted-text-preview-tablinks" onclick="openTab(event, 'cURL', 'pdf-with-redacted-text-preview')" id="pdf-with-redacted-text-preview-defaultOpen">cURL</button>
