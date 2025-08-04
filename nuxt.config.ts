@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-og-image',
     '@nuxt/scripts',
+    '@nuxtjs/robots',
   ],
   shadcn: {
     prefix: 'Ui',
