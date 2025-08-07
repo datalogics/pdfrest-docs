@@ -3,12 +3,12 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Documentation Reference Guide for pdfRest PDF Toolkit Self-Hosted API">
+	<meta name="description" content="Documentation Reference Guide for pdfRest API Toolkit with Self-Hosted Deployment on AWS or Container">
 	<title>pdfRest API Toolkit - Self-Hosted API Reference Guide</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-	<link rel="canonical" href="https://docs.pdfrest.com/pdf-toolkit-self-hosted-reference/">
+	<link rel="canonical" href="https://docs.pdfrest.com/pdfrest-api-toolkit-container/api-reference-guide/">
 	<style>
 		table { border: 2px solid #000; font-size: 18px; }
 		body { font-family: 'Baloo Bhai 2', sans-serif; padding:0px; margin:0px; background-color:#0C0C0C; color:#fff}
@@ -37,6 +37,7 @@
 		.menu-row { background-color: #350566; padding: 4px; margin: 4px 0px; font-size:16px; line-height: 25px; }
 		.get { font-weight:bold; color: #c688fc; font-size:18px;}
 		.post { font-weight:bold; color: #D14081; font-size:18px;}
+		.delete { font-weight:bold; color: #a5a5a8; font-size:18px;}
 		.yes { background-color:#D14081 }
 		.partial { background-color:#F8CA87; color: #000;}
 		.table-title { background-color:#333; font-weight:bold }
@@ -61,9 +62,13 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Query PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-info'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-info</a><br/></div>
 			<div class='menu-row'>
+			<span class='menu-cat'><b>Delete File</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/resource/{id}2'><span class='delete'>DELETE </span>&nbsp;&nbsp;<span class='menu-item'>/resource/{id}</a><br/></div>
+			<div class='menu-row'>
 			<span class='menu-cat'><b>Extract Images</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/extracted-images'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/extracted-images</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Extract Text</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/extracted-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/extracted-text</a><br/></div>
+			<div class='menu-row'>
+			<span class='menu-cat'><b>PDF to Markdown</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/markdown'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/markdown</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>OCR PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-ocr-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-ocr-text</a><br/></div>
 			<div class='menu-row'>
@@ -80,6 +85,8 @@
 			<span class='menu-cat'><b>PDF to PowerPoint</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/powerpoint'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/powerpoint</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Compress PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/compressed-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/compressed-pdf</a><br/></div>
+			<div class='menu-row'>
+			<span class='menu-cat'><b>Sign PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/signed-pdf'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/signed-pdf</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Redact PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-redacted-text-preview'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-redacted-text-preview</a><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-with-redacted-text-applied'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-with-redacted-text-applied</a><br/></div>
 			<div class='menu-row'>
@@ -129,8 +136,8 @@
 				<span class='subtitle'>PDF processing REST APIs via GET/POST HTTP requests for AWS & Container deployment</span><br/><hr/><br/>
 				<a name='overview'></a><span class='header'>Getting Started</span><br/>
 				Welcome to the pdfRest API Toolkit reference guide for self-hosted deployment!  Below you will find all the information you need to use any of the pdfRest API Tools.  This guide is organized by API endpoints, which express the output file types that can be generated from input files supplied with requests. For example, to convert a JPG file to a PDF, you would send the JPG file to the /pdf endpoint.<br/><br/> Note that the examples throughout are presented using cURL, but the APIs support any standard method for sending GET and POST HTTP requests.<br/><br/> <span class='summary'>Additional Resources</span><br/> <ul>
-    <li><a href='https://docs.pdfrest.com/pdfrest-api-toolkit-on-aws/getting-started/'>Setup Instructions for AWS Self-Hosted Backend</a> - Learn how to launch and configure an EC2 and create a scalable stack</li>
-    <li><a href='https://docs.pdfrest.com/pdfrest-api-toolkit-container/getting-started/'>Setup Instructions for Docker Container</a> - Learn how to set up and configure a containerized backend solution</li>
+    <li><a href='https://docs.pdfrest.com/self-hosted-api-on-aws/getting-started/'>Setup Instructions for AWS Self-Hosted Backend</a> - Learn how to launch and configure an EC2 and create a scalable stack</li>
+    <li><a href='https://docs.pdfrest.com/container-api-with-docker/getting-started/'>Setup Instructions for Docker Container</a> - Learn how to set up and configure a containerized backend solution</li>
     <li><a href='https://pdfrest.com/apilab/' target='_blank'>API Lab</a> - Validate solutions quickly with an intuitive interface to send calls and download results right from the website</li>
     <li><a href='https://github.com/datalogics/pdf-rest-api-samples' target='_blank'>GitHub Repository</a> - Find functional code examples available for popular languages and frameworks, including:</li>
         <ul>
@@ -176,6 +183,16 @@
 					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
    "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
+				<a name='/resource/{id}2'></a><div class='section-header'><span class='delete'>&nbsp;DELETE </span> <span class='header'>&nbsp;/resource/{id}</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Delete a resource file by ID. Resource IDs can be found in the JSON response of POST requests. Note that the file must have been uploaded or generated using the same API Key provided with the call to delete it.<br/><br/> <span class='summary'>Examples</span> <pre>curl --request DELETE "YOUR_DOMAIN_HERE/resource/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</pre>
+<br/><br/>	<span class='summary'>Path Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of the resource to delete<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='yes'>Yes</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>204</td><td>No Content<br>(Indicates a successful deletion)</td><td></td></tr>
+					<tr class='info'><td>404</td><td>Not Found</td><td><pre>{
+   "error": "Resource ID does not exist"<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
 				<a name='/extracted-images'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/extracted-images</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Extract all embedded images from a PDF file, or from a specified range of pages, and save them as separate image files. Each image will be saved in its original format (JPG, PNG, or TIFF), preserving its original compression and properties.<br/><br/> <a href="https://pdfrest.com/apitools/extract-images/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=extracted-images&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-images" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-images" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "pages=14-last"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
@@ -220,6 +237,32 @@
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
    "error": "Uploaded file is not valid input for this route. See documentation for valid file format(s)."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
+				<a name='/markdown'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/markdown</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Convert PDF documents into clean, structured Markdown format, facilitating content repurposing, easy text manipulation, and LLM training. <br/><br/> <a href="https://pdfrest.com/apitools/pdf-to-markdown/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=markdown&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span>  <pre>curl -X POST "YOUR_DOMAIN_HERE/markdown" \
+  -H "Accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@/path/to/file"</pre>
+<br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>pages</td><td>Page or range of pages to include<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
+					<tr class='info'><td>page_break_comments</td><td>Applies page breaks in the Markdown as HTML comments in the format &lt;!--Page 1--&gt;. This can provide useful contextual information for LLMs and other machine processing, as these comments are not rendered in the final visible output. However, be aware that these comments might conceptually break up the flow of the document in the raw Markdown file.<br/><br/><b>Accepts:</b><br/><ul><li>on</li><li>off</li></ul><br/><br/><b>Example:</b><br/>on</td><td>off</td><td class='No'>No</tr>
+					<tr class='info'><td>output_type</td><td>Specify whether to save output as a file with .md extension or return output directly in the JSON response<br/><br/><b>Accepts:</b><br/><ul><li><b>json</b></li> <li><b>file</b></li></ul></td><td>json</td><td class='No'>No</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file (when output_type is set to file), without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_out</td><td>[INPUT_FILE_NAME]_pdfrest_markdown</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK<br/>(output_type = json)</td><td><pre>{<pre> "markdown": "**Some header text**\n\nSome text in a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi corporis quidem enim maxime dolor porro repellat. At quidem cupiditate voluptatem sequi neque. Aliquam qui excepturi dolor, voluptate iste in veritatis!",
+"inputId": "1fc278f79-e431-4ac3-afa6-e14206500769" </pre>}</pre></td></tr>
+					<tr class='info'><td>200</td><td>OK<br/>(output_type = file)</td><td><pre>{
+   "outputUrl": "YOUR_DOMAIN_HERE/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
+   "outputId": "01240b25a-8936-4437-8652-8410130f1199"<br/>
+   "inputId": "112f7ea0d-0e56-44bc-a3d2-42fdff96d993"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "Uploaded file is not valid input for this route. See documentation for valid file format(s)."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
 				<a name='/pdf-with-ocr-text'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-ocr-text</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Uses Optical Character Recognition (OCR) technology to identify text within images embedded in PDFs. The detected text is then strategically placed behind the image within the PDF document. <br/><br/> This process results in a PDF with searchable and extractable text. Also works well as a pre-processing step before passing the PDF to the /extracted-text endpoint to extract PDF image text along with other document text.<br/><br/> <a href="https://pdfrest.com/apitools/ocr-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf-with-ocr-text&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span><br/> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf-with-ocr-text" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf" -F "output=example_out"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf-with-ocr-text" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "output=pdf_out"</pre><br/> <span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
@@ -238,7 +281,7 @@
 					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
    "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
-				<a name='/pdf'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Convert many types of files to PDF<br/><br/> Accepts all of the following input file types:<br/><ul> <li>Microsoft Word (.doc, .docx)</li> <li>Microsoft Excel (.xls, .xlsx)</li> <li>Microsoft PowerPoint (.ppt, .pptx)</li> <li>PostScript and Encapsulated PostScript (.ps, .eps) <li>JPEG (.jpg, .jpeg)</li> <li>TIF (.tif, .tiff)</li> <li>BMP (.bmp)</li> <li>PNG (.png)</li> <li>HTML (.html)</li>   <li>HTML (from URL)</li></ul><br/> <a href="https://pdfrest.com/apitools/convert-to-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span><br/> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.jpg" -F "output=example_out"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/index.html" -F "output=pdf_out" -F "compression=lossless" -F "downsample=600" -F "page_size=A5" -F "page_margin=15mm" -F "page_orientation=landscape"  -F "web_layout=mobile"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "output=pdf_out" -F "tagged_pdf=on"</pre><br/> <span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+				<a name='/pdf'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Convert many types of files to PDF<br/><br/> Accepts all of the following input file types:<br/><ul> <li>Microsoft Word (.doc, .docx)</li> <li>Microsoft Excel (.xls, .xlsx)</li> <li>Microsoft PowerPoint (.ppt, .pptx)</li> <li>PostScript and Encapsulated PostScript (.ps, .eps) <li>Email (.eml)</li> <li>JPEG (.jpg, .jpeg)</li> <li>TIF (.tif, .tiff)</li> <li>BMP (.bmp)</li> <li>PNG (.png)</li> <li>HTML (.html)</li>   <li>HTML (from URL)</li></ul><br/> <a href="https://pdfrest.com/apitools/convert-to-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span><br/> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.jpg" -F "output=example_out"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/index.html" -F "output=pdf_out" -F "compression=lossless" -F "downsample=600" -F "page_size=A5" -F "page_margin=15mm" -F "page_orientation=landscape"  -F "web_layout=mobile"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "output=pdf_out" -F "tagged_pdf=on"</pre><br/> <span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
 					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any file of supported type<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.html</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li><li>url</li></ul></tr>
@@ -366,6 +409,77 @@
 					<tr class='info'><td>422</td><td>Unprocessable Entity</td><td><pre>{
    "error": "The 'profile' file provided is not a JSON file, please see documentation for sample profile."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
+				<a name='/signed-pdf'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/signed-pdf</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Digitally sign PDF documents programmatically, ensuring authenticity and integrity. This tool allows for the application of digital signatures with various configurations, including visual representations. <br/><br/> <a href="https://pdfrest.com/apitools/sign-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=signed-pdf&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span> <pre>SIGNATURE_CONFIG='{"type": "new","name": "esignature","logo_opacity": "0.25","location": {"bottom_left": { "x": "0", "y": "0" },"top_right": { "x": "216", "y": "72" },"page": 1},"display": {"include_distinguished_name": "true","include_datetime": "true","contact": "My contact info","location": "My location","name": "John Doe","reason": "My reason for signing"}}'
+curl -X POST "YOUR_DOMAIN_HERE/signed-pdf" \
+  -H "Accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@/path/to/file" \
+  -F "pfx_credential_file=@/path/to/file" \
+  -F "pfx_passphrase_file=@/path/to/file" \
+  -F "logo_file=@/path/to/file" \
+  -F "signature_configuration=$SIGNATURE_CONFIG" \
+  -F "output=example_out"</pre>
+<br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
+<br/><br/>	<span class='summary'>Body Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>signature_configuration</td><td>JSON string defining the signature properties, including type, name, logo opacity, location, and display settings.<br/><br/><b>Accepts:</b><br/>A JSON object with the following properties:
+<ul>
+  <li><code>type</code> (string, required): Type of signature, e.g., "new".</li>
+  <li><code>name</code> (string, optional): Name of the signature, e.g., "esignature".</li>
+  <li><code>logo_opacity</code> (number, optional): Opacity of the signature logo (0.0 to 1.0).</li>
+  <li><code>location</code> (object, optional): Defines the signature's bounding box and page.
+    <ul>
+      <li><code>bottom_left</code> (object, required): Coordinates for the bottom-left corner.
+        <ul>
+          <li><code>x</code> (string, required): X-coordinate.</li>
+          <li><code>y</code> (string, required): Y-coordinate.</li>
+        </ul>
+      </li>
+      <li><code>top_right</code> (object, required): Coordinates for the top-right corner.
+        <ul>
+          <li><code>x</code> (string, required): X-coordinate.</li>
+          <li><code>y</code> (string, required): Y-coordinate.</li>
+        </ul>
+      </li>
+      <li><code>page</code> (string, required): Page number for the signature.</li>
+    </ul>
+  </li>
+  <li><code>display</code> (object, optional): Defines what information to display in the signature.
+    <ul>
+      <li><code>include_distinguished_name</code> (string, optional): "true" or "false".</li>
+      <li><code>include_datetime</code> (string, optional): "true" or "false".</li>
+      <li><code>contact</code> (string, optional): Contact information.</li>
+      <li><code>location</code> (string, optional): Signing location.</li>
+      <li><code>name</code> (string, optional): Signer's name.</li>
+      <li><code>reason</code> (string, optional): Reason for signing.</li>
+    </ul>
+  </li>
+</ul>
+<br/><br/><b>Example:</b><br/>{"type": "new", "name": "esignature", "logo_opacity": "0.5", "location": {"bottom_left": {"x": "0", "y": "0"}, "top_right": {"x": "216", "y": "72"}, "page": "1"}, "display": {"include_distinguished_name": "true", "include_datetime": "true", "contact": "My contact information", "location": "My signing location", "name": "John Doe", "reason": "My reason for signing"}}</td><td>None</td><td class='yes'>Yes</tr>
+					<tr class='info'><td>pfx_credential_file</td><td>A .pfx or .p12 formatted file containing the digital certificate and private key for PFX credentials.<br/><br/><b>Accepts:</b><br/>A PKCS#12 (.pfx or .p12) file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/credentials.pfx</td><td>None</td><td class='partial'>One of:<ul><li>pfx_credential_file</li><li>pfx_credential_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>pfx_credential_id</td><td>Resource ID of a .pfx or .p12 formatted file containing the digital certificate and private key for PFX credentials.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>pfx_credential_file</li><li>pfx_credential_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>pfx_passphrase_file</td><td>A .txt file with a passphrase for the PFX credential file.<br/><br/><b>Accepts:</b><br/>A text file containing the passphrase<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/passphrase.txt</td><td>None</td><td class='partial'>One of:<ul><li>pfx_passphrase_file</li><li>pfx_passphrase_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>pfx_passphrase_id</td><td>Resource ID of a .txt file with a passphrase for the PFX credential file.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>pfx_passphrase_file</li><li>pfx_passphrase_id</li></ul> (if using PFX credentials)</tr>
+					<tr class='info'><td>certificate_file</td><td>A .der or .pem formatted certificate file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>A .der or .pem certificate file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/certificate.pem</td><td>None</td><td class='partial'>One of:<ul><li>certificate_file</li><li>certificate_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>certificate_id</td><td>Resource ID of a .der or .pem formatted certificate file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>certificate_file</li><li>certificate_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>private_key_file</td><td>A .der or .pem formatted private key file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>A .der or .pem private key file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/private_key.pem</td><td>None</td><td class='partial'>One of:<ul><li>private_key_file</li><li>private_key_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>private_key_id</td><td>Resource ID of a .der or .pem formatted private key file for non-PFX credentials.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>private_key_file</li><li>private_key_id</li></ul> (if using non-PFX credentials)</tr>
+					<tr class='info'><td>logo_file</td><td>An image file (JPG, PNG, TIFF, BMP) to be used as a visual logo for the signature.<br/><br/><b>Accepts:</b><br/>Any JPG, PNG, TIFF, or BMP image file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/logo.png</td><td>None</td><td class='partial'>One of:<ul><li>logo_file</li><li>logo_id</li></ul> (Optional)</tr>
+					<tr class='info'><td>logo_id</td><td>Resource ID of an image file (JPG, PNG, TIFF, BMP) to be displayed on the signature as a logo.<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>logo_file</li><li>logo_id</li></ul> (Optional)</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file, without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>example_signed_doc</td><td>[INPUT_FILE_NAME]_pdfrest_signed_pdf</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+   "outputUrl": "YOUR_DOMAIN_HERE/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
+   "outputId": "01240b25a-8936-4437-8652-8410130f1199"<br/>
+   "inputId": ["1e3c7fefe-45e0-48f2-bf8d-fe506e1d7838", "11e24955f-bbe9-4267-aac6-d1c7e531a426"]<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "Uploaded file is not valid input for this route. See documentation for valid file format(s)."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
+   "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
 				<a name='/pdf-with-redacted-text-preview'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-with-redacted-text-preview</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Generates a visual preview of redactions to be applied to a PDF document, highlighting the areas to be redacted with red rectangles based on the specified JSON redaction parameters. This step is required before applying the final redactions, allowing users to review and verify the redactions for accuracy and completeness. To apply redactions, send the output from this endpoint to the <code>/pdf-with-redacted-text-applied</code> endpoint. <br/> <br/> <a href="https://pdfrest.com/apitools/redact-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf-with-redacted-text-preview&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br/> <br/> <span class='summary'>Example</span> <pre>REDACTIONS='[{"type":"preset","value":"email"},{"type":"regex","value":"(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}"},{"type":"literal","value":"word"}]'
 curl -X POST "YOUR_DOMAIN_HERE/pdf-with-redacted-text-preview" \
   -H "Accept: application/json" \
@@ -467,10 +581,12 @@ curl -X POST "YOUR_DOMAIN_HERE/pdf-with-redacted-text-preview" \
 					<tr class='info'><td>x</td><td>Horizontal offset in PDF units from the center of page for both text and file watermarks (72 units = 1 inch)<br/><br/><b>Accepts:</b><br/>Any integer value<br/><br/><b>Example:</b><br/>-72</td><td>0 (horizontal center of page)</td><td class='No'>No</tr>
 					<tr class='info'><td>y</td><td>Vertical offset in PDF units from the center of page for both text and file watermarks (72 units = 1 inch)<br/><br/><b>Accepts:</b><br/>Any integer value<br/><br/><b>Example:</b><br/>150</td><td>0 (vertical center of page)</td><td class='No'>No</tr>
 					<tr class='info'><td>rotation</td><td>Rotation in degrees to be applied to both text and file watermarks<br/><br/><b>Accepts:</b><br/>Any integer value<br/><br/><b>Example:</b><br/>45</td><td>0</td><td class='No'>No</tr>
+					<tr class='info'><td>pages</td><td>Page or range of pages on which to apply watermark<br/><br/><b>Accepts:</b><br/>Any mix of individual pages and/or ranges seperated by commas. "last" can be used to represent the number of the last page of the document.<br/><br/><b>Example:</b><br/><ul><li>14-last</li><li>2-9</li><li>1,2,5-10,12-last</li></ul></td><td>1-last<br/>(all pages)</td><td class='No'>No</tr>
+					<tr class='info'><td>behind_page</td><td>When true, places watermark behind all page content instead of on top of all page content.<br/><br/><b>Accepts:</b><br/><ul><li>true</li><li>false</li></ul></td><td>false</td><td class='No'>No</tr>
 				</table><br/><br/>	<span class='summary'>Responses</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
 					<tr class='info'><td>200</td><td>OK<br/><br/>NOTE: inputId always returns the resource ID of the input PDF to be watermarked. When a file is used as a watermark, inputID returns an array with the resource ID of the input PDF that was watermarked first and the resource ID of the input file that was applied as a watermark second.</td><td><pre>{
-   "outputUrl": "https://api.pdfrest.com/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
+   "outputUrl": "YOUR_DOMAIN_HERE/resource/01240b25a-8936-4437-8652-8410130f1199?format=file"<br/>
    "outputId": "01240b25a-8936-4437-8652-8410130f1199"<br/>
    "inputId": ["1e3c7fefe-45e0-48f2-bf8d-fe506e1d7838", "11e24955f-bbe9-4267-aac6-d1c7e531a426"]<br/>}</pre></td></tr>
 					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
