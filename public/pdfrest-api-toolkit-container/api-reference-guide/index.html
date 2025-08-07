@@ -60,9 +60,9 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Retrieve File (Download)</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/resource/{id}'><span class='get'>GET </span>&nbsp;&nbsp;<span class='menu-item'>/resource/{id}</a><br/></div>
 			<div class='menu-row'>
-			<span class='menu-cat'><b>Query PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-info'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-info</a><br/></div>
-			<div class='menu-row'>
 			<span class='menu-cat'><b>Delete File</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/resource/{id}2'><span class='delete'>DELETE </span>&nbsp;&nbsp;<span class='menu-item'>/resource/{id}</a><br/></div>
+			<div class='menu-row'>
+			<span class='menu-cat'><b>Query PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-info'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-info</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Extract Images</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/extracted-images'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/extracted-images</a><br/></div>
 			<div class='menu-row'>
@@ -167,6 +167,16 @@
 					<tr class='info'><td>404</td><td>Not Found</td><td><pre>{
    "error": "That file does not exist"<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
+				<a name='/resource/{id}2'></a><div class='section-header'><span class='delete'>&nbsp;DELETE </span> <span class='header'>&nbsp;/resource/{id}</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Delete a resource file by ID. Resource IDs can be found in the JSON response of POST requests. Note that the file must have been uploaded or generated using the same API Key provided with the call to delete it.<br/><br/> <span class='summary'>Examples</span> <pre>curl --request DELETE "YOUR_DOMAIN_HERE/resource/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</pre>
+<br/><br/>	<span class='summary'>Path Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of the resource to delete<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='yes'>Yes</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>204</td><td>No Content<br>(Indicates a successful deletion)</td><td></td></tr>
+					<tr class='info'><td>404</td><td>Not Found</td><td><pre>{
+   "error": "Resource ID does not exist"<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
 				<a name='/pdf-info'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-info</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Return detailed information about a PDF document and its contents to assess the current state of the file and drive conditional processing. <br/><br/> NOTE: Some PDF conditions can prevent all queries from completing.  For example, if the document is password-protected, corrupted, or not actually a PDF, all queries will not be able to be completed. The output response will always include an "allQueriesProcessed" field with a true or false value. When this is false, an additional "warning" field will also be included in the output response with a human-readable string explaining why all queries could not be processed.<br/><br/> <a href="https://pdfrest.com/apitools/query-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf-info&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span><br/> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf-info" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf" -F "queries=title,filename"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/pdf-info" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "queries=tagged,image_only,creation_date,modified_date,doc_language"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
 				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
@@ -182,16 +192,6 @@
    "error": "This route will only accept a File or an ID, not both."<br/>}</pre></td></tr>
 					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
    "error": "The input file is password protected and cannot be processed."<br/>}</pre></td></tr>
-				</table><br/></div><br/><br/>
-				<a name='/resource/{id}2'></a><div class='section-header'><span class='delete'>&nbsp;DELETE </span> <span class='header'>&nbsp;/resource/{id}</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Delete a resource file by ID. Resource IDs can be found in the JSON response of POST requests. Note that the file must have been uploaded or generated using the same API Key provided with the call to delete it.<br/><br/> <span class='summary'>Examples</span> <pre>curl --request DELETE "YOUR_DOMAIN_HERE/resource/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</pre>
-<br/><br/>	<span class='summary'>Path Parameters</span><br/>
-				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
-					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of the resource to delete<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='yes'>Yes</tr>
-				</table><br/><br/>	<span class='summary'>Responses</span><br/>
-				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
-					<tr class='info'><td>204</td><td>No Content<br>(Indicates a successful deletion)</td><td></td></tr>
-					<tr class='info'><td>404</td><td>Not Found</td><td><pre>{
-   "error": "Resource ID does not exist"<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/extracted-images'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/extracted-images</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Extract all embedded images from a PDF file, or from a specified range of pages, and save them as separate image files. Each image will be saved in its original format (JPG, PNG, or TIFF), preserving its original compression and properties.<br/><br/> <a href="https://pdfrest.com/apitools/extract-images/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=extracted-images&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-images" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@PATH_TO_FILE/example_file.pdf"</pre> <pre>curl -X POST "YOUR_DOMAIN_HERE/extracted-images" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "id=0950b9bdf-0465-4d3f-8ea3-d2894f1ae839" -F "pages=14-last"</pre> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre>
 <br/><br/>	<span class='summary'>Body Parameters</span><br/>
