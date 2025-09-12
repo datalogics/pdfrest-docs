@@ -110,9 +110,17 @@ export default defineNuxtConfig({
     '/container-api-with-docker/deploy-container-api/': { redirect: '/pdfrest-api-toolkit-container/deploy-container-api/' },
 
     '/cloud-api-reference/': { redirect: '/pdfrest-api-toolkit-cloud/api-reference-guide/' },
+    '/cloud-api-reference/**': { redirect: '/pdfrest-api-toolkit-cloud/api-reference-guide/**' },
+
     '/pdf-forms-pro-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
+    '/pdf-forms-pro-self-hosted-reference/**': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/**' },
+
     '/pdf-to-office-pro-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
+    '/pdf-to-office-pro-self-hosted-reference/**': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/**' },
+
     '/pdf-toolkit-self-hosted-reference/': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/' },
+    '/pdf-toolkit-self-hosted-reference/**': { redirect: '/pdfrest-api-toolkit-container/api-reference-guide/**' },
+
   },
   nitro: { prerender: { ignore: ['/pdfrest-api-toolkit-cloud/api-reference-guide/', '/pdfrest-api-toolkit-container/api-reference-guide/'] } },
   compatibilityDate: '2024-07-05',
