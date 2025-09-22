@@ -110,7 +110,7 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>API Polling (Request Status)</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/request-status/{id}'><span class='get'>GET </span>&nbsp;&nbsp;<span class='menu-item'>/request-status/{id}</a><br/></div>
 			<div class='menu-row'>
-			<span class='menu-cat'><b>Delete File</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/resource/{id}2'><span class='delete'>DELETE </span>&nbsp;&nbsp;<span class='menu-item'>/resource/{id}</a><br/></div>
+			<span class='menu-cat'><b>Delete Files</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/resource/{id}2'><span class='delete'>DELETE </span>&nbsp;&nbsp;<span class='menu-item'>/resource/{id}</a><br/>&nbsp;&nbsp;&#8226; <a href='#/delete'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/delete</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Query PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-info'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-info</a><br/></div>
 			<div class='menu-row'>
@@ -296,6 +296,43 @@
    "message": "File has already been deleted"<br/>}</pre></td></tr>
 					<tr class='info'><td>404</td><td>Not Found</td><td><pre>{
    "error": "The provided resource ID does not exist, or you lack the necessary permissions. Verify the resource ID and API Key and try again."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/delete'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/delete</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/> Delete oneor resource files by ID. Resource IDs can be found in the JSON response of POST requests. Note that files must have been uploaded or generated using the same API Key provided with the call to delete it.<br/><br/> <a href="https://pdfrest.com/apitools/delete-files/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=delete&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br/><br/> <span class='summary'>Examples</span><div class="tab">
+  <button class="delete-tablinks" onclick="openTab(event, 'cURL', 'delete')" id="delete-defaultOpen">cURL</button>
+  <button class="delete-tablinks" onclick="openTab(event, 'JavaScript', 'delete')">JavaScript</button>
+  <button class="delete-tablinks" onclick="openTab(event, 'Python', 'delete')">Python</button>
+  <button class="delete-tablinks" onclick="openTab(event, 'PHP', 'delete')">PHP</button>
+  <button class="delete-tablinks" onclick="openTab(event, 'DotNET', 'delete')">.NET</button>
+  <button class="delete-tablinks" onclick="openTab(event, 'Java', 'delete')">Java</button>
+</div> <div id="delete-cURL" class="delete-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FcURL%2FEndpoint%20Examples%2FMultipart%20Payload%2Fdelete.sh&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="delete-JavaScript" class="delete-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJavaScript%2FEndpoint%20Examples%2FMultipart%20Payload%2Fdelete.js&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script> 
+</div> <div id="delete-Python" class="delete-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPython%2FEndpoint%20Examples%2FMultipart%20Payload%2Fdelete.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="delete-PHP" class="delete-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPHP%2FEndpoint%20Examples%2FMultipart%20Payload%2Fdelete.php&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="delete-DotNET" class="delete-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FDotNET%2FEndpoint%20Examples%2FMultipart%20Payload%2Fdelete.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="delete-Java" class="delete-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJava%2FEndpoint%20Examples%2FMultipart%20Payload%2FDelete.java&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <script> document.getElementById("delete-defaultOpen").click(); </script>   <br/><span class='summary'>Required Headers</span><br/> <pre>Api-Key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
+<br/><br/>	<span class='summary'>Path Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>ids</td><td>Comma-separated list of Alphanumeric IDs (UUID) for resources to delete<br/><br/><b>Accepts:</b><br/>List of any valid resource IDs returned by POST requests<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839, vt60b2bdc-d66v-1dax-vea9-aw894f1aer3p, 8srtb9bdf-l49d-0s4e-cv23-js84lpa12n99</td><td>None</td><td class='yes'>Yes</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK</td><td><pre>{
+"deletionResponses":
+    {
+    "2ab5c15d3-00cb-48a6-9bf5-12ec770ef07c": "Successfully Deleted",
+    "19acb7607-6415-469e-a611-3314bd58db11": "The provided resource ID does not exist, or you lack the necessary permissions. Verify the resource ID and API Key and try again.",
+    "191757026-5689-44f8-ac96-cc648f2565d6": "The provided resource ID does not exist, or you lack the necessary permissions. Verify the resource ID and API Key and try again.",
+    "1a13d1f03-c632-4167-be4f-c36c51e9b0b9": "File has already been deleted"
+    }              
+}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Not Found</td><td><pre>{
+   "error": "An Api-Key header is required to send this request."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/pdf-info'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-info</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Return detailed information about a PDF document and its contents to assess the current state of the file and drive conditional processing. <br/><br/> NOTE: Some PDF conditions can prevent all queries from completing.  For example, if the document is password-protected, corrupted, or not actually a PDF, all queries will not be able to be completed. The output response will always include an "allQueriesProcessed" field with a true or false value. When this is false, an additional "warning" field will also be included in the output response with a human-readable string explaining why all queries could not be processed.<br/><br/> <a href="https://pdfrest.com/apitools/query-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf-info&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span>  <div class="tab">
   <button class="pdf-info-tablinks" onclick="openTab(event, 'cURL', 'pdf-info')" id="pdf-info-defaultOpen">cURL</button>
