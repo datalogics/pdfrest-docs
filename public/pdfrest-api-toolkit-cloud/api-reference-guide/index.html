@@ -112,6 +112,8 @@
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Delete Files</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/resource/{id}2'><span class='delete'>DELETE </span>&nbsp;&nbsp;<span class='menu-item'>/resource/{id}</a><br/>&nbsp;&nbsp;&#8226; <a href='#/delete'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/delete</a><br/></div>
 			<div class='menu-row'>
+			<span class='menu-cat'><b>Summarize PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/summarized-pdf-text'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/summarized-pdf-text</a><br/></div>
+			<div class='menu-row'>
 			<span class='menu-cat'><b>Query PDF</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/pdf-info'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/pdf-info</a><br/></div>
 			<div class='menu-row'>
 			<span class='menu-cat'><b>Extract Images</b></span><br/>&nbsp;&nbsp;&#8226; <a href='#/extracted-images'><span class='post'>POST </span>&nbsp;&nbsp;<span class='menu-item'>/extracted-images</a><br/></div>
@@ -332,6 +334,50 @@
     }              
 }</pre></td></tr>
 					<tr class='info'><td>401</td><td>Not Found</td><td><pre>{
+   "error": "An Api-Key header is required to send this request."<br/>}</pre></td></tr>
+				</table><br/></div><br/><br/>
+				<a name='/summarized-pdf-text'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/summarized-pdf-text</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Generate an AI-powered summary of a PDF document using a target word count and format. <br/><br/> <a href="https://pdfrest.com/apitools/summarize-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=summarized-pdf-text&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span> <div class="tab">
+  <button class="summarized-pdf-text-tablinks" onclick="openTab(event, 'cURL', 'summarized-pdf-text')" id="summarized-pdf-text-defaultOpen">cURL</button>
+  <button class="summarized-pdf-text-tablinks" onclick="openTab(event, 'JavaScript', 'summarized-pdf-text')">JavaScript</button>
+  <button class="summarized-pdf-text-tablinks" onclick="openTab(event, 'Python', 'summarized-pdf-text')">Python</button>
+  <button class="summarized-pdf-text-tablinks" onclick="openTab(event, 'PHP', 'summarized-pdf-text')">PHP</button>
+  <button class="summarized-pdf-text-tablinks" onclick="openTab(event, 'DotNET', 'summarized-pdf-text')">.NET</button>
+  <button class="summarized-pdf-text-tablinks" onclick="openTab(event, 'Java', 'summarized-pdf-text')">Java</button>
+</div> <div id="summarized-pdf-text-cURL" class="summarized-pdf-text-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FcURL%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsummarized-pdf-text.sh&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="summarized-pdf-text-JavaScript" class="summarized-pdf-text-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJavaScript%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsummarized-pdf-text.js&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="summarized-pdf-text-Python" class="summarized-pdf-text-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPython%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsummarized-pdf-text.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="summarized-pdf-text-PHP" class="summarized-pdf-text-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FPHP%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsummarized-pdf-text.php&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="summarized-pdf-text-DotNET" class="summarized-pdf-text-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FDotNET%2FEndpoint%20Examples%2FMultipart%20Payload%2Fsummarized-pdf-text.cs&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <div id="summarized-pdf-text-Java" class="summarized-pdf-text-tabcontent">
+  <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fdatalogics%2Fpdf-rest-api-samples%2Fblob%2Fmain%2FJava%2FEndpoint%20Examples%2FMultipart%20Payload%2FSummarizedPDFText.java&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div> <script> document.getElementById("summarized-pdf-text-defaultOpen").click(); </script> <br/><span class='summary'>Required Headers</span><br/> <pre>Accept: application/json</pre> <pre>Content-Type: multipart/form-data</pre> <pre>Api-Key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
+<br/><br/>	<span class='summary'>Path Parameters</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=12%>Name</td><td width=64%>Description</td><td width=12%>Default</td><td width=12%>Required</td></tr>
+					<tr class='info'><td>file</td><td>File to be uploaded and processed<br/><br/><b>Accepts:</b><br/>Any PDF file<br/><br/><b>Example:</b><br/>@PATH_TO_FILE/example_file.pdf</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>id</td><td>Alphanumeric ID (UUID) of existing file on server to be processed<br/><br/><b>Accepts:</b><br/>Any valid resource ID returned by a POST request<br/><br/><b>Example:</b><br/>0950b9bdf-0465-4d3f-8ea3-d2894f1ae839</td><td>None</td><td class='partial'>One of:<ul><li>file</li><li>id</li></ul></tr>
+					<tr class='info'><td>target_word_count</td><td>Specify the target length of the summary in words (Min 1).<br/><br/><b>Accepts:</b><br/>Any positive integer.<br><b>Note:</b> exceeding the context window may cause a 400 error.<br/><br/><b>Example:</b><br/>250</td><td>800</td><td class='No'>No</tr>
+					<tr class='info'><td>summary_format</td><td>The format in which the summary is structured and presented.<br/><br/><b>Accepts:</b><br/><ul><li><b>overview</b></li><li><b>highlight</b></li><li><b>abstract</b></li><li><b>bullet_points</b></li><li><b>numbered_list</b></li><li><b>table_of_contents</b></li><li><b>outline</b></li><li><b>question_answer</b></li><li><b>action_items</b></li></ul><br/><br/><b>Example:</b><br/>bullet_points</td><td>overview</td><td class='No'>No</tr>
+					<tr class='info'><td>pages</td><td>Page or range of pages of the document to summarize.<br/><br/><b>Accepts:</b><br/>Single page number (e.g., 5) or range (e.g., 1-5, 3-last)<br/><br/><b>Example:</b><br/>1-3</td><td>1-last</td><td class='No'>No</tr>
+					<tr class='info'><td>output_format</td><td>Whether the output text should have markdown syntax or not.<br/><br/><b>Accepts:</b><br/><ul><li><b>plaintext</b></li><li><b>markdown</b></li></ul><br/><br/><b>Example:</b><br/>plaintext</td><td>markdown</td><td class='No'>No</tr>
+					<tr class='info'><td>output_type</td><td>What format the output should be returned in (file to download or output included directly in JSON response).<br/><br/><b>Accepts:</b><br/><ul><li><b>json</b></li><li><b>file</b></li></ul><br/><br/><b>Example:</b><br/>json</td><td>json</td><td class='No'>No</tr>
+					<tr class='info'><td>output</td><td>Name of the generated output file (when output_type is set to file), without extension<br/><br/><b>Accepts:</b><br/>Any valid file name<br/><br/><b>Example:</b><br/>my_summary_output</td><td>[INPUT_FILE_NAME]_pdfrest_summarized-pdf-text</td><td class='No'>No</tr>
+				</table><br/><br/>	<span class='summary'>Responses</span><br/>
+				<table width=100% border=1 cellpadding=10 cellspacing=0 ><tr class='table-title'><td width=15%>Response Status Code</td><td width=25%>Description</td><td width=60%>JSON Response Example</td></tr>
+					<tr class='info'><td>200</td><td>OK<br/>(output_type = json)</td><td><pre>{
+   "summary": "### Sleep: High-Level Overview\nSleep is essential for health and well-being, supporting tissue repair, memory consolidation, and energy restoration for the next day. When rest is insufficient, physical and mental performance suffers, reducing focus, mood stability, and productivity. Modern life often sacrifices sleep for schedules, late-night work, and constant technology, risking long-term problems such as weakened immunity, higher stress, and heart disease. Prioritizing sleep is crucial for balance and success. Adopting good habits—consistent bedtimes, limited screen time before bed, and a comfortable sleep environment—can yield meaningful improvements. Valuing sleep alongside diet and exercise enhances overall quality of life, for true, long-term vitality."<br/>
+   "inputId": "11d6341ce-1c8a-45db-9f43-aa3c72295d82"<br/>}</pre></td></tr>
+					<tr class='info'><td>200</td><td>OK<br/>(output_type = file)</td><td><pre>{
+   "outputUrl": "http://localhost:3000/resource/266e4c17a-5d13-487d-a886-f3470530b95c?format=file"<br/>
+   "outputId": "266e4c17a-5d13-487d-a886-f3470530b95c"<br/>
+   "inputId": "1b593f334-5809-4b08-b3f9-252c8f58e71c"<br/>}</pre></td></tr>
+					<tr class='info'><td>400</td><td>Bad Request</td><td><pre>{
+   "error": "Uploaded file is not valid input for this route. See documentation for valid file format(s)."<br/>}</pre></td></tr>
+					<tr class='info'><td>401</td><td>Unauthorized</td><td><pre>{
    "error": "An Api-Key header is required to send this request."<br/>}</pre></td></tr>
 				</table><br/></div><br/><br/>
 				<a name='/pdf-info'></a><div class='section-header'><span class='post'>&nbsp;POST </span> <span class='header'>&nbsp;/pdf-info</span></div><div class='section-content'><br/><span class='summary'>Summary</span><br/><br/> Return detailed information about a PDF document and its contents to assess the current state of the file and drive conditional processing. <br/><br/> NOTE: Some PDF conditions can prevent all queries from completing.  For example, if the document is password-protected, corrupted, or not actually a PDF, all queries will not be able to be completed. The output response will always include an "allQueriesProcessed" field with a true or false value. When this is false, an additional "warning" field will also be included in the output response with a human-readable string explaining why all queries could not be processed.<br/><br/> <a href="https://pdfrest.com/apitools/query-pdf/" target="_blank" style="display: inline-block; padding: 8px 15px; margin-right: 8px; background-color: #D14081; color: white; text-decoration: none; border-radius: 15px;">Learn More</a> <a href="https://pdfrest.com/apilab/?endpoint=pdf-info&eu=false" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 15px; background-color: #F8CA87; color: #333; text-decoration: none; border-radius: 15px;">Try in API Lab</a> <br><br> <span class='summary'>Examples</span>  <div class="tab">
