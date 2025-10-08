@@ -38,6 +38,14 @@ export default defineNuxtConfig({
     join(currentDir, './assets/css/themes.css'),
   ],
   content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'pdfrest-docs',
+        owner: 'pdfrest',
+        url: 'https://github.com/pdfrest/pdfrest-docs',
+      },
+    },
     documentDriven: true,
     highlight: {
       theme: {
